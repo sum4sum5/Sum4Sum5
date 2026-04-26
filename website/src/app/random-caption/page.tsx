@@ -42,17 +42,19 @@ export default function CaptionPage() {
         <AdBanner slot="home-horizontal" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 pt-4 lg:pt-8 pb-4 space-y-4 lg:space-y-6">
+      <div className="w-full pt-4 lg:pt-8 pb-4 space-y-4 lg:space-y-6">
         {/* Main Tool - Top Priority */}
         <div className="w-full">
            <ContentAssistant />
         </div>
+      </div>
 
-        {/* Deep Content & SEO Section */}
-        <div className="grid lg:grid-cols-[1fr_350px] gap-12 pt-16 border-t border-slate-100">
+      {/* Deep Content & SEO Section */}
+      <div className="max-w-7xl mx-auto px-6 pt-16 border-t border-slate-100">
+        <div className="grid lg:grid-cols-[1fr_350px] gap-12">
            <div className="space-y-16">
               {/* Expert Article Section */}
-              <article className="prose prose-slate max-w-none px-4">
+              <article className="prose prose-slate max-w-none">
                 <header>
                   <h2 className="font-prompt font-black text-3xl lg:text-4xl text-slate-900 leading-tight mb-8">
                     <span className="text-primary italic">แคปชั่น AI</span> อัจฉริยะ! ไอเดียเรียกยอดไลก์ที่ดีที่สุด
@@ -65,27 +67,28 @@ export default function CaptionPage() {
                     ไม่ว่าคุณจะหา <strong>สุ่มแคปชั่นกวนๆ</strong>, <strong>แคปชั่นสายฮา</strong>, <strong>แคปชั่นสายอ่อย</strong> หรือแม้แต่ <strong>แคปชั่นสายมู</strong> เราช่วยหาคำพูดที่ &quot;โดนใจ&quot; และ &quot;เพิ่ม Engagement&quot; ได้ในคลิกเดียว
                   </p>
 
-                  <div className="mt-12 bg-orange-50/50 rounded-3xl p-8 border border-orange-100/50">
-                    <h3 className="font-prompt font-black text-2xl text-slate-900 mb-6 flex items-center gap-3">
-                      <Wand2 className="w-6 h-6 text-primary" /> วิธีการใช้งานสุ่มแคปชั่น AI
+                  <div className="mt-12 bg-orange-50/50 p-6 lg:p-8 rounded-[2rem] lg:rounded-3xl border border-orange-100/50">
+                    <h3 className="font-prompt font-black text-xl lg:text-2xl text-slate-900 mb-6 flex items-start lg:items-center gap-3">
+                      <Wand2 className="w-7 h-7 lg:w-8 lg:h-8 text-primary flex-shrink-0 mt-1 lg:mt-0" />
+                      <span>วิธีการใช้งานสุ่มแคปชั่น AI</span>
                     </h3>
                     
-                    <ol className="space-y-4 text-slate-600 font-medium list-none p-0 m-0">
-                      <li className="flex gap-4">
-                        <span className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center shrink-0 font-bold">1</span>
-                        <span className="pt-1">เลือก <strong>แพลตฟอร์มปลายทาง</strong> (Facebook, TikTok, IG Reels ฯลฯ) เพื่อให้ AI ปรับสไตล์ภาษา</span>
+                    <ol className="list-none p-0 m-0 space-y-4 lg:space-y-5 text-slate-600 font-medium">
+                      <li className="flex items-start gap-3 lg:gap-4">
+                        <span className="flex-shrink-0 w-7 h-7 lg:w-8 lg:h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm lg:text-base mt-0.5">1</span>
+                        <span className="text-base lg:text-lg leading-relaxed">เลือก <strong>แพลตฟอร์มปลายทาง</strong> (Facebook, TikTok, IG Reels ฯลฯ) เพื่อให้ AI ปรับสไตล์ภาษา</span>
                       </li>
-                      <li className="flex gap-4">
-                        <span className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center shrink-0 font-bold">2</span>
-                        <span className="pt-1">กำหนด <strong>มู้ดแอนด์โทน (Vibe)</strong> ว่าอยากได้สายฮา สายอ่อย หรือสายมู</span>
+                      <li className="flex items-start gap-3 lg:gap-4">
+                        <span className="flex-shrink-0 w-7 h-7 lg:w-8 lg:h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm lg:text-base mt-0.5">2</span>
+                        <span className="text-base lg:text-lg leading-relaxed">กำหนด <strong>มู้ดแอนด์โทน (Vibe)</strong> ว่าอยากได้สายฮา สายอ่อย หรือสายมู</span>
                       </li>
-                      <li className="flex gap-4">
-                        <span className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center shrink-0 font-bold">3</span>
-                        <span className="pt-1">พิมพ์หัวข้อคร่าวๆ แล้วกดปุ่ม <strong>"ให้ AI ช่วยคิด"</strong> เพื่อสุ่มแคปชั่น 3 สไตล์ทันที</span>
+                      <li className="flex items-start gap-3 lg:gap-4">
+                        <span className="flex-shrink-0 w-7 h-7 lg:w-8 lg:h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm lg:text-base mt-0.5">3</span>
+                        <span className="text-base lg:text-lg leading-relaxed">พิมพ์หัวข้อคร่าวๆ แล้วกดปุ่ม <strong>"ให้ AI ช่วยคิด"</strong> เพื่อสุ่มแคปชั่น 3 สไตล์ทันที</span>
                       </li>
-                      <li className="flex gap-4">
-                        <span className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center shrink-0 font-bold">4</span>
-                        <span className="pt-1">เลือกแคปชั่นที่ชอบแล้วกด <strong>คัดลอก</strong> ไปใช้งานได้เลย!</span>
+                      <li className="flex items-start gap-3 lg:gap-4">
+                        <span className="flex-shrink-0 w-7 h-7 lg:w-8 lg:h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm lg:text-base mt-0.5">4</span>
+                        <span className="text-base lg:text-lg leading-relaxed">เลือกแคปชั่นที่ชอบแล้วกด <strong>คัดลอก</strong> ไปใช้งานได้เลย!</span>
                       </li>
                     </ol>
                   </div>

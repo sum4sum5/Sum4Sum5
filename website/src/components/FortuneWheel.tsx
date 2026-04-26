@@ -617,7 +617,7 @@ export default function FortuneWheel() {
           topIcon={
             <motion.div
               initial={{ scale: 0.5, opacity: 0, y: 50, rotate: -10 }}
-              animate={{ scale: 1.6, opacity: 1, y: 0, rotate: 0 }}
+              animate={{ scale: winner?.image ? 1.15 : 1.6, opacity: 1, y: 0, rotate: 0 }}
               transition={{ delay: 0.2, type: "spring", damping: 12, stiffness: 90 }}
               className="drop-shadow-[0_25px_50px_rgba(0,0,0,0.3)]"
             >

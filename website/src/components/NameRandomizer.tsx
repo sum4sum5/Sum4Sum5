@@ -255,7 +255,7 @@ export default function NameRandomizer() {
                 transition={{ type: "spring", damping: 25, stiffness: 200 }}
                 className={`relative w-full flex flex-col items-center gap-10 justify-center ${isFullscreen ? (showSettings ? 'max-w-[850px]' : 'max-w-[1000px]') : (showSettings ? 'max-w-[800px]' : 'max-w-[850px]')}`}
               >
-                <div className="relative w-full aspect-[4/3] lg:aspect-[1.6/1] flex flex-col items-center justify-center">
+                <div className="relative w-full min-h-[450px] lg:aspect-[1.6/1] flex flex-col items-center justify-center">
 
                   <div className="absolute inset-0 bg-white/40 backdrop-blur-3xl rounded-[3.5rem] border-4 border-white shadow-[0_40px_100px_-20px_rgba(0,0,0,0.08)] overflow-hidden">
                     <div className="absolute inset-0 opacity-10 pointer-events-none">
@@ -284,7 +284,7 @@ export default function NameRandomizer() {
                     </div>
                   </div>
 
-                  <div className="relative z-10 w-full h-full flex flex-col items-center justify-center p-10">
+                  <div className="relative z-10 w-full h-full flex flex-col items-center justify-center p-6 lg:p-10">
                     <AnimatePresence mode="wait">
                       {isRolling ? (
                         <motion.div

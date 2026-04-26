@@ -1,33 +1,21 @@
 'use client';
 
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 import FortuneWheel from '@/components/FortuneWheel';
 import AdBanner from '@/components/shared/AdBanner';
 import { FerrisWheel, Sparkles, Image as ImageIcon, Zap, BarChart3, HelpCircle, Fingerprint } from 'lucide-react';
 
 export default function WheelPage() {
-  const toolRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    // Auto-scroll to tool after a short delay to ensure layout and ads are ready
-    const timer = setTimeout(() => {
-      if (toolRef.current) {
-        toolRef.current.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    }, 1000); // 1s delay gives users a moment to see the top ad before scrolling to the content
-
-    return () => clearTimeout(timer);
-  }, []);
 
   return (
     <div className="min-h-screen bg-transparent pb-24 lg:pb-32">
       {/* 1. Top Ad Banner - Maximum Visibility */}
-      <div className="max-w-7xl mx-auto w-full px-6 py-4 lg:py-8">
+      <div className="w-full">
         <AdBanner slot="home-horizontal" />
       </div>
 
-      {/* 2. Main Tool Area - Auto-scrolled to on load */}
-      <div ref={toolRef} className="max-w-7xl mx-auto px-4 py-4 lg:py-6 space-y-6 scroll-mt-24">
+      {/* 2. Main Tool Area */}
+      <div className="w-full pt-4 lg:pt-8 pb-4 space-y-4 lg:space-y-6 scroll-mt-24">
         <div className="w-full">
            <FortuneWheel />
         </div>
@@ -81,22 +69,23 @@ export default function WheelPage() {
                   ในยุคที่เรามีทางเลือกมากมายจนบางครั้งเกิดภาวะ <strong>&quot;Decision Fatigue&quot;</strong> หรือความล้าในการตัดสินใจ 
                   เราจึงพัฒนาเครื่องมือที่เปลี่ยนการเลือกที่ยุ่งยากให้กลายเป็นเรื่องสนุกและยุติธรรมที่สุด
                 </p>
-                <div className="bg-orange-50/50 rounded-3xl p-8 border border-orange-100/50">
-                  <h3 className="font-prompt font-black text-2xl text-slate-900 mb-6 flex items-center gap-2">
-                    <Zap className="w-6 h-6 text-primary" /> วิธีการใช้งานวงล้อสุ่มออนไลน์
+                <div className="bg-orange-50/50 p-6 lg:p-8 rounded-[2rem] lg:rounded-3xl border border-orange-100/50 my-8">
+                  <h3 className="font-prompt font-black text-xl lg:text-2xl text-slate-900 mb-6 flex items-start lg:items-center gap-3">
+                    <Zap className="w-7 h-7 lg:w-8 lg:h-8 text-primary flex-shrink-0 mt-1 lg:mt-0" />
+                    <span>วิธีการใช้งานวงล้อสุ่มออนไลน์</span>
                   </h3>
-                  <ol className="space-y-4 text-slate-600 font-medium list-none p-0">
-                    <li className="flex gap-4">
-                      <span className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center shrink-0 font-bold">1</span>
-                      <span>พิมพ์รายชื่อหรือตัวเลือกที่ต้องการลงในเมนูตั้งค่าด้านซ้าย (รองรับการใส่รูปภาพ)</span>
+                  <ol className="list-none p-0 space-y-4 lg:space-y-5 text-slate-600 font-medium">
+                    <li className="flex items-start gap-3 lg:gap-4">
+                      <span className="flex-shrink-0 w-7 h-7 lg:w-8 lg:h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm lg:text-base mt-0.5">1</span>
+                      <span className="text-base lg:text-lg leading-relaxed">พิมพ์รายชื่อหรือตัวเลือกที่ต้องการลงในเมนูตั้งค่าด้านซ้าย (รองรับการใส่รูปภาพ)</span>
                     </li>
-                    <li className="flex gap-4">
-                      <span className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center shrink-0 font-bold">2</span>
-                      <span>เลือกธีมสีที่ต้องการเพื่อให้วงล้อของคุณสวยโดดเด่นไม่ซ้ำใคร</span>
+                    <li className="flex items-start gap-3 lg:gap-4">
+                      <span className="flex-shrink-0 w-7 h-7 lg:w-8 lg:h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm lg:text-base mt-0.5">2</span>
+                      <span className="text-base lg:text-lg leading-relaxed">เลือกธีมสีที่ต้องการเพื่อให้วงล้อของคุณสวยโดดเด่นไม่ซ้ำใคร</span>
                     </li>
-                    <li className="flex gap-4">
-                      <span className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center shrink-0 font-bold">3</span>
-                      <span>กดปุ่ม SPIN! หรือคลิกที่กึ่งกลางวงล้อเพื่อให้มันเริ่มหมุน</span>
+                    <li className="flex items-start gap-3 lg:gap-4">
+                      <span className="flex-shrink-0 w-7 h-7 lg:w-8 lg:h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm lg:text-base mt-0.5">3</span>
+                      <span className="text-base lg:text-lg leading-relaxed">กดปุ่ม SPIN! หรือคลิกที่กึ่งกลางวงล้อเพื่อให้มันเริ่มหมุน</span>
                     </li>
                   </ol>
                 </div>

@@ -69,15 +69,17 @@ export default function NamePage() {
         <AdBanner slot="home-horizontal" />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 pt-4 lg:pt-8 pb-4 space-y-4 lg:space-y-6">
+      <div className="w-full pt-4 lg:pt-8 pb-4 space-y-4 lg:space-y-6">
         {/* Main Tool - Top Priority */}
         <NameRandomizer />
+      </div>
 
-        {/* Deep Content & SEO Section */}
-        <div className="grid lg:grid-cols-[1fr_350px] gap-12 pt-16 border-t border-slate-100">
+      {/* Deep Content & SEO Section */}
+      <div className="max-w-7xl mx-auto px-6 pt-16 border-t border-slate-100">
+        <div className="grid lg:grid-cols-[1fr_350px] gap-12">
            <div className="space-y-16">
               {/* Expert Article Section */}
-              <article className="prose prose-slate max-w-none px-4">
+              <article className="prose prose-slate max-w-none">
                 <header className="mb-12">
                   <h2 className="font-prompt font-black text-3xl lg:text-5xl text-slate-900 leading-tight mb-6">
                     โปรแกรม <span className="text-primary italic">สุ่มรายชื่อ</span> และจับฉลากออนไลน์ที่แม่นยำที่สุด
@@ -98,22 +100,23 @@ export default function NamePage() {
                     </p>
                   </section>
 
-                  <section className="bg-orange-50/50 p-8 rounded-[3rem] border border-orange-100 space-y-6">
-                    <h3 className="font-prompt font-black text-2xl text-slate-900 mb-6 flex items-center gap-3">
-                      <Users className="w-6 h-6 text-primary" /> วิธีใช้ เว็บสุ่มชื่อ ง่ายๆ ใน 3 ขั้นตอน
+                  <section className="bg-orange-50/50 p-6 lg:p-8 rounded-[2.5rem] lg:rounded-[3rem] border border-orange-100 space-y-6">
+                    <h3 className="font-prompt font-black text-xl lg:text-2xl text-slate-900 mb-6 flex items-start lg:items-center gap-3">
+                      <Users className="w-7 h-7 lg:w-8 lg:h-8 text-primary flex-shrink-0 mt-1 lg:mt-0" />
+                      <span>วิธีใช้ เว็บสุ่มชื่อ ง่ายๆ ใน 3 ขั้นตอน</span>
                     </h3>
-                    <ol className="list-none p-0 space-y-4">
-                      <li className="flex gap-4">
-                        <span className="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm">1</span>
-                        <span><strong>ใส่รายชื่อ:</strong> คัดลอกรายชื่อสำหรับ <strong>จับสลาก</strong> จาก Excel หรือพิมพ์ลงไปโดยตรง</span>
+                    <ol className="list-none p-0 space-y-5">
+                      <li className="flex items-start gap-3 lg:gap-4">
+                        <span className="flex-shrink-0 w-7 h-7 lg:w-8 lg:h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm lg:text-base mt-0.5">1</span>
+                        <span className="text-base lg:text-lg leading-relaxed"><strong>ใส่รายชื่อ:</strong> คัดลอกรายชื่อสำหรับ <strong>จับสลาก</strong> จาก Excel หรือพิมพ์ลงไปโดยตรง</span>
                       </li>
-                      <li className="flex gap-4">
-                        <span className="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm">2</span>
-                        <span><strong>เลือกโหมด:</strong> เลือกว่าจะสุ่มหาผู้โชคดีเพียงคนเดียว หรือ <strong>สุ่มแบ่งกลุ่ม (สุ่มทีม)</strong></span>
+                      <li className="flex items-start gap-3 lg:gap-4">
+                        <span className="flex-shrink-0 w-7 h-7 lg:w-8 lg:h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm lg:text-base mt-0.5">2</span>
+                        <span className="text-base lg:text-lg leading-relaxed"><strong>เลือกโหมด:</strong> เลือกว่าจะสุ่มหาผู้โชคดีเพียงคนเดียว หรือ <strong>สุ่มแบ่งกลุ่ม (สุ่มทีม)</strong></span>
                       </li>
-                      <li className="flex gap-4">
-                        <span className="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm">3</span>
-                        <span><strong>ลุ้นผลและแชร์:</strong> กดปุ่มสุ่ม แล้วบันทึกภาพผลลัพธ์การ <strong>จับฉลาก</strong> ไปลงโซเชียลได้ทันที</span>
+                      <li className="flex items-start gap-3 lg:gap-4">
+                        <span className="flex-shrink-0 w-7 h-7 lg:w-8 lg:h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm lg:text-base mt-0.5">3</span>
+                        <span className="text-base lg:text-lg leading-relaxed"><strong>ลุ้นผลและแชร์:</strong> กดปุ่มสุ่ม แล้วบันทึกภาพผลลัพธ์การ <strong>จับฉลาก</strong> ไปลงโซเชียลได้ทันที</span>
                       </li>
                     </ol>
                   </section>
