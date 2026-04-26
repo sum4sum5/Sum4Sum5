@@ -74,4 +74,17 @@ Important:
 - Keep `SUPABASE_SERVICE_ROLE_KEY` server-only.
 - Admin passwords live in the `admin_users` table (bcrypt). Rotate with `admin:seed` or direct DB updates, and rotate `ADMIN_SESSION_SECRET` if session cookies are ever compromised.
 
+---
+
+## 🛠 คำสั่งที่ใช้บ่อย (Common Commands)
+
+| คำสั่ง | คำอธิบาย |
+| :--- | :--- |
+| `npm run dev` | เริ่มรันโปรเจกต์ในเครื่อง (Development) |
+| `npm run build` | เตรียมไฟล์สำหรับขึ้น Production (Build) |
+| `npm run admin:seed` | **สร้างบัญชี Admin** (ต้องตั้งค่าใน .env.local ก่อน) |
+| `npm run lint` | ตรวจสอบความถูกต้องของโค้ด |
+
+---
+
 Reference: [Next.js deployment docs](https://nextjs.org/docs/app/building-your-application/deploying)

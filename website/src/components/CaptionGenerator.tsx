@@ -83,7 +83,7 @@ export default function ContentAssistant() {
     
     const selectedVibeLabel = vibes.find(v => v.id === vibe)?.label || vibe;
     const selectedPlatformLabel = platforms.find(p => p.id === platform)?.label || platform;
-    logToolUsage('Caption Randomizer', {
+    logToolUsage('แคปชั่น AI', {
       mode,
       vibe,
       platform,
@@ -107,7 +107,7 @@ export default function ContentAssistant() {
     const formattedText = text.replace(/([^\n])\s*(#[\w\u0E00-\u0E7F]+)/g, '$1\n\n$2');
     setSelectedCaptionForShare(formattedText);
     setShowShareModal(true);
-    logToolUsage('Share to Story', { length: text.length });
+    logToolUsage('แชร์ลง Story', { length: text.length });
   };
 
   const handleSaveImage = async () => {
@@ -126,7 +126,7 @@ export default function ContentAssistant() {
       link.download = `caption-sum4sum5-${Date.now()}.png`;
       link.href = dataUrl;
       link.click();
-      logToolUsage('Save Image', { length: selectedCaptionForShare.length });
+      logToolUsage('บันทึกรูปภาพ', { length: selectedCaptionForShare.length });
     } catch (err) {
       console.error('oops, something went wrong!', err);
     }
@@ -135,7 +135,7 @@ export default function ContentAssistant() {
   const copyToClipboard = (text: string, index: number) => {
     navigator.clipboard.writeText(text);
     setCopiedIndex(index);
-    logToolUsage('Copy Content', { length: text.length });
+    logToolUsage('คัดลอกเนื้อหา', { length: text.length });
     setTimeout(() => setCopiedIndex(null), 2000);
   };
 
@@ -335,26 +335,26 @@ export default function ContentAssistant() {
                   <div className="relative flex flex-col items-center">
                     <motion.div 
                       animate={{ 
-                        rotate: [0, 90, 180, 270, 360],
-                        y: [0, -10, 0]
+                        y: [0, -15, 0],
+                        scale: [1, 1.05, 1]
                       }}
-                      transition={{ duration: 1.5, repeat: Infinity, ease: "easeInOut" }}
-                      className="w-20 h-20 bg-gradient-to-br from-orange-400 to-red-500 rounded-2xl flex items-center justify-center shadow-xl shadow-orange-200/50 mb-6"
+                      transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                      className="w-20 h-20 bg-primary rounded-3xl flex items-center justify-center shadow-lg shadow-orange-200 mb-6"
                     >
-                       <Dice5 className="w-10 h-10 text-white" />
+                       <Sparkles className="w-10 h-10 text-white" />
                     </motion.div>
                     
-                    <div className="w-64 h-3 bg-slate-100 rounded-full overflow-hidden mb-4 relative">
+                    <div className="w-64 h-2 bg-slate-100 rounded-full overflow-hidden mb-6 relative">
                        <motion.div 
-                         initial={{ width: "0%" }}
-                         animate={{ width: "100%" }}
-                         transition={{ duration: 3, repeat: Infinity }}
-                         className="h-full bg-gradient-to-r from-orange-500 to-red-500 shadow-[0_0_15px_rgba(255,140,0,0.5)]"
+                         initial={{ x: "-100%" }}
+                         animate={{ x: "100%" }}
+                         transition={{ duration: 1.5, repeat: Infinity, ease: "linear" }}
+                         className="h-full w-1/2 bg-gradient-to-r from-transparent via-primary to-transparent"
                        />
                     </div>
                     
                     <div className="text-center">
-                      <p className="text-slate-800 font-black font-prompt text-xl animate-pulse">กำลังเสกคำคม...</p>
+                      <p className="text-slate-800 font-black font-prompt text-xl">กำลังเสกคำคม...</p>
                       <p className="text-slate-400 text-sm font-bold font-prompt mt-1">วิเคราะห์ความกวนระดับ {annoyanceLevel}/5</p>
                     </div>
                   </div>

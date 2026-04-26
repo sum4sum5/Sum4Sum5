@@ -21,8 +21,8 @@ const Navbar = () => {
   return (
     <nav className="sticky top-0 z-[10000] px-4 py-2">
       <div className="max-w-7xl mx-auto glass rounded-3xl px-6 py-3 flex items-center justify-between shadow-sm border border-white/50 relative">
-        <Link href="/" className="flex items-center gap-2 group">
-          <div className="w-10 h-10 orange-gradient rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-inner group-hover:rotate-12 transition-transform">
+        <Link href="/" className="flex items-center gap-2 group active:scale-95 transition-transform">
+          <div className="w-10 h-10 orange-gradient rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-inner group-hover:rotate-12 transition-transform shadow-orange-200">
             ส
           </div>
           <span className="font-prompt font-bold text-xl tracking-tight">
@@ -76,10 +76,10 @@ const Navbar = () => {
                     <Link
                       href={item.href}
                       onClick={() => setIsOpen(false)}
-                      className={`flex items-center justify-between px-5 py-4 rounded-2xl transition-all ${
+                      className={`flex items-center justify-between px-5 py-4 rounded-2xl transition-all active:scale-[0.98] active:opacity-80 ${
                         pathname === item.href 
                           ? 'bg-orange-500 text-white shadow-lg shadow-orange-200' 
-                          : 'hover:bg-orange-50 text-slate-600'
+                          : 'bg-white border border-slate-100 text-slate-600'
                       }`}
                     >
                       <div className="flex items-center gap-4">
@@ -104,11 +104,13 @@ const Navbar = () => {
 const NavLink = ({ href, children, icon, active }: { href: string; children: React.ReactNode; icon: React.ReactNode; active: boolean }) => (
   <Link 
     href={href} 
-    className={`flex items-center gap-2 px-4 py-2 rounded-full transition-all group font-prompt font-bold text-[14px] ${
-      active ? 'text-orange-600 bg-orange-50' : 'text-slate-500 hover:bg-orange-50 hover:text-primary'
+    className={`flex items-center gap-2 px-4 py-2 rounded-full transition-all group font-prompt font-bold text-[14px] active:scale-95 ${
+      active 
+        ? 'text-orange-600 bg-orange-50 shadow-sm border border-orange-100' 
+        : 'text-slate-600 hover:bg-orange-50 hover:text-primary border border-transparent'
     }`}
   >
-    <span className={`transition-transform group-hover:scale-110 ${active ? 'text-orange-600' : 'text-orange-400'}`}>
+    <span className={`transition-transform group-hover:scale-110 ${active ? 'text-orange-600' : 'text-orange-500'}`}>
       {icon}
     </span>
     <span>{children}</span>

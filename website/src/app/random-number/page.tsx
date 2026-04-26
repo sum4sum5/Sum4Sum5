@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import NumberRandomizer from '@/components/NumberRandomizer';
-import StickyAd from '@/components/StickyAd';
+import AdBanner from '@/components/shared/AdBanner';
 import { Sparkles, Zap, HelpCircle } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -36,13 +36,8 @@ export default function NumberPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      {/* Subtle Top Ad space - Restored to top */}
-      <div className="w-full bg-white border-b border-gray-100 py-1 overflow-hidden">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="w-full h-12 md:h-16 bg-slate-50 border border-dashed border-slate-200 rounded-xl flex items-center justify-center text-slate-400 text-[10px] md:text-xs">
-            พื้นที่โฆษณา (Ad Banner)
-          </div>
-        </div>
+      <div className="w-full">
+        <AdBanner slot="home-horizontal" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 pt-4 lg:pt-8 pb-4 space-y-4 lg:space-y-6">
@@ -102,15 +97,15 @@ export default function NumberPage() {
                   <div className="divide-y divide-slate-100">
                     <FAQItem 
                       question="สุ่มเลข 2 ตัว หรือ 3 ตัว ได้ไหม?"
-                      answer="ได้แน่นอนครับ เพียงแค่คุณกำหนดช่วงเริ่มต้นเป็น 0 และตัวเลขสุดท้ายเป็น 99 สำหรับเลข 2 ตัว หรือ 999 สำหรับเลข 3 ตัว ระบบจะสุ่มภายในช่วงนั้นให้ทันทีครับ"
+                      answer="ได้แน่นอน เพียงแค่คุณกำหนดช่วงเริ่มต้นเป็น 0 และตัวเลขสุดท้ายเป็น 99 สำหรับเลข 2 ตัว หรือ 999 สำหรับเลข 3 ตัว ระบบจะสุ่มภายในช่วงนั้นให้ทันทีเลย"
                     />
                     <FAQItem 
                       question="ผลลัพธ์การสุ่มมีการล็อคค่าไว้ล่วงหน้าไหม?"
-                      answer="ไม่มีการล็อคค่าครับ ระบบของเราใช้การสุ่มแบบกระจายตัวที่สมบูรณ์ (Pseudo-Random Generation) ทุกตัวเลขมีโอกาสถูกสุ่มได้เท่ากันตามหลักสถิติครับ"
+                      answer="ไม่มีการล็อคค่าแน่นอน ระบบของเราใช้การสุ่มแบบกระจายตัวที่สมบูรณ์ (Pseudo-Random Generation) ทุกตัวเลขมีโอกาสถูกสุ่มได้เท่ากันตามหลักสถิติ"
                     />
                     <FAQItem 
                       question="ใช้สุ่มเลข 6 หลัก (สลากกินแบ่ง) ได้อย่างไร?"
-                      answer="ใช้ฟีเจอร์ '6-digit (Lottery)' ในเมนูตั้งค่าได้เลยครับ ระบบจะทำการสุ่มเลข 6 หลักพร้อมแอนิเมชั่นตู้สล็กที่สมบูรณ์แบบที่สุด"
+                      answer="ใช้ฟีเจอร์ '6-digit (Lottery)' ในเมนูตั้งค่าได้เลย ระบบจะทำการสุ่มเลข 6 หลักพร้อมแอนิเมชั่นตู้สล็อตที่สมบูรณ์แบบที่สุด"
                     />
                   </div>
                 </div>
@@ -139,19 +134,13 @@ export default function NumberPage() {
                   </div>
                 </div>
 
-                {/* Sidebar Ad space */}
-                <div className="w-full aspect-square bg-slate-50/50 border border-dashed border-slate-200 rounded-[3rem] flex flex-col items-center justify-center text-slate-400 text-sm text-center px-8 font-bold gap-4 backdrop-blur-sm">
-                  <div className="w-16 h-16 bg-white rounded-3xl flex items-center justify-center shadow-sm">
-                    <Sparkles className="w-8 h-8 opacity-20" />
-                  </div>
-                  พื้นที่โฆษณา (Ad Space)
-                </div>
+                <AdBanner slot="sidebar-sq" />
               </div>
            </aside>
         </div>
       </div>
 
-      <StickyAd />
+      {/* Removed StickyAd to fix layout */}
     </div>
   );
 }

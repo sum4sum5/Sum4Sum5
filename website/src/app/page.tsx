@@ -4,6 +4,7 @@ import React from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Dices, Sparkles, ChevronRight, Play, Users, FerrisWheel } from 'lucide-react';
 import Link from 'next/link';
+import AdBanner from '@/components/shared/AdBanner';
 
 export default function Home() {
   const jsonLd = {
@@ -19,24 +20,13 @@ export default function Home() {
     },
     "description": "แพลตฟอร์มเครื่องมือสุ่มออนไลน์ฟรี รวมวงล้อเสี่ยงดวง สุ่มเลขออนไลน์ และสุ่มชื่อจับฉลาก",
     "featureList": [
-      "สุ่มเลขออนไลน์",
-      "วงล้อเสี่ยงดวง",
-      "สุ่มชื่อผู้โชคดี",
-      "สุ่มแคปชั่นกวนๆ"
+      "สุ่มเลขออนไลน์ แม่นยำ 100% (PRNG)",
+      "วงล้อเสี่ยงดวง ออนไลน์ ดีไซน์พรีเมียม",
+      "สุ่มรายชื่อผู้โชคดี พร้อมภาพประกาศผล 3D",
+      "แคปชั่น AI ภาษาไทยล่าสุด (Gemini)"
     ]
   };
 
-  const webSiteJsonLd = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "สุ่มสี่สุ่มห้า",
-    "url": "https://sum4sum5.com",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://sum4sum5.com/search?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
-  };
 
   const faqJsonLd = {
     "@context": "https://schema.org",
@@ -47,7 +37,7 @@ export default function Home() {
         "name": "สุ่มสี่สุ่มห้า (Sum4Sum5) คืออะไร?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "เป็นแพลตฟอร์มรวมเครื่องมือสุ่มออนไลน์ฟรี เช่น วงล้อเสี่ยงดวง สุ่มตัวเลข สุ่มรายชื่อ และสุ่มแคปชั่นกวนๆ ออกแบบมาเพื่อช่วยในการตัดสินใจและสร้างคอนเทนต์โซเชียลมีเดีย"
+          "text": "เป็นแพลตฟอร์มรวมเครื่องมือสุ่มออนไลน์ฟรี เช่น วงล้อสุ่ม สุ่มตัวเลข สุ่มรายชื่อ และสุ่มแคปชั่นกวนๆ ออกแบบมาเพื่อช่วยในการตัดสินใจและสร้างคอนเทนต์โซเชียลมีเดีย"
         }
       },
       {
@@ -55,7 +45,7 @@ export default function Home() {
         "name": "ใช้งานฟรีจริงหรือไม่?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "ใช่ครับ ทุกเครื่องมือบนเว็บไซต์ของเราใช้งานได้ฟรี 100% โดยไม่ต้องสมัครสมาชิก"
+          "text": "ใช่ ทุกเครื่องมือบนเว็บไซต์ของเราใช้งานได้ฟรี 100% โดยไม่ต้องสมัครสมาชิก"
         }
       }
     ]
@@ -67,10 +57,6 @@ export default function Home() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteJsonLd) }}
       />
       <script
         type="application/ld+json"
@@ -145,6 +131,10 @@ export default function Home() {
           </div>
         </section>
 
+        <div className="max-w-7xl mx-auto w-full px-6">
+          <AdBanner slot="home-horizontal" />
+        </div>
+
         {/* Features Portal Grid */}
         <section className="max-w-7xl mx-auto w-full px-6">
           <div className="grid md:grid-cols-2 gap-8">
@@ -153,7 +143,7 @@ export default function Home() {
               href="/wheel"
               icon={FerrisWheel}
               title="วงล้อสุ่ม"
-              description="สร้างวงล้อส่วนตัว ใส่รายชื่ออาหาร เพื่อน หรือรางวัล แล้วหมุนเพื่อลุ้นผลลัพธ์!"
+              description="สร้างวงล้อส่วนตัวที่มีความแม่นยำสูง (PRNG) ใส่รายชื่ออาหาร เพื่อน หรือรางวัล แล้วลุ้นผลลัพธ์ผ่านกราฟิกสุดพรีเมียม"
               color="orange"
             />
 
@@ -162,7 +152,7 @@ export default function Home() {
               href="/random-number"
               icon={Dices}
               title="สุ่มเลข"
-              description="สุ่มเลขตามช่วงที่ต้องการ (Min/Max) แม่นยำ รวดเร็ว บันทึกรูปผลลัพธ์ได้ทันที"
+              description="ระบบสุ่มตัวเลขออนไลน์ที่ยุติธรรม 100% กำหนดช่วงได้ตามต้องการ พร้อมฟีเจอร์บันทึกรูปผลลัพธ์เพื่อแชร์ลงโซเชียล"
               color="blue"
             />
 
@@ -171,7 +161,7 @@ export default function Home() {
               href="/random-name"
               icon={Users}
               title="สุ่มรายชื่อ"
-              description="สุ่มรายชื่อผู้โชคดีด้วยดีไซน์พรีเมียม พร้อมภาพประกาศผล 3D สุดอลังการ แชร์ลงโซเชียลได้ทันที เหมาะสำหรับทุกกิจกรรม"
+              description="สุ่มรายชื่อผู้โชคดีด้วยระบบแอนิเมชัน 3D สุดอลังการ ให้ทุกการจับฉลากเป็นเรื่องตื่นเต้นและโปร่งใสที่สุด"
               color="purple"
             />
 
@@ -180,7 +170,7 @@ export default function Home() {
               href="/random-caption"
               icon={Sparkles}
               title="แคปชั่น AI"
-              description="สุ่มแคปชั่นสายฮา สายอ่อย สายมู หรือแคปชั่นขายของ พร้อมอิโมจิสุดน่ารัก ช่วยคิดแคปชั่นลงไอจี/เฟซบุ๊กให้ปังกว่าเดิม"
+              description="คิดแคปชั่นไม่ออก? ให้ AI (Gemini) ช่วยสุ่มแคปชั่นเด็ดๆ ทั้งสายฮา สายอ่อย และขายของ พร้อมอิโมจิที่เข้ากับ Vibe ของรูปภาพ"
               color="pink"
             />
           </div>
@@ -190,7 +180,7 @@ export default function Home() {
         <section className="max-w-7xl mx-auto px-6 py-6 md:py-10">
           <div className="text-center mb-10 md:mb-16 space-y-3 md:space-y-4">
             <h2 className="text-2xl md:text-5xl font-prompt font-black text-slate-900 leading-tight">เริ่มสุ่มง่ายๆ ใน 3 ขั้นตอน</h2>
-            <p className="text-slate-500 text-base md:text-lg">ไม่ต้องดาวน์โหลด ไม่ต้องสมัครสมาชิก เริ่มใช้งานได้ทันที</p>
+            <p className="text-slate-500 text-base md:text-lg">สัมผัสประสบการณ์การสุ่มที่ดีที่สุด ไม่ต้องดาวน์โหลด ไม่ต้องสมัครสมาชิก</p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-12 relative">
@@ -200,17 +190,17 @@ export default function Home() {
              <StepCard 
                number="01"
                title="เลือกเครื่องมือ"
-               description="เลือกวงล้อ สุ่มเลข สุ่มชื่อ หรือสุ่มแคปชั่น ตามที่คุณต้องการใช้งาน"
+               description="เลือกวงล้อสุ่ม สุ่มเลข หรือแคปชั่น AI ตามเป้าหมายที่คุณต้องการ"
              />
              <StepCard 
                number="02"
                title="ใส่ข้อมูล"
-               description="กรอกรายชื่อ ช่วงตัวเลข หรือหัวข้อแคปชั่นที่คุณอยากให้ AI ช่วยคิด"
+               description="กรอกรายชื่อ กำหนดช่วงตัวเลข หรือเลือกโหมดแคปชั่นที่คุณต้องการให้ระบบประมวลผล"
              />
              <StepCard 
                number="03"
-               title="สุ่มและแชร์"
-               description="กดปุ่มสุ่ม แล้วบันทึกผลลัพธ์เป็นรูปภาพสวยๆ ไปลงโซเชียลได้ทันที"
+               title="รับผลสรุป"
+               description="กดปุ่มสุ่มเพื่อดูผลลัพธ์ และบันทึกเป็นรูปภาพสวยๆ ไปลงโซเชียลได้ทันที"
              />
           </div>
         </section>
@@ -277,6 +267,10 @@ export default function Home() {
           </div>
         </section>
 
+        <div className="max-w-4xl mx-auto w-full px-6">
+          <AdBanner slot="home-horizontal" />
+        </div>
+
         {/* FAQ Section for Home SEO */}
         <section className="max-w-4xl mx-auto px-6 py-20 border-t border-slate-100">
           <div className="text-center mb-16">
@@ -287,19 +281,19 @@ export default function Home() {
           <div className="space-y-4">
              <FAQAccordion 
                question="สุ่มสี่สุ่มห้า (Sum4Sum5) คืออะไร?"
-               answer="เราคือแพลตฟอร์มรวมเครื่องมือสุ่มออนไลน์ที่ดีที่สุดในไทย ทั้งวงล้อสุ่ม สุ่มเลข สุ่มรายชื่อ และแคปชั่น AI ที่ออกแบบมาให้ใช้งานง่าย ดีไซน์พรีเมียม และเหมาะกับการแชร์ลงโซเชียลมีเดียที่สุดครับ"
+               answer="เราคือแพลตฟอร์มรวมเครื่องมือสุ่มออนไลน์ที่ดีที่สุดในไทย ทั้งวงล้อสุ่ม สุ่มเลข สุ่มรายชื่อ และแคปชั่น AI ที่ออกแบบมาให้ใช้งานง่าย ดีไซน์พรีเมียม และเหมาะกับการแชร์ลงโซเชียลมีเดียที่สุดเลย"
              />
              <FAQAccordion 
                question="ผลการสุ่มยุติธรรมหรือไม่?"
-               answer="แน่นอนครับ ระบบของเราใช้อัลกอริทึมการสุ่มมาตรฐานสากล (PRNG) ที่มีความแม่นยำและยุติธรรม 100% มั่นใจได้เลยว่าไม่มีการล็อคผลครับ"
+               answer="แน่นอน ระบบของเราใช้อัลกอริทึมการสุ่มมาตรฐานสากล (PRNG) ที่มีความแม่นยำและยุติธรรม 100% มั่นใจได้เลยว่าไม่มีการล็อคผล"
              />
              <FAQAccordion 
                question="บันทึกภาพไปลง TikTok หรือ Instagram ได้อย่างไร?"
-               answer="ในหน้าสรุปผลการสุ่มทุกอัน จะมีปุ่ม 'บันทึกรูปภาพ' หรือ 'แชร์' ระบบจะเจนรูปภาพขนาด 1:1 ที่สวยงามมาให้คุณเซฟลงเครื่องได้ทันทีครับ"
+               answer="ในหน้าสรุปผลการสุ่มทุกอัน จะมีปุ่ม 'บันทึกรูปภาพ' หรือ 'แชร์' ระบบจะเจนรูปภาพขนาด 1:1 ที่สวยงามมาให้คุณเซฟลงเครื่องได้ทันทีเลย"
              />
              <FAQAccordion 
                question="ใช้งานบนมือถือได้สะดวกไหม?"
-               answer="เว็บไซต์ของเราถูกออกแบบมาให้เป็น Mobile-First ครับ ใช้งานบนมือถือได้ลื่นไหลเหมือนแอปพลิเคชัน โดยไม่ต้องโหลดแอปเพิ่มให้หนักเครื่องครับ"
+               answer="เว็บไซต์ของเราถูกออกแบบมาให้เป็น Mobile-First ใช้งานบนมือถือได้ลื่นไหลเหมือนแอปพลิเคชัน โดยไม่ต้องโหลดแอปเพิ่มให้หนักเครื่องเลย"
              />
           </div>
         </section>

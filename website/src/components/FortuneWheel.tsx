@@ -13,6 +13,7 @@ import ResultModal from '@/components/shared/ResultModal';
 import { FORTUNE_WHEEL_THEMES } from '@/constants/tool-themes';
 import { useIsMobile } from '@/hooks/use-is-mobile';
 import { shuffleArray } from '@/lib/client/random-utils';
+import { useFullscreen } from '@/hooks/use-fullscreen';
 
 const PRESETS = [
   { name: 'วันนี้กินอะไรดี?', items: ['ส้มตำ', 'กะเพรา', 'ยำแซ่บ', 'ต้มยำ', 'ข้าวผัด'] },
@@ -42,13 +43,18 @@ export default function FortuneWheel() {
   const [isBulkMode, setIsBulkMode] = useState(true);
   const [bulkText, setBulkText] = useState(PRESETS[0].items.join('\n'));
   const [showSettings, setShowSettings] = useState(true);
-  const [isFullscreen, setIsFullscreen] = useState(false);
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const wheelContainerRef = useRef<HTMLDivElement>(null);
   const imageCache = useRef<Map<string, HTMLImageElement>>(new Map());
   const lastSliceRef = useRef<number>(-1);
   const rotationRef = useRef(0);
   const isMobile = useIsMobile();
+
+  const { isFullscreen, toggleFullscreen } = useFullscreen(wheelContainerRef, {
+    onToggle: (active) => {
+      if (active && isMobile) setShowSettings(false);
+    }
+  });
 
   const shuffleOptions = () => {
     const shuffled = shuffleArray(options);
@@ -274,7 +280,7 @@ export default function FortuneWheel() {
     if (isSpinning || options.length < 2) return;
     setIsSpinning(true);
     setWinner(null);
-    logToolUsage('Fortune Wheel', { options: options.length, theme: currentTheme.name });
+    logToolUsage('วงล้อสุ่ม', { options: options.length, theme: currentTheme.name });
     const spinRotation = Math.random() * 1440 + 1440;
     const duration = 8500;
     const start = performance.now();
@@ -320,25 +326,6 @@ export default function FortuneWheel() {
   };
 
 
-  const toggleFullScreen = () => {
-    const element = wheelContainerRef.current;
-    if (!element) return;
-    if (!document.fullscreenElement) {
-      element.requestFullscreen().catch(() => { });
-    } else {
-      if (document.exitFullscreen) document.exitFullscreen();
-    }
-  };
-
-  useEffect(() => {
-    const handleFullscreenChange = () => {
-      const active = !!document.fullscreenElement;
-      setIsFullscreen(active);
-      if (active) setShowSettings(false);
-    };
-    document.addEventListener('fullscreenchange', handleFullscreenChange);
-    return () => document.removeEventListener('fullscreenchange', handleFullscreenChange);
-  }, []);
 
   return (
     <div className="relative flex-1 flex flex-col min-h-0 pt-0 pb-12 overflow-x-hidden">
@@ -557,7 +544,7 @@ export default function FortuneWheel() {
           >
             <div className={`w-full flex items-center justify-between px-4 lg:px-10 transition-all duration-500 z-[1000] ${isFullscreen ? 'absolute top-6 lg:top-10 left-0 right-0' : 'absolute top-4 left-0 right-0'}`}>
               <ThemeSelector themes={THEMES} currentTheme={currentTheme} setCurrentTheme={setCurrentTheme} />
-              <FullscreenButton isFullscreen={isFullscreen} onToggle={toggleFullScreen} />
+              <FullscreenButton isFullscreen={isFullscreen} onToggle={toggleFullscreen} />
             </div>
 
             <div className={`relative w-full aspect-square flex items-center justify-center transition-all duration-700 ${showSettings ? 'max-w-[550px]' : 'max-w-[85vh] lg:max-w-[650px]'}`}>

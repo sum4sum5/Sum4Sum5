@@ -2,6 +2,9 @@
 
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import CookieBanner from "@/components/CookieBanner";
+import AdBanner from "@/components/shared/AdBanner";
+import BackToTop from "@/components/BackToTop";
 import { usePathname } from "next/navigation";
 
 type AppShellProps = {
@@ -21,6 +24,9 @@ export default function AppShell({ children }: AppShellProps) {
       <Navbar />
       <main className="flex-grow">{children}</main>
       <Footer />
+      <CookieBanner />
+      <AdBanner slot="sticky-bottom" />
+      <BackToTop />
     </>
   );
 }

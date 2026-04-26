@@ -1,7 +1,7 @@
 import React from 'react';
 import { Metadata } from 'next';
 import ContentAssistant from '@/components/CaptionGenerator';
-import StickyAd from '@/components/StickyAd';
+import AdBanner from '@/components/shared/AdBanner';
 import { Sparkles, Heart, Share2, HelpCircle, Wand2, Laugh } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -38,13 +38,8 @@ export default function CaptionPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       
-      {/* Subtle Top Ad space */}
-      <div className="w-full bg-white border-b border-gray-100 py-1 overflow-hidden">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="w-full h-12 md:h-16 bg-slate-50 border border-dashed border-slate-200 rounded-xl flex items-center justify-center text-slate-400 text-[10px] md:text-xs">
-            พื้นที่โฆษณา (Ad Banner)
-          </div>
-        </div>
+      <div className="w-full">
+        <AdBanner slot="home-horizontal" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 pt-4 lg:pt-8 pb-4 space-y-4 lg:space-y-6">
@@ -69,6 +64,31 @@ export default function CaptionPage() {
                     เบื่อไหมกับการนั่งจ้องจอนานๆ แต่คิดแคปชั่นไม่ออก? <strong>เครื่องมือสุ่มแคปชั่น AI</strong> ของเราคือคำตอบที่ดีที่สุด 
                     ไม่ว่าคุณจะหา <strong>สุ่มแคปชั่นกวนๆ</strong>, <strong>แคปชั่นสายฮา</strong>, <strong>แคปชั่นสายอ่อย</strong> หรือแม้แต่ <strong>แคปชั่นสายมู</strong> เราช่วยหาคำพูดที่ &quot;โดนใจ&quot; และ &quot;เพิ่ม Engagement&quot; ได้ในคลิกเดียว
                   </p>
+
+                  <div className="mt-12 bg-orange-50/50 rounded-3xl p-8 border border-orange-100/50">
+                    <h3 className="font-prompt font-black text-2xl text-slate-900 mb-6 flex items-center gap-3">
+                      <Wand2 className="w-6 h-6 text-primary" /> วิธีการใช้งานสุ่มแคปชั่น AI
+                    </h3>
+                    
+                    <ol className="space-y-4 text-slate-600 font-medium list-none p-0 m-0">
+                      <li className="flex gap-4">
+                        <span className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center shrink-0 font-bold">1</span>
+                        <span className="pt-1">เลือก <strong>แพลตฟอร์มปลายทาง</strong> (Facebook, TikTok, IG Reels ฯลฯ) เพื่อให้ AI ปรับสไตล์ภาษา</span>
+                      </li>
+                      <li className="flex gap-4">
+                        <span className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center shrink-0 font-bold">2</span>
+                        <span className="pt-1">กำหนด <strong>มู้ดแอนด์โทน (Vibe)</strong> ว่าอยากได้สายฮา สายอ่อย หรือสายมู</span>
+                      </li>
+                      <li className="flex gap-4">
+                        <span className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center shrink-0 font-bold">3</span>
+                        <span className="pt-1">พิมพ์หัวข้อคร่าวๆ แล้วกดปุ่ม <strong>"ให้ AI ช่วยคิด"</strong> เพื่อสุ่มแคปชั่น 3 สไตล์ทันที</span>
+                      </li>
+                      <li className="flex gap-4">
+                        <span className="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center shrink-0 font-bold">4</span>
+                        <span className="pt-1">เลือกแคปชั่นที่ชอบแล้วกด <strong>คัดลอก</strong> ไปใช้งานได้เลย!</span>
+                      </li>
+                    </ol>
+                  </div>
                   
                   <div className="grid sm:grid-cols-2 gap-6 my-10">
                     <div className="bg-orange-50/50 p-6 rounded-3xl border border-orange-100">
@@ -100,15 +120,15 @@ export default function CaptionPage() {
                   <div className="divide-y divide-slate-100">
                     <FAQItem 
                       question="สุ่มแคปชั่นกวนๆ ไปใช้ที่ไหนได้บ้าง?"
-                      answer="ใช้ได้ทุกที่เลยครับ! ไม่ว่าจะเป็น Facebook, Instagram, TikTok หรือแม้แต่ Twitter (X) ระบบของเราปรับจริตภาษาให้เข้ากับทุกแพลตฟอร์มครับ"
+                      answer="ใช้ได้ทุกที่เลย ไม่ว่าจะเป็น Facebook, Instagram, TikTok หรือแม้แต่ Twitter (X) ระบบของเราปรับจริตภาษาให้เข้ากับทุกแพลตฟอร์มแน่นอน"
                     />
                     <FAQItem 
                       question="AI ช่วยคิดแคปชั่นได้จริงไหม?"
-                      answer="จริงแท้แน่นอนครับ! เราใช้โมเดล AI ล่าสุดที่ถูกฝึกฝนมาให้เข้าใจภาษาไทยและมุกตลกของคนไทยโดยเฉพาะ ทำให้ได้แคปชั่นที่ดูเป็นธรรมชาติเหมือนคนเขียนเองเลย"
+                      answer="จริงแท้แน่นอน เราใช้โมเดล AI ล่าสุดที่ถูกฝึกฝนมาให้เข้าใจภาษาไทยและมุกตลกของคนไทยโดยเฉพาะ ทำให้ได้แคปชั่นที่ดูเป็นธรรมชาติเหมือนคนเขียนเองเลย"
                     />
                     <FAQItem 
                       question="ใช้งานฟรีและสุ่มได้ไม่จำกัดใช่ไหม?"
-                      answer="ใช่ครับ สุ่มสี่สุ่มห้าให้บริการฟรี 100% คุณสามารถกดสุ่มได้เรื่อยๆ จนกว่าจะได้แคปชั่นที่โดนใจที่สุดครับ"
+                      answer="ใช่ สุ่มสี่สุ่มห้าให้บริการฟรี 100% คุณสามารถกดสุ่มได้เรื่อยๆ จนกว่าจะได้แคปชั่นที่โดนใจที่สุดเลย"
                     />
                   </div>
                 </div>
@@ -144,19 +164,13 @@ export default function CaptionPage() {
                   </div>
                 </div>
 
-                {/* Sidebar Ad space */}
-                <div className="w-full aspect-square bg-slate-50/50 border border-dashed border-slate-200 rounded-[3rem] flex flex-col items-center justify-center text-slate-400 text-sm text-center px-8 font-bold gap-4 backdrop-blur-sm">
-                  <div className="w-16 h-16 bg-white rounded-3xl flex items-center justify-center shadow-sm">
-                    <Heart className="w-8 h-8 opacity-20 text-red-500" />
-                  </div>
-                  พื้นที่โฆษณา (Ad Space)
-                </div>
+                <AdBanner slot="sidebar-sq" />
               </div>
            </aside>
         </div>
       </div>
 
-      <StickyAd />
+      {/* Removed StickyAd to fix layout */}
     </div>
   );
 }

@@ -1,8 +1,8 @@
 import React from 'react';
 import { Metadata } from 'next';
 import NameRandomizer from '@/components/NameRandomizer';
-import StickyAd from '@/components/StickyAd';
-import { Trophy, HelpCircle } from 'lucide-react';
+import AdBanner from '@/components/shared/AdBanner';
+import { Trophy, HelpCircle, Users } from 'lucide-react';
 
 export const metadata: Metadata = {
   title: 'สุ่มชื่อ ออนไลน์ - จับฉลากสุ่มผู้โชคดี โปรแกรมจับสลากพรีเมียม (Random Name Picker)',
@@ -65,13 +65,8 @@ export default function NamePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(howToLd) }}
       />
       
-      {/* Subtle Top Ad space - Restored to top */}
-      <div className="w-full bg-white border-b border-gray-100 py-1 overflow-hidden">
-        <div className="max-w-4xl mx-auto px-6">
-          <div className="w-full h-12 md:h-16 bg-slate-50 border border-dashed border-slate-200 rounded-xl flex items-center justify-center text-slate-400 text-[10px] md:text-xs">
-            พื้นที่โฆษณา (Ad Banner)
-          </div>
-        </div>
+      <div className="w-full">
+        <AdBanner slot="home-horizontal" />
       </div>
 
       <div className="max-w-7xl mx-auto px-4 pt-4 lg:pt-8 pb-4 space-y-4 lg:space-y-6">
@@ -104,7 +99,9 @@ export default function NamePage() {
                   </section>
 
                   <section className="bg-orange-50/50 p-8 rounded-[3rem] border border-orange-100 space-y-6">
-                    <h3 className="text-2xl font-black text-slate-800 font-prompt">วิธีใช้ เว็บสุ่มชื่อ ง่ายๆ ใน 3 ขั้นตอน</h3>
+                    <h3 className="font-prompt font-black text-2xl text-slate-900 mb-6 flex items-center gap-3">
+                      <Users className="w-6 h-6 text-primary" /> วิธีใช้ เว็บสุ่มชื่อ ง่ายๆ ใน 3 ขั้นตอน
+                    </h3>
                     <ol className="list-none p-0 space-y-4">
                       <li className="flex gap-4">
                         <span className="flex-shrink-0 w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-bold text-sm">1</span>
@@ -138,19 +135,19 @@ export default function NamePage() {
                   <div className="divide-y divide-slate-100 border-t border-slate-100">
                     <FAQItem 
                       question="สุ่มชื่อแล้วสามารถบันทึกเป็นรูปภาพได้ไหม?"
-                      answer="ได้ครับ! ระบบของเราจะสร้างภาพประกาศผลที่สวยงามระดับพรีเมียม (Premium Wave Poster) พร้อมไอคอนถ้วยรางวัล 3D คุณสามารถกดปุ่ม 'บันทึกภาพ' เพื่อเซฟรูปลงเครื่องและนำไปแชร์ต่อได้ทันทีครับ"
+                      answer="ได้เลย! ระบบของเราจะสร้างภาพประกาศผลที่สวยงามระดับพรีเมียม (Premium Wave Poster) พร้อมไอคอนถ้วยรางวัล 3D คุณสามารถกดปุ่ม 'บันทึกภาพ' เพื่อเซฟรูปลงเครื่องและนำไปแชร์ต่อได้ทันที"
                     />
                     <FAQItem 
                       question="สุ่มแบ่งกลุ่มได้มากที่สุดกี่กลุ่ม?"
-                      answer="คุณสามารถสุ่มแบ่งกลุ่มได้ตามจำนวนรายชื่อที่มีครับ ระบบจะกระจายรายชื่อลงในแต่ละกลุ่มให้เท่าๆ กันอย่างยุติธรรมที่สุด เหมาะสำหรับการจัดทีมทำงานหรือจับฉลากแข่งกีฬาครับ"
+                      answer="คุณสามารถสุ่มแบ่งกลุ่มได้ตามจำนวนรายชื่อที่มี ระบบจะกระจายรายชื่อลงในแต่ละกลุ่มให้เท่าๆ กันอย่างยุติธรรมที่สุด เหมาะสำหรับการจัดทีมทำงานหรือจับฉลากแข่งกีฬา"
                     />
                     <FAQItem 
                       question="สามารถสุ่มรายชื่อได้มากที่สุดกี่คน?"
-                      answer="ระบบของเรารองรับการสุ่มรายชื่อได้หลายร้อยรายชื่อในคราวเดียวครับ โดยไม่มีการสะดุดหรือช้าลงแต่อย่างใดครับ"
+                      answer="ระบบของเรารองรับการสุ่มรายชื่อได้หลายร้อยรายชื่อในคราวเดียว โดยไม่มีการสะดุดหรือช้าลงแต่อย่างใดเลย"
                     />
                     <FAQItem 
                       question="ข้อมูลรายชื่อจะปลอดภัยไหม?"
-                      answer="ปลอดภัยแน่นอนครับ ข้อมูลรายชื่อจะถูกเก็บไว้ในระดับเบราว์เซอร์ของคุณเท่านั้น เราไม่มีการบันทึกข้อมูลส่วนบุคคลลงเซิร์ฟเวอร์ และข้อมูลจะถูกล้างออกเมื่อคุณปิดหน้าเว็บหรือกดปุ่มล้างรายชื่อครับ"
+                      answer="ปลอดภัยแน่นอน ข้อมูลรายชื่อจะถูกเก็บไว้ในระดับเบราว์เซอร์ของคุณเท่านั้น เราไม่มีการบันทึกข้อมูลส่วนบุคคลลงเซิร์ฟเวอร์ และข้อมูลจะถูกล้างออกเมื่อคุณปิดหน้าเว็บหรือกดปุ่มล้างรายชื่อ"
                     />
                   </div>
                 </div>
@@ -186,19 +183,13 @@ export default function NamePage() {
                   </div>
                 </div>
 
-                {/* Sidebar Ad space */}
-                <div className="w-full aspect-square bg-slate-50/50 border border-dashed border-slate-200 rounded-[3rem] flex flex-col items-center justify-center text-slate-400 text-sm text-center px-8 font-bold gap-4 backdrop-blur-sm">
-                  <div className="w-16 h-16 bg-white rounded-3xl flex items-center justify-center shadow-sm">
-                    <Trophy className="w-8 h-8 opacity-20 text-orange-500" />
-                  </div>
-                  พื้นที่โฆษณา (Ad Space)
-                </div>
+                <AdBanner slot="sidebar-sq" />
               </div>
            </aside>
         </div>
       </div>
 
-      <StickyAd />
+      {/* Removed StickyAd to fix layout */}
     </div>
   );
 }

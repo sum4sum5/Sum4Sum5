@@ -14,6 +14,8 @@ import Switch from '@/components/shared/Switch';
 import ResultModal from '@/components/shared/ResultModal';
 import { NUMBER_RANDOMIZER_THEMES } from '@/constants/tool-themes';
 import { useIsMobile } from '@/hooks/use-is-mobile';
+import { useFullscreen } from '@/hooks/use-fullscreen';
+import { logToolUsage } from '@/lib/supabase';
 
 const THEMES = NUMBER_RANDOMIZER_THEMES;
 
@@ -87,64 +89,24 @@ export default function NumberRandomizer() {
   const [isRolling, setIsRolling] = useState(false);
   const [showSettings, setShowSettings] = useState(true);
   const [currentTheme, setCurrentTheme] = useState(THEMES[0]);
-  const [isFullscreen, setIsFullscreen] = useState(false);
   const isMobile = useIsMobile();
   const [selectedPreset, setSelectedPreset] = useState<string | null>('1-99');
   const [showResultModal, setShowResultModal] = useState(false);
-
+  
   const containerRef = useRef<HTMLDivElement>(null);
+  const { isFullscreen, toggleFullscreen } = useFullscreen(containerRef, {
+    onToggle: (active) => {
+      if (active && isMobile) setShowSettings(false);
+    }
+  });
   const leverControls = useAnimation();
 
-  useEffect(() => {
-    const handleFullscreenChange = () => {
-      const active = !!document.fullscreenElement;
-      setIsFullscreen(active);
-      if (active && isMobile) setShowSettings(false);
-    };
-    document.addEventListener('fullscreenchange', handleFullscreenChange);
-
-    // Inject global styles
-    const style = document.createElement('style');
-    style.textContent = `
-      @keyframes bounce-slow {
-        0%, 100% { transform: translateY(0); }
-        50% { transform: translateY(-10px); }
-      }
-      .animate-bounce-slow {
-        animation: bounce-slow 2s infinite ease-in-out;
-      }
-      .custom-scrollbar::-webkit-scrollbar {
-        width: 4px;
-      }
-      .custom-scrollbar::-webkit-scrollbar-track {
-        background: transparent;
-      }
-      .custom-scrollbar::-webkit-scrollbar-thumb {
-        background: #e2e8f0;
-        border-radius: 10px;
-      }
-    `;
-    document.head.appendChild(style);
-
-    return () => {
-      document.removeEventListener('fullscreenchange', handleFullscreenChange);
-      document.head.removeChild(style);
-    };
-  }, [isMobile]);
-
-  const toggleFullScreen = () => {
-    if (!containerRef.current) return;
-    if (!document.fullscreenElement) {
-      containerRef.current.requestFullscreen();
-    } else {
-      document.exitFullscreen();
-    }
-  };
 
   const spin = async () => {
     if (min >= max || isRolling) return;
     setIsRolling(true);
     setShowResultModal(false);
+    logToolUsage('สุ่มตัวเลข', { min, max, quantity, allowDuplicates });
 
     leverControls.start({
       rotateX: [0, 50, 0],
@@ -443,7 +405,7 @@ export default function NumberRandomizer() {
             <div className={`flex-1 flex flex-col items-center order-1 lg:order-2 relative ${isFullscreen ? 'justify-center h-full' : 'justify-start pt-0 lg:pt-0'}`}>
               <div className={`w-full flex items-center justify-between px-4 lg:px-10 transition-all duration-500 z-[1000] ${isFullscreen ? 'absolute top-6 lg:top-10 left-0 right-0' : 'mb-2'}`}>
                 <ThemeSelector themes={THEMES} currentTheme={currentTheme} setCurrentTheme={setCurrentTheme} />
-                <FullscreenButton isFullscreen={isFullscreen} onToggle={toggleFullScreen} />
+                <FullscreenButton isFullscreen={isFullscreen} onToggle={toggleFullscreen} />
               </div>
 
                 <motion.div 

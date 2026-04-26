@@ -62,6 +62,17 @@ export const metadata: Metadata = {
   verification: {
     google: "Qqy3gTIegAfH4_7A8_lDj3N31PoJFTTejpQAKdRxMpk",
   },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
+  },
 };
 
 export default function RootLayout({
@@ -69,8 +80,27 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "สุ่มสี่สุ่มห้า (Sum4Sum5)",
+    "alternateName": "Sum4Sum5",
+    "url": siteUrl,
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": `${siteUrl}/search?q={search_term_string}`,
+      "query-input": "required name=search_term_string"
+    }
+  };
+
   return (
     <html lang="th" className={`${kanit.variable} ${prompt.variable} scroll-smooth`}>
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body className="font-kanit antialiased bg-gray-50 text-slate-900 min-h-screen">
         <AppShell>{children}</AppShell>
         {process.env.NEXT_PUBLIC_GA_ID && (

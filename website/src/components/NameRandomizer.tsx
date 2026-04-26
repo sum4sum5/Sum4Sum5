@@ -15,6 +15,9 @@ import ResultModal from '@/components/shared/ResultModal';
 import { NAME_RANDOMIZER_THEMES } from '@/constants/tool-themes';
 import { useIsMobile } from '@/hooks/use-is-mobile';
 import { shuffleArray } from '@/lib/client/random-utils';
+import { logToolUsage } from '@/lib/supabase';
+
+import { useFullscreen } from '@/hooks/use-fullscreen';
 
 const THEMES = NAME_RANDOMIZER_THEMES;
 
@@ -45,13 +48,17 @@ export default function NameRandomizer() {
   const [isRolling, setIsRolling] = useState(false);
   const [showSettings, setShowSettings] = useState(true);
   const [currentTheme, setCurrentTheme] = useState(THEMES[0]);
-  const [isFullscreen, setIsFullscreen] = useState(false);
   const isMobile = useIsMobile();
   const [showResultModal, setShowResultModal] = useState(false);
   const [rollingName, setRollingName] = useState('');
   const [isMounted, setIsMounted] = useState(false);
-
+  
   const containerRef = useRef<HTMLDivElement>(null);
+  const { isFullscreen, toggleFullscreen } = useFullscreen(containerRef, {
+    onToggle: (active) => {
+      if (active && isMobile) setShowSettings(false);
+    }
+  });
 
   const names = namesText.split('\n').map(n => n.trim()).filter(n => n !== '');
 
@@ -73,33 +80,18 @@ export default function NameRandomizer() {
     }
   }, [namesText, isMounted]);
 
-  useEffect(() => {
-    const handleFullscreenChange = () => {
-      const active = !!document.fullscreenElement;
-      setIsFullscreen(active);
-      if (active && isMobile) setShowSettings(false);
-    };
-    document.addEventListener('fullscreenchange', handleFullscreenChange);
-    return () => document.removeEventListener('fullscreenchange', handleFullscreenChange);
-  }, [isMobile]);
-
-  const toggleFullScreen = () => {
-    if (!containerRef.current) return;
-    if (!document.fullscreenElement) {
-      containerRef.current.requestFullscreen();
-    } else {
-      document.exitFullscreen();
-    }
-  };
 
   const spin = async () => {
     if (names.length === 0 || isRolling) return;
     setIsRolling(true);
     setShowResultModal(false);
+    logToolUsage('สุ่มรายชื่อ', { names: names.length, mode, winners: winnerCount });
 
+    // Optimized interval for mobile performance
+    const rollSpeed = isMobile ? 100 : 70;
     const interval = setInterval(() => {
       setRollingName(names[Math.floor(Math.random() * names.length)]);
-    }, 70);
+    }, rollSpeed);
 
     setTimeout(() => {
       clearInterval(interval);
@@ -252,7 +244,7 @@ export default function NameRandomizer() {
           >
             <div className={`w-full flex items-center justify-between px-4 lg:px-10 transition-all duration-500 z-[1000] ${isFullscreen ? 'absolute top-6 lg:top-10 left-0 right-0' : 'mb-2'}`}>
               <ThemeSelector themes={THEMES} currentTheme={currentTheme} setCurrentTheme={setCurrentTheme} />
-              <FullscreenButton isFullscreen={isFullscreen} onToggle={toggleFullScreen} />
+              <FullscreenButton isFullscreen={isFullscreen} onToggle={toggleFullscreen} />
             </div>
 
             <div
@@ -332,15 +324,15 @@ export default function NameRandomizer() {
                           </div>
                           <div className="space-y-2 text-center w-full max-w-full overflow-hidden min-w-0 flex flex-col items-center">
                             <div 
-                              className="text-sm font-black uppercase tracking-[0.4em] animate-pulse"
+                              className="text-sm font-black uppercase tracking-widest animate-pulse"
                               style={{ color: `${currentTheme.primary}99` }}
                             >
                               กำลังสุ่มหาผู้โชคดี...
                             </div>
-                            <div className="w-full max-w-[85%] overflow-hidden min-w-0">
+                            <div className="w-full max-w-[95%] overflow-hidden min-w-0">
                               <div 
-                                className="text-3xl lg:text-4xl font-prompt font-black drop-shadow-sm italic py-2 truncate text-center"
-                                style={{ color: currentTheme.primary, lineHeight: '1.4' }}
+                                className="text-3xl lg:text-5xl font-prompt font-black drop-shadow-sm italic py-2 truncate text-center"
+                                style={{ color: currentTheme.primary, lineHeight: '1.2' }}
                               >
                                 {rollingName}
                               </div>
@@ -622,6 +614,120 @@ export default function NameRandomizer() {
 
             </div>
           </motion.div>
+
+          <ResultModal
+            isOpen={showResultModal}
+            onClose={() => setShowResultModal(false)}
+            theme={currentTheme}
+            captureId="name-randomizer"
+            title={mode === 'winner' ? 'THE WINNER IS' : 'THE GROUPS ARE'}
+            exportChildren={
+              <div className="w-full flex flex-col items-center">
+                {mode === 'winner' ? (
+                  results.map((name, i) => (
+                    <div key={i} className="flex flex-col items-center w-full">
+                      <p className={`font-prompt font-black text-slate-800 break-words w-full text-center leading-tight mb-8 ${name.length > 20 ? 'text-4xl' : 'text-6xl'}`}>
+                        {name}
+                      </p>
+                      <div className="w-24 h-[1px] bg-slate-100 mb-8 last:hidden" />
+                    </div>
+                  ))
+                ) : (
+                  <div className="grid grid-cols-1 gap-8 w-full">
+                    {groups.map((team, i) => (
+                      <div key={i} className="flex flex-col items-center w-full">
+                        <div className="flex items-center gap-3 mb-4">
+                          <div className="h-[1px] w-8 bg-slate-100" />
+                          <span className="text-sm font-black text-slate-300 uppercase tracking-widest">Team {i + 1}</span>
+                          <div className="h-[1px] w-8 bg-slate-100" />
+                        </div>
+                        <div className="flex flex-wrap justify-center gap-3 w-full">
+                          {team.map((name, j) => (
+                            <div key={j} className="bg-slate-50 px-5 py-2 rounded-2xl border border-slate-100">
+                              <span className="text-xl font-black text-slate-700">{name}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            }
+            topIcon={
+              <motion.div
+                initial={{ scale: 0.5, opacity: 0, y: 50, rotate: -10 }}
+                animate={{ scale: 1.6, opacity: 1, y: 0, rotate: 0 }}
+                transition={{ delay: 0.2, type: "spring", damping: 12, stiffness: 90 }}
+                className="drop-shadow-[0_25px_50px_rgba(0,0,0,0.3)]"
+              >
+                <div className="relative w-32 h-32 lg:w-44 lg:h-44 flex items-center justify-center">
+                  {/* Floating Decor Particles (Sync with Wheel/Number) */}
+                  {[...Array(8)].map((_, i) => (
+                    <div key={i} className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                      <motion.div
+                        initial={{ y: 20, opacity: 0, scale: 0.3, x: 0 }}
+                        animate={{ 
+                          y: [-20, -100 - (i * 10)], 
+                          opacity: [0, 0.4, 0], 
+                          scale: [0.3, 0.8, 0.2], 
+                          x: [(i - 3.5) * 5, (i - 3.5) * 15 + Math.sin(i) * 10] 
+                        }}
+                        transition={{ duration: 4 + i * 0.2, repeat: Infinity, delay: i * 0.4, ease: "easeOut" }}
+                        className="absolute text-pink-500"
+                      >
+                        <Heart className="w-3 h-3 fill-current" />
+                      </motion.div>
+                      <motion.div
+                        initial={{ y: 20, opacity: 0, scale: 0.3, x: 0 }}
+                        animate={{ 
+                          y: [-20, -120 - (i * 8)], 
+                          opacity: [0, 0.5, 0], 
+                          scale: [0.3, 1, 0.2], 
+                          x: [(i - 3.5) * -5, (i - 3.5) * -20 + Math.cos(i) * 15] 
+                        }}
+                        transition={{ duration: 5 + i * 0.2, repeat: Infinity, delay: i * 0.6, ease: "easeOut" }}
+                        className="absolute text-yellow-400"
+                      >
+                        <Sparkles className="w-4 h-4 fill-current" />
+                      </motion.div>
+                    </div>
+                  ))}
+
+                  <NextImage
+                    src="/images/wheel/icon-lucky-draw.png"
+                    width={176}
+                    height={176}
+                    className="w-full h-full object-contain"
+                    alt="winner"
+                  />
+                </div>
+              </motion.div>
+            }
+          >
+            <div className="w-full flex flex-col items-center">
+              {mode === 'winner' ? (
+                results.map((name, i) => (
+                  <div key={i} className="text-4xl lg:text-5xl font-black text-slate-800 text-center mb-2">
+                    {name}
+                  </div>
+                ))
+              ) : (
+                <div className="w-full max-h-[40vh] overflow-y-auto custom-scrollbar px-4">
+                  {groups.map((team, i) => (
+                    <div key={i} className="mb-6 last:mb-0">
+                      <div className="text-[10px] font-black text-slate-300 uppercase tracking-widest mb-2 text-center">Team {i + 1}</div>
+                      <div className="flex flex-wrap justify-center gap-2">
+                        {team.map((name, j) => (
+                          <span key={j} className="bg-slate-50 px-3 py-1 rounded-full text-sm font-bold text-slate-600 border border-slate-100">{name}</span>
+                        ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          </ResultModal>
         </div>
       </div>
 
@@ -637,119 +743,6 @@ export default function NameRandomizer() {
           border-radius: 10px;
         }
       `}</style>
-      <ResultModal
-        isOpen={showResultModal}
-        onClose={() => setShowResultModal(false)}
-        theme={currentTheme}
-        captureId="name-randomizer"
-        title={mode === 'winner' ? 'THE WINNER IS' : 'THE GROUPS ARE'}
-        exportChildren={
-          <div className="w-full flex flex-col items-center">
-            {mode === 'winner' ? (
-              results.map((name, i) => (
-                <div key={i} className="flex flex-col items-center w-full">
-                  <p className={`font-prompt font-black text-slate-800 break-words w-full text-center leading-tight mb-8 ${name.length > 20 ? 'text-4xl' : 'text-6xl'}`}>
-                    {name}
-                  </p>
-                  <div className="w-24 h-[1px] bg-slate-100 mb-8 last:hidden" />
-                </div>
-              ))
-            ) : (
-              <div className="grid grid-cols-1 gap-8 w-full">
-                {groups.map((team, i) => (
-                  <div key={i} className="flex flex-col items-center w-full">
-                    <div className="flex items-center gap-3 mb-4">
-                      <div className="h-[1px] w-8 bg-slate-100" />
-                      <span className="text-sm font-black text-slate-300 uppercase tracking-widest">Team {i + 1}</span>
-                      <div className="h-[1px] w-8 bg-slate-100" />
-                    </div>
-                    <div className="flex flex-wrap justify-center gap-3 w-full">
-                      {team.map((name, j) => (
-                        <div key={j} className="bg-slate-50 px-5 py-2 rounded-2xl border border-slate-100">
-                          <span className="text-xl font-black text-slate-700">{name}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            )}
-          </div>
-        }
-        topIcon={
-          <motion.div
-            initial={{ scale: 0.5, opacity: 0, y: 50, rotate: -10 }}
-            animate={{ scale: 1.6, opacity: 1, y: 0, rotate: 0 }}
-            transition={{ delay: 0.2, type: "spring", damping: 12, stiffness: 90 }}
-            className="drop-shadow-[0_25px_50px_rgba(0,0,0,0.3)]"
-          >
-            <div className="relative w-32 h-32 lg:w-44 lg:h-44 flex items-center justify-center">
-              {/* Floating Decor Particles (Sync with Wheel/Number) */}
-              {[...Array(8)].map((_, i) => (
-                <div key={i} className="absolute inset-0 flex items-center justify-center pointer-events-none">
-                  <motion.div
-                    initial={{ y: 20, opacity: 0, scale: 0.3, x: 0 }}
-                    animate={{ 
-                      y: [-20, -100 - (i * 10)], 
-                      opacity: [0, 0.4, 0], 
-                      scale: [0.3, 0.8, 0.2], 
-                      x: [(i - 3.5) * 5, (i - 3.5) * 15 + Math.sin(i) * 10] 
-                    }}
-                    transition={{ duration: 4 + i * 0.2, repeat: Infinity, delay: i * 0.4, ease: "easeOut" }}
-                    className="absolute text-pink-500"
-                  >
-                    <Heart className="w-3 h-3 fill-current" />
-                  </motion.div>
-                  <motion.div
-                    initial={{ y: 20, opacity: 0, scale: 0.3, x: 0 }}
-                    animate={{ 
-                      y: [-20, -120 - (i * 8)], 
-                      opacity: [0, 0.5, 0], 
-                      scale: [0.3, 1, 0.2], 
-                      x: [(i - 3.5) * -5, (i - 3.5) * -20 + Math.cos(i) * 15] 
-                    }}
-                    transition={{ duration: 5 + i * 0.2, repeat: Infinity, delay: i * 0.6, ease: "easeOut" }}
-                    className="absolute text-yellow-400"
-                  >
-                    <Sparkles className="w-4 h-4 fill-current" />
-                  </motion.div>
-                </div>
-              ))}
-
-              <NextImage
-                src="/images/wheel/icon-lucky-draw.png"
-                width={176}
-                height={176}
-                className="w-full h-full object-contain"
-                alt="winner"
-              />
-            </div>
-          </motion.div>
-        }
-      >
-        <div className="w-full flex flex-col items-center">
-          {mode === 'winner' ? (
-            results.map((name, i) => (
-              <div key={i} className="text-4xl lg:text-5xl font-black text-slate-800 text-center mb-2">
-                {name}
-              </div>
-            ))
-          ) : (
-            <div className="w-full max-h-[40vh] overflow-y-auto custom-scrollbar px-4">
-              {groups.map((team, i) => (
-                <div key={i} className="mb-6 last:mb-0">
-                  <div className="text-[10px] font-black text-slate-300 uppercase tracking-widest mb-2 text-center">Team {i + 1}</div>
-                  <div className="flex flex-wrap justify-center gap-2">
-                    {team.map((name, j) => (
-                      <span key={j} className="bg-slate-50 px-3 py-1 rounded-full text-sm font-bold text-slate-600 border border-slate-100">{name}</span>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
-      </ResultModal>
     </div>
   );
 }
