@@ -204,16 +204,6 @@ export default function NumberRandomizer() {
 
       {/* Background Decor */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden z-0">
-        <motion.div
-          animate={{ x: [0, 40, 0], y: [0, 30, 0] }} transition={{ repeat: Infinity, duration: 25, ease: "linear" }}
-          className="absolute top-[10%] -left-[10%] w-[500px] h-[500px] rounded-full blur-[120px] transition-colors duration-1000"
-          style={{ backgroundColor: currentTheme.bgGlow1 }}
-        />
-        <motion.div
-          animate={{ x: [0, -50, 0], y: [0, -40, 0] }} transition={{ repeat: Infinity, duration: 30, ease: "linear" }}
-          className="absolute bottom-[10%] -right-[10%] w-[600px] h-[600px] rounded-full blur-[140px] transition-colors duration-1000"
-          style={{ backgroundColor: currentTheme.bgGlow2 }}
-        />
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full bg-[radial-gradient(circle_at_center,transparent_0%,rgba(249,250,251,0.4)_100%)]" />
       </div>
 
@@ -463,7 +453,7 @@ export default function NumberRandomizer() {
                 >
 
                 <div className="relative w-full flex items-center justify-center py-0">
-                  <div id="lucky-machine-capture" className="relative flex-1 rounded-[3rem] lg:rounded-[3.5rem] border border-white shadow-[0_35px_70px_-15px_rgba(0,0,0,0.1)] bg-white/80 backdrop-blur-2xl transition-all duration-700 overflow-hidden">
+                  <div id="lucky-machine-capture" className="relative flex-1 rounded-[3rem] lg:rounded-[3.5rem] border border-white shadow-[0_35px_70px_-15px_rgba(0,0,0,0.1)] bg-white md:bg-white/80 md:backdrop-blur-2xl transition-all duration-700 overflow-hidden">
                     <div className={`flex items-center justify-center relative overflow-hidden transition-all duration-500 border-b border-white/20 shadow-lg ${isFullscreen ? 'h-16 lg:h-24' : 'h-12 lg:h-16'}`} style={{ background: `linear-gradient(to bottom, ${currentTheme.machineTop}, ${currentTheme.primary})` }}>
                       <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#fff_1px,transparent_1px)] [background-size:10px_10px]" />
                       <span className={`text-white font-prompt font-black italic tracking-[0.1em] relative z-20 drop-shadow-[0_2px_4px_rgba(0,0,0,0.3)] uppercase transition-all ${isFullscreen ? 'text-2xl lg:text-3xl' : 'text-xs lg:text-lg'}`}>

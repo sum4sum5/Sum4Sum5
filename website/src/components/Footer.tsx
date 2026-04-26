@@ -3,6 +3,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { FerrisWheel, Dices, Users, Sparkles, Mail, ShieldCheck, FileText, Info } from 'lucide-react';
+import { version } from '../../package.json';
 
 const FacebookIcon = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
@@ -99,9 +100,15 @@ const Footer = () => {
 
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-slate-100 flex flex-col md:flex-row items-center justify-between gap-6">
-          <p className="text-slate-400 text-[13px] font-bold tracking-wide">
-            © {currentYear} SUM4SUM5.COM - ALL RIGHTS RESERVED.
-          </p>
+          <div className="flex flex-col md:flex-row items-center gap-2 md:gap-4">
+            <p className="text-slate-400 text-[13px] font-bold tracking-wide">
+              © {currentYear} SUM4SUM5.COM - ALL RIGHTS RESERVED.
+            </p>
+            <span className="hidden md:block text-slate-200">|</span>
+            <span className="text-[11px] font-bold px-2 py-1 bg-slate-50 text-slate-400 rounded-lg border border-slate-100">
+              VERSION {version}
+            </span>
+          </div>
           <div className="flex items-center gap-8 text-slate-400 text-[13px] font-bold">
             <span className="flex items-center gap-2">
               MADE WITH <Sparkles className="w-4 h-4 text-orange-400 fill-orange-400/20" /> IN THAILAND

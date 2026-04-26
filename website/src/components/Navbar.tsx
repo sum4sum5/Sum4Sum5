@@ -19,7 +19,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="sticky top-0 z-[100] px-4 py-2">
+    <nav className="sticky top-0 z-[10000] px-4 py-2">
       <div className="max-w-7xl mx-auto glass rounded-3xl px-6 py-3 flex items-center justify-between shadow-sm border border-white/50 relative">
         <Link href="/" className="flex items-center gap-2 group">
           <div className="w-10 h-10 orange-gradient rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-inner group-hover:rotate-12 transition-transform">
@@ -58,13 +58,13 @@ const Navbar = () => {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 onClick={() => setIsOpen(false)}
-                className="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-[-1] lg:hidden rounded-[2.5rem]"
+                className="fixed inset-0 bg-slate-900/60 backdrop-blur-sm z-40 lg:hidden rounded-[2.5rem]"
               />
               <motion.div
                 initial={{ opacity: 0, y: 10, scale: 0.95 }}
                 animate={{ opacity: 1, y: 0, scale: 1 }}
                 exit={{ opacity: 0, y: 10, scale: 0.95 }}
-                className="absolute top-[calc(100%+12px)] left-0 right-0 p-4 bg-white/90 backdrop-blur-2xl rounded-[2.5rem] shadow-2xl border border-white/50 lg:hidden flex flex-col gap-2 overflow-hidden"
+                className="absolute top-[calc(100%+12px)] left-0 right-0 p-4 bg-white/95 backdrop-blur-2xl rounded-[2.5rem] shadow-2xl border border-white/50 lg:hidden flex flex-col gap-2 overflow-hidden z-50"
               >
                 {menuItems.map((item, idx) => (
                   <motion.div

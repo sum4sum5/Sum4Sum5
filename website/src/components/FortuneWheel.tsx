@@ -47,7 +47,7 @@ export default function FortuneWheel() {
   const wheelContainerRef = useRef<HTMLDivElement>(null);
   const imageCache = useRef<Map<string, HTMLImageElement>>(new Map());
   const lastSliceRef = useRef<number>(-1);
-  const [rotation, setRotation] = useState(0);
+  const rotationRef = useRef(0);
   const isMobile = useIsMobile();
 
   const shuffleOptions = () => {
@@ -129,6 +129,7 @@ export default function FortuneWheel() {
     const size = canvas.width;
     const center = size / 2;
     const radius = center - 40;
+    const rotation = rotationRef.current;
     const sliceAngle = (2 * Math.PI) / options.length;
 
     ctx.clearRect(0, 0, size, size);
@@ -259,7 +260,7 @@ export default function FortuneWheel() {
     ctx.strokeStyle = 'rgba(255,255,255,0.2)';
     ctx.lineWidth = 5;
     ctx.stroke();
-  }, [options, rotation, isSpinning, currentTheme]);
+  }, [options, currentTheme]);
 
   useEffect(() => {
     if (document.fonts) {
@@ -277,13 +278,15 @@ export default function FortuneWheel() {
     const spinRotation = Math.random() * 1440 + 1440;
     const duration = 8500;
     const start = performance.now();
-    const initialRotation = rotation;
+    const initialRotation = rotationRef.current;
     const animate = (time: number) => {
       const elapsed = time - start;
       const progress = Math.min(elapsed / duration, 1);
       const easedProgress = 1 - Math.pow(1 - progress, 4);
       const currentRotation = initialRotation + (spinRotation * (Math.PI / 180)) * easedProgress;
-      setRotation(currentRotation);
+      rotationRef.current = currentRotation;
+      drawWheel();
+      
       const sliceAngle = (2 * Math.PI) / options.length;
       const currentSlice = Math.floor((currentRotation % (2 * Math.PI)) / sliceAngle);
       if (currentSlice !== lastSliceRef.current) { lastSliceRef.current = currentSlice; playTick(); }
@@ -294,8 +297,8 @@ export default function FortuneWheel() {
         const winningIndex = Math.floor(wheelAngleAtPointer / sliceAngle);
         setWinner(options[winningIndex]);
         confetti({
-          particleCount: 250,
-          spread: 100,
+          particleCount: isMobile ? 100 : 250,
+          spread: isMobile ? 70 : 100,
           origin: { y: 0.6 },
           colors: currentTheme.colors,
           zIndex: 20000
@@ -550,7 +553,7 @@ export default function FortuneWheel() {
         <motion.div layout className="flex-1 flex justify-center order-1 lg:order-2 self-stretch items-center relative min-h-[400px] max-h-[75vh] lg:max-h-none lg:min-h-[600px] pt-4 pb-0 lg:py-0">
           <div
             id="wheel-result-card"
-            className={`bg-[#fffdf5]/30 backdrop-blur-md rounded-[2.5rem] lg:rounded-[3.5rem] pt-16 lg:pt-20 pb-4 lg:pb-8 px-4 lg:p-14 border border-white relative flex flex-col items-center justify-center shadow-xl transition-all duration-700 ${showSettings ? 'w-full h-full' : 'w-full lg:w-full h-full'} ${isFullscreen ? '!border-none !rounded-0 !bg-transparent !shadow-none !p-0' : ''}`}
+            className={`bg-[#fffdf5]/30 md:backdrop-blur-md rounded-[2.5rem] lg:rounded-[3.5rem] pt-16 lg:pt-20 pb-4 lg:pb-8 px-4 lg:p-14 border border-white relative flex flex-col items-center justify-center shadow-xl transition-all duration-700 ${showSettings ? 'w-full h-full' : 'w-full lg:w-full h-full'} ${isFullscreen ? '!border-none !rounded-0 !bg-transparent !shadow-none !p-0' : ''}`}
           >
             <div className={`w-full flex items-center justify-between px-4 lg:px-10 transition-all duration-500 z-[1000] ${isFullscreen ? 'absolute top-6 lg:top-10 left-0 right-0' : 'absolute top-4 left-0 right-0'}`}>
               <ThemeSelector themes={THEMES} currentTheme={currentTheme} setCurrentTheme={setCurrentTheme} />

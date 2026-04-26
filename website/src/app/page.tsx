@@ -76,13 +76,13 @@ export default function Home() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
-      <div className="flex flex-col gap-20 pb-20">
+      <div className="flex flex-col gap-12 md:gap-20 pb-20">
         {/* Hero Section */}
-        <section className="relative pt-24 pb-16 px-6 overflow-hidden">
-          {/* Animated Background Elements */}
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-6xl h-[600px] bg-gradient-radial from-orange-200/50 via-transparent to-transparent blur-[120px] -z-10" />
-          <div className="absolute top-1/4 -right-20 w-80 h-80 bg-blue-200/30 blur-[100px] rounded-full -z-10 animate-pulse" />
-          <div className="absolute bottom-0 -left-20 w-96 h-96 bg-purple-200/30 blur-[120px] rounded-full -z-10 animate-pulse" />
+        <section className="relative pt-16 md:pt-24 pb-12 md:pb-16 px-6 overflow-hidden">
+          {/* Animated Background Elements - Simplified for Mobile */}
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-6xl h-[600px] bg-gradient-radial from-orange-200/50 via-transparent to-transparent blur-[60px] md:blur-[120px] -z-10" />
+          <div className="hidden md:block absolute top-1/4 -right-20 w-80 h-80 bg-blue-200/30 blur-[100px] rounded-full -z-10 animate-pulse" />
+          <div className="hidden md:block absolute bottom-0 -left-20 w-96 h-96 bg-purple-200/30 blur-[120px] rounded-full -z-10 animate-pulse" />
           
           {/* Floating Icons for Modern Feel */}
           <div className="absolute inset-0 pointer-events-none -z-10">
@@ -122,23 +122,23 @@ export default function Home() {
                 <Sparkles className="w-4 h-4" />
                 <span>เครื่องมือสุ่มที่ทุกคนควรมีติดเครื่องไว้!</span>
               </div>
-              <h1 className="text-6xl md:text-8xl font-prompt font-black leading-[1.1] text-slate-900 tracking-tight">
+              <h1 className="text-4xl sm:text-5xl md:text-8xl font-prompt font-black leading-[1.2] md:leading-[1.1] text-slate-900 tracking-tight">
                 ตัดสินใจไม่ถูก? <br /> 
                 <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary to-orange-400">ให้เราสุ่มให้สิ!</span>
               </h1>
-              <p className="mt-8 text-xl md:text-2xl text-slate-500 max-w-2xl mx-auto leading-relaxed font-medium">
+              <p className="mt-6 md:mt-8 text-lg md:text-2xl text-slate-500 max-w-2xl mx-auto leading-relaxed font-medium px-4 md:px-0">
                 เครื่องมือสุ่มที่แม่นยำ ดีไซน์สวยระดับพรีเมียม และฟรี 100% 
                 ช่วยให้การตัดสินใจและการทำคอนเทนต์เป็นเรื่องสนุกที่สุด
               </p>
             </motion.div>
 
             <motion.div 
-              className="pt-6 flex flex-wrap justify-center gap-6"
+              className="pt-4 md:pt-6 flex flex-wrap justify-center gap-6"
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ delay: 0.4, duration: 0.5 }}
             >
-              <Link href="/wheel" className="btn-primary inline-flex items-center gap-3 text-xl px-10 py-5 group shadow-[0_15px_30px_-5px_rgba(255,140,0,0.4)]">
+              <Link href="/wheel" className="btn-primary inline-flex items-center gap-3 text-lg md:text-xl px-8 md:px-10 py-4 md:py-5 group shadow-[0_15px_30px_-5px_rgba(255,140,0,0.4)]">
                 เริ่มสุ่มเลย <ChevronRight className="w-6 h-6 group-hover:translate-x-1 transition-transform" />
               </Link>
             </motion.div>
@@ -187,10 +187,10 @@ export default function Home() {
         </section>
 
         {/* How It Works Section */}
-        <section className="max-w-7xl mx-auto px-6 py-10">
-          <div className="text-center mb-16 space-y-4">
-            <h2 className="text-3xl md:text-5xl font-prompt font-black text-slate-900">เริ่มสุ่มง่ายๆ ใน 3 ขั้นตอน</h2>
-            <p className="text-slate-500 text-lg">ไม่ต้องดาวน์โหลด ไม่ต้องสมัครสมาชิก เริ่มใช้งานได้ทันที</p>
+        <section className="max-w-7xl mx-auto px-6 py-6 md:py-10">
+          <div className="text-center mb-10 md:mb-16 space-y-3 md:space-y-4">
+            <h2 className="text-2xl md:text-5xl font-prompt font-black text-slate-900 leading-tight">เริ่มสุ่มง่ายๆ ใน 3 ขั้นตอน</h2>
+            <p className="text-slate-500 text-base md:text-lg">ไม่ต้องดาวน์โหลด ไม่ต้องสมัครสมาชิก เริ่มใช้งานได้ทันที</p>
           </div>
           
           <div className="grid md:grid-cols-3 gap-12 relative">
@@ -217,14 +217,14 @@ export default function Home() {
 
         {/* Why Choose Us Section */}
         <section className="max-w-7xl mx-auto px-6">
-          <div className="bg-slate-900 rounded-[4rem] p-12 md:p-20 text-center space-y-16 overflow-hidden relative shadow-2xl">
+          <div className="bg-slate-900 rounded-[3rem] md:rounded-[4rem] p-8 md:p-20 text-center space-y-12 md:space-y-16 overflow-hidden relative shadow-2xl">
             {/* Background Glows */}
             <div className="absolute -top-24 -left-24 w-96 h-96 bg-primary/20 blur-[100px] rounded-full" />
             <div className="absolute -bottom-24 -right-24 w-80 h-80 bg-orange-500/10 blur-[100px] rounded-full" />
 
-            <div className="relative z-10 space-y-4">
-              <h2 className="text-4xl md:text-5xl font-prompt font-black text-white tracking-tight">ทำไมต้องสุ่มที่ Sum4Sum5?</h2>
-              <p className="text-slate-400 text-lg max-w-2xl mx-auto">ทางเลือกอันดับหนึ่งสำหรับการสุ่มออนไลน์ที่ทั้งไวและสนุกที่สุด</p>
+            <div className="relative z-10 space-y-3 md:space-y-4">
+              <h2 className="text-2xl md:text-5xl font-prompt font-black text-white tracking-tight leading-tight">ทำไมต้องสุ่มที่ Sum4Sum5?</h2>
+              <p className="text-slate-400 text-base md:text-lg max-w-2xl mx-auto">ทางเลือกอันดับหนึ่งสำหรับการสุ่มออนไลน์ที่ทั้งไวและสนุกที่สุด</p>
             </div>
 
             <div className="relative z-10 grid sm:grid-cols-3 gap-12">
@@ -414,11 +414,11 @@ function FeatureCard({ href, icon, title, description, color }: {
           <Icon className="w-10 h-10 drop-shadow-md" />
         </div>
         
-        <div className="relative z-10 flex-1 space-y-4">
-          <h3 className="text-3xl font-prompt font-black text-slate-900 tracking-tight leading-tight">
+        <div className="relative z-10 flex-1 space-y-3 md:space-y-4">
+          <h3 className="text-2xl md:text-3xl font-prompt font-black text-slate-900 tracking-tight leading-tight">
             {title}
           </h3>
-          <p className="text-lg text-slate-500 leading-relaxed max-w-[90%]">
+          <p className="text-base md:text-lg text-slate-500 leading-relaxed max-w-[90%]">
             {description}
           </p>
         </div>
