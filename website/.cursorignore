@@ -1,0 +1,8 @@
+# Keep local secrets out of Cursor / AI full-file context (indexing).
+# Variable names and placeholders stay in .env.example (not listed here).
+.env
+.env.local
+.env.production
+.env.development
+.env.test
+.env.*.local
