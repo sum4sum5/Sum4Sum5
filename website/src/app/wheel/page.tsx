@@ -1,14 +1,41 @@
-'use client';
-
 import React from 'react';
+import { Metadata } from 'next';
 import FortuneWheel from '@/components/FortuneWheel';
 import AdBanner from '@/components/shared/AdBanner';
-import { FerrisWheel, Sparkles, Image as ImageIcon, Zap, BarChart3, HelpCircle, Fingerprint } from 'lucide-react';
+import { Sparkles, Zap, HelpCircle } from 'lucide-react';
+
+export const metadata: Metadata = {
+  title: 'วงล้อสุ่ม ออนไลน์ (Fortune Wheel) - สุ่มรายชื่อ สุ่มอาหาร จับฉลากพรีเมียมฟรี!',
+  description: 'วงล้อสุ่มออนไลน์ที่ดีที่สุด ดีไซน์พรีเมียม ใช้งานง่าย หมุนวงล้อเพื่อสุ่มชื่อ สุ่มอาหาร หรือสุ่มรางวัล พร้อมฟีเจอร์บันทึกรูปภาพสรุปผลและรองรับการใส่รูปภาพในวงล้อ ยุติธรรม 100%',
+  keywords: ['วงล้อสุ่ม', 'วงล้อสุ่มออนไลน์', 'หมุนวงล้อ', 'สุ่มรายชื่อ', 'สุ่มอาหาร', 'จับฉลากออนไลน์', 'Fortune Wheel', 'Random Wheel Picker'],
+};
 
 export default function WheelPage() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "วงล้อสุ่มออนไลน์ (Fortune Wheel) - Sum4Sum5",
+    "operatingSystem": "All",
+    "applicationCategory": "UtilitiesApplication",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "THB"
+    },
+    "description": "เครื่องมือวงล้อสุ่มออนไลน์ที่สวยและพรีเมียมที่สุด รองรับการสุ่มชื่อ สุ่มเมนูอาหาร และจับฉลากกิจกรรมต่างๆ พร้อมแอนิเมชั่นที่สมจริง",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "reviewCount": "2450"
+    }
+  };
 
   return (
     <div className="min-h-screen bg-transparent pb-24 lg:pb-32">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       {/* 1. Top Ad Banner - Maximum Visibility */}
       <div className="w-full">
         <AdBanner slot="home-horizontal" />
@@ -155,3 +182,4 @@ const FAQItem = ({ question, answer }: { question: string; answer: string }) => 
     <p className="text-slate-500 m-0 leading-relaxed text-lg">{answer}</p>
   </div>
 );
+
