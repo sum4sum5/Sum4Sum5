@@ -30,7 +30,7 @@ export default function BlogCard({ article }: BlogCardProps) {
         {!imageError ? (
           <img 
             src={article.image} 
-            alt=""
+            alt={article.title} 
             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
             onError={() => setImageError(true)}
           />

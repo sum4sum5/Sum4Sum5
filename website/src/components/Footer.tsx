@@ -2,7 +2,7 @@
 
 import React from 'react';
 import Link from 'next/link';
-import { FerrisWheel, Dices, Users, Sparkles, Mail, ShieldCheck, FileText, Info } from 'lucide-react';
+import { FerrisWheel, Dices, Users, Sparkles, Mail, ShieldCheck, FileText, Info, BookOpen } from 'lucide-react';
 import { version } from '../../package.json';
 
 const Footer = () => {
@@ -21,6 +21,7 @@ const Footer = () => {
     {
       title: 'เกี่ยวกับเรา',
       links: [
+        { name: 'บทความ / สาระน่ารู้', href: '/blog', icon: <BookOpen className="w-4 h-4" /> },
         { name: 'รู้จักสุ่มสี่สุ่มห้า', href: '/about', icon: <Info className="w-4 h-4" /> },
         { name: 'คำถามที่พบบ่อย (FAQ)', href: '/faq', icon: <Info className="w-4 h-4" /> },
         { name: 'ติดต่องาน / แจ้งปัญหา', href: '/contact', icon: <Mail className="w-4 h-4" /> },

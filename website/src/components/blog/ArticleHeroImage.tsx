@@ -20,11 +20,11 @@ export default function ArticleHeroImage({ src, alt, title, category, date, read
   const [imageError, setImageError] = useState(false);
 
   return (
-    <div className="relative w-full h-[40vh] md:h-[55vh] overflow-hidden bg-slate-900">
+    <div className="relative w-full h-[50vh] md:h-[55vh] overflow-hidden bg-slate-900">
       {!imageError ? (
         <img 
           src={src} 
-          alt=""
+          alt={alt || title}
           className="w-full h-full object-cover opacity-60 transition-opacity duration-700"
           onError={() => setImageError(true)}
         />
@@ -35,7 +35,7 @@ export default function ArticleHeroImage({ src, alt, title, category, date, read
       
       <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent" />
       
-      <div className="absolute bottom-0 left-0 right-0 p-6 md:p-16">
+      <div className="absolute bottom-0 left-0 right-0 p-6 md:p-16 pb-10 md:pb-16">
         <div className="max-w-7xl mx-auto px-6">
           <Link 
             href="/blog" 
@@ -51,7 +51,7 @@ export default function ArticleHeroImage({ src, alt, title, category, date, read
             </span>
           </div>
           
-          <h1 className="text-3xl md:text-6xl font-prompt font-bold text-white mb-8 leading-[1.1] tracking-tight">
+          <h1 className="text-2xl md:text-6xl font-prompt font-bold text-white mb-6 md:mb-8 leading-[1.2] md:leading-[1.1] tracking-tight">
             {title}
           </h1>
           
