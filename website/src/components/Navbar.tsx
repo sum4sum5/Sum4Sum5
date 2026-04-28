@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Dices, Sparkles, Users, Home, FerrisWheel, Menu, X, ChevronRight } from 'lucide-react';
+import { Dices, Sparkles, Users, Home, FerrisWheel, Menu, X, ChevronRight, BookOpen } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 
 const Navbar = () => {
@@ -16,6 +16,7 @@ const Navbar = () => {
     { name: 'สุ่มเลข', href: '/random-number', icon: <Dices className="w-5 h-5" /> },
     { name: 'สุ่มรายชื่อ', href: '/random-name', icon: <Users className="w-5 h-5" /> },
     { name: 'แคปชั่น AI', href: '/random-caption', icon: <Sparkles className="w-5 h-5" /> },
+    { name: 'บทความ', href: '/blog', icon: <BookOpen className="w-5 h-5" /> },
   ];
 
   return (

@@ -1,12 +1,12 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Megaphone, X } from 'lucide-react';
 import Link from 'next/link';
 
 interface AdBannerProps {
-  slot: 'home-horizontal' | 'sidebar-sq' | 'tool-bottom' | 'footer-top' | 'sticky-bottom';
+  slot: 'home-horizontal' | 'sidebar-sq' | 'tool-bottom' | 'footer-top' | 'sticky-bottom' | 'article_middle' | 'article_sidebar';
   className?: string;
 }
 
@@ -48,6 +48,16 @@ export default function AdBanner({ slot, className = '' }: AdBannerProps) {
       label: 'Slim Anchor',
       dimensions: 'fixed bottom-4 left-4 right-4 md:left-1/2 md:-translate-x-1/2 md:max-w-4xl z-[10000] h-[75px] md:h-[85px] rounded-[2rem] shadow-[0_20px_50px_rgba(0,0,0,0.2)] bg-white/95 backdrop-blur-md border border-slate-200',
       sizeText: '728 x 90'
+    },
+    'article_middle': {
+      label: 'Article Inline',
+      dimensions: 'w-full min-h-[150px] rounded-3xl my-8',
+      sizeText: '728 x 150'
+    },
+    'article_sidebar': {
+      label: 'Sidebar Vertical',
+      dimensions: 'w-full min-h-[400px] rounded-3xl',
+      sizeText: '300 x 600'
     }
   };
 
@@ -109,6 +119,3 @@ export default function AdBanner({ slot, className = '' }: AdBannerProps) {
     </AnimatePresence>
   );
 }
-
-// Add missing useEffect import
-import { useEffect } from 'react';
