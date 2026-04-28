@@ -20,7 +20,7 @@ export default function ArticleHeroImage({ src, alt, title, category, date, read
   const [imageError, setImageError] = useState(false);
 
   return (
-    <div className="relative w-full h-[50vh] md:h-[55vh] overflow-hidden bg-slate-900">
+    <div className="relative w-full h-[65vh] md:h-[60vh] overflow-hidden bg-slate-900">
       {!imageError ? (
         <img 
           src={src} 
@@ -35,23 +35,28 @@ export default function ArticleHeroImage({ src, alt, title, category, date, read
       
       <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-900/40 to-transparent" />
       
-      <div className="absolute bottom-0 left-0 right-0 p-6 md:p-16 pb-10 md:pb-16">
+      {/* Back Button - Positioned at the top to avoid being pushed by long titles */}
+      <div className="absolute top-0 left-0 right-0 p-6 pt-8 md:pt-12 z-20">
         <div className="max-w-7xl mx-auto px-6">
           <Link 
             href="/blog" 
-            className="inline-flex items-center gap-2 text-white/60 hover:text-white mb-8 transition-all font-medium bg-white/5 backdrop-blur-xl px-5 py-2.5 rounded-full border border-white/10 hover:bg-white/10 hover:scale-105 active:scale-95"
+            className="inline-flex items-center gap-2 text-white/60 hover:text-white transition-all font-medium bg-white/5 backdrop-blur-xl px-5 py-2.5 rounded-full border border-white/10 hover:bg-white/10 hover:scale-105 active:scale-95"
           >
             <ChevronLeft className="w-4 h-4" />
             กลับไปหน้าบทความ
           </Link>
-          
+        </div>
+      </div>
+      
+      <div className="absolute bottom-0 left-0 right-0 p-6 md:p-16 pb-10 md:pb-16">
+        <div className="max-w-7xl mx-auto px-6">
           <div className="flex flex-wrap items-center gap-3 mb-6">
             <span className="px-4 py-1.5 bg-orange-500 text-white text-[10px] font-black uppercase tracking-widest rounded-full shadow-lg shadow-orange-500/20">
               {category}
             </span>
           </div>
           
-          <h1 className="text-2xl md:text-6xl font-prompt font-bold text-white mb-6 md:mb-8 leading-[1.2] md:leading-[1.1] tracking-tight">
+          <h1 className="text-2xl md:text-5xl font-prompt font-bold text-white mb-6 md:mb-8 leading-[1.3] md:leading-[1.2] tracking-tight">
             {title}
           </h1>
           

@@ -33,7 +33,7 @@ const ARTICLES: Record<string, any> = {
     content: (
       <article className="prose prose-slate max-w-none font-kanit w-full overflow-hidden">
         <p className="lead text-lg md:text-xl text-slate-600 mb-10 leading-relaxed font-medium border-l-4 border-orange-500 pl-6 py-2">
-          "สุ่มได้แต่เพื่อนตัวเองหรือเปล่า?" หรือ "ล็อคผลไว้แล้วใช่ไหม?"... นี่คือคำถามแทงใจที่คนจัดกิจกรรมแจกรางวัลหลายคนต้องเคยเจอครับ เอาเข้าจริงปัญหาไม่ได้อยู่ที่รางวัลใหญ่หรือเล็ก แต่อยู่ที่ "ความโปร่งใส" ของกระบวนการสุ่มต่างหาก คู่มือฉบับนี้ทีมงาน <strong>"สุ่มสี่สุ่มห้า"</strong> จะมาแชร์วิธีสุ่มเลข 2 ตัว และ 3 ตัว แบบมือโปรที่ทำให้นักเลงคีย์บอร์ดต้องยอมจำนนด้วยหลักฐานและความยุติธรรมครับ
+          "สุ่มได้แต่เพื่อนตัวเองหรือเปล่า?" หรือ "ล็อคผลไว้แล้วใช่ไหม?"... นี่คือคำถามแทงใจที่คนจัดกิจกรรมแจกรางวัลหลายคนต้องเคยเจอครับ เอาเข้าจริงปัญหาไม่ได้อยู่ที่รางวัลใหญ่หรือเล็ก แต่อยู่ที่ "ความโปร่งใส" ของกระบวนการสุ่มต่างหาก คู่มือฉบับนี้ทีมงาน <Link href="/" className="text-orange-600 hover:text-orange-700 font-bold decoration-orange-300 underline-offset-4 hover:underline"><strong>"สุ่มสี่สุ่มห้า"</strong></Link> จะมาแชร์วิธีสุ่มเลข 2 ตัว และ 3 ตัว แบบมือโปรที่ทำให้นักเลงคีย์บอร์ดต้องยอมจำนนด้วยหลักฐานและความยุติธรรมครับ
         </p>
 
         <section id="why-fairness" className="scroll-mt-24 mb-12">
@@ -68,17 +68,17 @@ const ARTICLES: Record<string, any> = {
         <section id="logic-of-random" className="scroll-mt-24 mb-12">
           <h2 className="font-prompt font-black text-xl md:text-2xl lg:text-3xl text-slate-900 leading-tight mb-6 flex items-center gap-4 bg-slate-50/50 p-4 rounded-2xl border border-slate-100">
             <span className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-orange-500 text-white flex items-center justify-center text-lg md:text-xl italic font-serif shadow-lg shadow-orange-500/20 shrink-0">02</span>
-            ถอดรหัสจิตวิทยา: สุ่มเลข 2 ตัว vs 3 ตัว แบบไหนที่กระชากใจคนดู?
+            ถอดรหัสจิตวิทยา: <Link href="/random-number" className="text-orange-600 hover:text-orange-700 decoration-orange-300 underline-offset-4 hover:underline">สุ่มเลข</Link> 2 ตัว vs 3 ตัว แบบไหนที่กระชากใจคนดู?
           </h2>
           <div className="space-y-4 text-slate-600 leading-relaxed">
             <p className="indent-6 md:indent-12">
-              เชื่อไหมครับว่าจำนวนหลักของตัวเลขส่งผลต่อความรู้สึกของคนอ่านอย่างไม่น่าเชื่อ! การสุ่มเลข 2 หลัก (00-99) คือการเล่นกับความรู้สึก "เป็นไปได้" เพราะโอกาส 1 ใน 100 นั้นดูไม่ไกลเกินเอื้อม เหมาะกับกิจกรรมที่แจกรางวัลเล็กๆ จำนวนมากๆ 
+              เชื่อไหมครับว่าจำนวนหลักของตัวเลขส่งผลต่อความรู้สึกของคนอ่านอย่างไม่น่าเชื่อ! การ<Link href="/random-number" className="text-orange-600 hover:text-orange-700 decoration-orange-300 underline-offset-4 hover:underline">สุ่มเลข</Link> 2 หลัก (00-99) คือการเล่นกับความรู้สึก "เป็นไปได้" เพราะโอกาส 1 ใน 100 นั้นดูไม่ไกลเกินเอื้อม เหมาะกับกิจกรรมที่แจกรางวัลเล็กๆ จำนวนมากๆ 
             </p>
             <p className="indent-6 md:indent-12">
               ส่วนเลข 3 ตัว (000-999) คือการยกระดับความตื่นเต้นขึ้นมาอีกขั้นครับ ด้วยความน่าจะเป็น 1 ใน 1,000 มันจึงเหมาะกับ "รางวัลใหญ่" ที่ต้องการสร้างความขลังและความน่าเกรงขามให้กับกิจกรรม
             </p>
             <p className="indent-6 md:indent-12">
-              นอกจากเรื่องจิตวิทยาแล้ว การใช้ตัวเลขยังช่วยให้การจัดการรายชื่อจำนวนมหาศาลทำได้ง่ายขึ้นมากครับ เพราะเราสามารถใช้เลขลำดับ (Index) อ้างอิงถึงตัวบุคคลได้ทันที ซึ่งเป็นวิธีที่ดูสะอาดตา เป็นระเบียบ และดูเป็นมืออาชีพที่สุดสำหรับการประกาศผลในที่สาธารณะครับ
+              นอกจากเรื่องจิตวิทยาแล้ว การใช้ตัวเลขยังช่วยให้การจัดการ<Link href="/random-name" className="text-orange-600 hover:text-orange-700 decoration-orange-300 underline-offset-4 hover:underline">รายชื่อ</Link>จำนวนมหาศาลทำได้ง่ายขึ้นมากครับ เพราะเราสามารถใช้เลขลำดับ (Index) อ้างอิงถึงตัวบุคคลได้ทันที ซึ่งเป็นวิธีที่ดูสะอาดตา เป็นระเบียบ และดูเป็นมืออาชีพที่สุดสำหรับการประกาศผลในที่สาธารณะครับ
             </p>
           </div>
         </section>
@@ -96,7 +96,7 @@ const ARTICLES: Record<string, any> = {
               <CheckCircle2 className="w-6 h-6 text-green-500 shrink-0 mt-0.5" />
               <div>
                 <span className="font-bold text-slate-900 block mb-1">ความลื่นไหลของอนิเมชัน (Visual Proof):</span>
-                <p className="text-slate-500 text-sm m-0 leading-relaxed">คนไทยชอบความลุ้นครับ การเห็นตัวเลขกลิ้งๆ เหมือนตู้สล็อต หรือวงล้อที่ค่อยๆ ช้าลงจนหยุดที่เลขผู้โชคดี มันช่วยพิสูจน์ด้วยตาเปล่าว่าระบบไม่ได้ดีดผลลัพธ์ที่ล็อคไว้ออกมาทันที</p>
+                <p className="text-slate-500 text-sm m-0 leading-relaxed">คนไทยชอบความลุ้นครับ การเห็นตัวเลขกลิ้งๆ เหมือนตู้สล็อต หรือ<Link href="/wheel" className="text-orange-600 hover:text-orange-700 decoration-orange-300 underline-offset-4 hover:underline">วงล้อ</Link>ที่ค่อยๆ ช้าลงจนหยุดที่เลขผู้โชคดี มันช่วยพิสูจน์ด้วยตาเปล่าว่าระบบไม่ได้ดีดผลลัพธ์ที่ล็อคไว้ออกมาทันที</p>
               </div>
             </li>
             <li className="flex items-start gap-4 p-5 rounded-2xl bg-white border border-slate-100 shadow-sm transition-all hover:border-orange-200">
@@ -115,7 +115,7 @@ const ARTICLES: Record<string, any> = {
             </li>
           </ul>
           <p className="text-slate-600 leading-relaxed indent-6 md:indent-12">
-            ถ้าอยากได้ความมั่นใจแบบ 100% ลองใช้ <strong>โปรแกรมสุ่มตัวเลขของ "สุ่มสี่สุ่มห้า"</strong> ดูครับ ทีมงานเราตั้งใจปั้นอัลกอริทึมให้ยุติธรรมที่สุด และที่สำคัญคือดีไซน์สวยมากจนคนดูต้องร้องว้าวแน่นอนครับ
+            ถ้าอยากได้ความมั่นใจแบบ 100% ลองใช้ <Link href="/random-number" className="text-orange-600 hover:text-orange-700 font-bold decoration-orange-300 underline-offset-4 hover:underline"><strong>โปรแกรมสุ่มตัวเลขของ "สุ่มสี่สุ่มห้า"</strong></Link> ดูครับ ทีมงานเราตั้งใจปั้นอัลกอริทึมให้ยุติธรรมที่สุด และที่สำคัญคือดีไซน์สวยมากจนคนดูต้องร้องว้าวแน่นอนครับ
           </p>
         </section>
 
@@ -134,7 +134,7 @@ const ARTICLES: Record<string, any> = {
               <div className="w-12 h-12 rounded-2xl bg-slate-900 text-white flex items-center justify-center shrink-0 font-black mb-6 shadow-lg group-hover:bg-orange-500 transition-colors">1</div>
               <h4 className="font-prompt font-bold text-xl mb-3 text-slate-900">เตรียม Data ให้โปร่งใส</h4>
               <p className="text-slate-500 text-sm leading-loose indent-4">
-                รวบรวมรายชื่อลง Google Sheet แล้วให้เลขลำดับ 1 ถึงคนสุดท้าย แนะนำให้แชร์ลิงก์แบบ "อ่านได้อย่างเดียว" ให้ทุกคนเช็คเลขตัวเองก่อนเริ่มสุ่ม 15-30 นาทีครับ
+                รวบรวม<Link href="/random-name" className="text-slate-900 hover:text-orange-600 decoration-slate-300 underline-offset-4 hover:underline">รายชื่อ</Link>ลง Google Sheet แล้วให้เลขลำดับ 1 ถึงคนสุดท้าย แนะนำให้แชร์ลิงก์แบบ "อ่านได้อย่างเดียว" ให้ทุกคนเช็คเลขตัวเองก่อนเริ่มสุ่ม 15-30 นาทีครับ
               </p>
             </div>
 
@@ -150,7 +150,7 @@ const ARTICLES: Record<string, any> = {
               <div className="w-12 h-12 rounded-2xl bg-slate-900 text-white flex items-center justify-center shrink-0 font-black mb-6 shadow-lg group-hover:bg-orange-500 transition-colors">3</div>
               <h4 className="font-prompt font-bold text-xl mb-3 text-slate-900">ประกาศผลทันที</h4>
               <p className="text-slate-500 text-sm leading-loose indent-4">
-                เมื่อได้ผลลัพธ์จาก <strong>"สุ่มสี่สุ่มห้า"</strong> ให้ใช้ฟีเจอร์ <strong>"บันทึกผลเป็นรูปภาพ"</strong> จากระบบโดยตรง เพื่อให้ได้ภาพประกาศผลที่สวยงามและดูเป็นทางการ พร้อมโพสต์ลงคอมเมนต์ปิดจบงานอย่างมืออาชีพครับ
+                เมื่อได้ผลลัพธ์จาก <Link href="/" className="text-slate-900 hover:text-orange-600 font-bold decoration-slate-300 underline-offset-4 hover:underline"><strong>"สุ่มสี่สุ่มห้า"</strong></Link> ให้ใช้ฟีเจอร์ <strong>"บันทึกผลเป็นรูปภาพ"</strong> จากระบบโดยตรง เพื่อให้ได้ภาพประกาศผลที่สวยงามและดูเป็นทางการ พร้อมโพสต์ลงคอมเมนต์ปิดจบงานอย่างมืออาชีพครับ
               </p>
             </div>
           </div>
@@ -163,7 +163,7 @@ const ARTICLES: Record<string, any> = {
           </h2>
           <div className="space-y-4 text-slate-600 leading-relaxed mb-8">
             <p className="indent-6 md:indent-12">
-              หนึ่งในชนวนดราม่าที่พบบ่อยที่สุดคือการกดสุ่มทีละคนแล้วดันได้คนเดิมครับ! วิธีแก้ที่ขาดลอยที่สุดคือการใช้ฟีเจอร์ <strong>"สุ่มหลายตัวเลขพร้อมกัน" (Multiple Generate)</strong> 
+              หนึ่งในชนวนดราม่าที่พบบ่อยที่สุดคือการกดสุ่มทีละคนแล้วดันได้คนเดิมครับ! วิธีแก้ที่ขาดลอยที่สุดคือการใช้ฟีเจอร์ <Link href="/random-number" className="text-orange-600 hover:text-orange-700 font-bold decoration-orange-300 underline-offset-4 hover:underline"><strong>"สุ่มหลายตัวเลขพร้อมกัน" (Multiple Generate)</strong></Link> 
             </p>
             <p className="indent-6 md:indent-12">
               การตั้งค่าให้ระบบดีดผลลัพธ์ออกมาเป็นชุดเลขที่ไม่ซ้ำกัน (Unique Set) ในการกดเพียงครั้งเดียว จะช่วยลดความเคลือบแคลงสงสัยได้มากกว่าการกดทีละปุ่มหลายๆ รอบเป็นสิบเท่าตัวเลยครับ นอกจากนี้ระบบยังมีฟีเจอร์ <strong>"บันทึกภาพผลลัพธ์"</strong> ที่รวมเลขผู้โชคดีทั้งหมดไว้ในกราฟิกที่สวยงาม ช่วยให้คุณแชร์ต่อได้ทันทีโดยไม่ต้องมานั่งแคปหน้าจอหรือครอปรูปเองให้เสียเวลาครับ
@@ -249,10 +249,10 @@ const ARTICLES: Record<string, any> = {
           </h2>
           <div className="space-y-4 text-slate-600 leading-relaxed text-lg">
             <p className="indent-6 md:indent-12 font-medium">
-              สุดท้ายแล้ว การสุ่มตัวเลข 2-3 ตัว อาจจะดูเป็นเรื่องเล็กน้อย แต่หากเราใส่ใจใน "ความโปร่งใส" และใช้เครื่องมือที่น่าเชื่อถือ มันคือการสร้างสังคมออนไลน์ที่มีความเชื่อมั่นต่อกันครับ 
+              สุดท้ายแล้ว การ<Link href="/random-number" className="text-orange-600 hover:text-orange-700 font-bold decoration-orange-300 underline-offset-4 hover:underline">สุ่มเลข</Link> 2-3 ตัว อาจจะดูเป็นเรื่องเล็กน้อย แต่หากเราใส่ใจใน "ความโปร่งใส" และใช้เครื่องมือที่น่าเชื่อถือ มันคือการสร้างสังคมออนไลน์ที่มีความเชื่อมั่นต่อกันครับ 
             </p>
             <p className="indent-6 md:indent-12">
-              หวังว่าบทความนี้จะช่วยให้เพื่อนๆ จัดกิจกรรมได้อย่างสนุกและราบรื่นนะครับ ถ้าพร้อมแล้วก็เตรียมรายชื่อให้พร้อม แล้วไปใช้ระบบสุ่มที่ยุติธรรมที่สุดได้เลยที่หน้าเว็บของเราครับ!
+              หวังว่าบทความนี้จะช่วยให้เพื่อนๆ จัดกิจกรรมได้อย่างสนุกและราบรื่นนะครับ ถ้าพร้อมแล้วก็เตรียมรายชื่อให้พร้อม แล้วไปใช้ระบบ<Link href="/" className="text-orange-600 hover:text-orange-700 font-bold decoration-orange-300 underline-offset-4 hover:underline">สุ่ม</Link>ที่ยุติธรรมที่สุดได้เลยที่หน้าเว็บของเราครับ!
             </p>
           </div>
         </section>
@@ -265,13 +265,13 @@ const ARTICLES: Record<string, any> = {
               <Sparkles className="w-12 h-12 text-orange-400" />
             </div>
             <h3 className="text-3xl md:text-5xl font-black font-prompt mb-8 tracking-tighter uppercase">แจกรางวัลอย่างมือโปรวันนี้!</h3>
-            <p className="text-slate-400 mb-12 max-w-2xl mx-auto text-xl leading-relaxed">ใช้ระบบจาก <strong>"สุ่มสี่สุ่มห้า"</strong> เพื่อความโปร่งใสขั้นสุด สวยงาม และใช้งานง่ายในทุกอุปกรณ์</p>
+            <p className="text-slate-400 mb-12 max-w-2xl mx-auto text-xl leading-relaxed">ใช้ระบบจาก <Link href="/" className="text-orange-400 hover:text-orange-300 font-bold decoration-orange-900/30 underline-offset-4 hover:underline"><strong>"สุ่มสี่สุ่มห้า"</strong></Link> เพื่อความโปร่งใสขั้นสุด สวยงาม และใช้งานง่ายในทุกอุปกรณ์</p>
             <Link 
               href="/random-number" 
-              className="inline-flex items-center gap-5 px-14 py-6 bg-orange-500 hover:bg-orange-600 text-white font-black rounded-2xl transition-all hover:scale-105 active:scale-95 shadow-2xl shadow-orange-500/40 text-2xl uppercase tracking-wider group/btn"
+              className="inline-flex items-center justify-center gap-3 md:gap-5 px-8 py-4 md:px-14 md:py-6 bg-orange-500 hover:bg-orange-600 text-white font-black rounded-2xl transition-all hover:scale-105 active:scale-95 shadow-2xl shadow-orange-500/40 text-lg md:text-2xl uppercase tracking-wider group/btn w-full md:w-auto"
             >
-              เริ่มสุ่มตัวเลข 
-              <ArrowRight className="w-8 h-8 group-hover/btn:translate-x-3 transition-transform" />
+              <span>เริ่มสุ่มตัวเลข</span>
+              <ArrowRight className="w-6 h-6 md:w-8 h-8 group-hover/btn:translate-x-3 transition-transform shrink-0" />
             </Link>
           </div>
         </div>
@@ -371,7 +371,7 @@ const ARTICLES: Record<string, any> = {
             วิธีใช้ "สุ่มสี่สุ่มห้า" ให้ชีวิตง่ายขึ้น
           </h2>
           <p className="indent-6 md:indent-12 text-slate-600 leading-relaxed mb-6">
-            ง่ายๆ เลยครับ ไม่ต้องจุดธูป ไม่ต้องโรยแป้ง เพียงแค่เข้ามาที่เว็บ <strong>Sum4Sum5.com</strong> แล้วเลือกเมนูสุ่มเลข คุณสามารถกำหนดช่วงที่ชอบ หรือจะสุ่มแบบไร้ทิศทางเลยก็ได้ ระบบจะเจนภาพผลลัพธ์สวยๆ มาให้คุณบันทึกเก็บไว้ดูหรือส่งต่อให้เพื่อนร่วมชะตากรรมได้ทันที!
+            ง่ายๆ เลยครับ ไม่ต้องจุดธูป ไม่ต้องโรยแป้ง เพียงแค่เข้ามาที่เว็บ <Link href="https://sum4sum5.com" className="text-orange-600 hover:text-orange-700 font-bold decoration-orange-300 underline-offset-4 hover:underline"><strong>Sum4Sum5.com</strong></Link> แล้วเลือก<Link href="/random-number" className="text-orange-600 hover:text-orange-700 decoration-orange-300 underline-offset-4 hover:underline">เมนูสุ่มเลข</Link> คุณสามารถกำหนดช่วงที่ชอบ หรือจะสุ่มแบบไร้ทิศทางเลยก็ได้ ระบบจะเจนภาพผลลัพธ์สวยๆ มาให้คุณบันทึกเก็บไว้ดูหรือส่งต่อให้เพื่อนร่วมชะตากรรมได้ทันที!
           </p>
           <div className="p-6 bg-slate-50 rounded-2xl border-2 border-dashed border-slate-200 text-center">
             <p className="text-slate-400 text-sm mb-4">ลองกดดูสักที... เผื่อพรุ่งนี้จะเปลี่ยนชีวิต!</p>
@@ -386,7 +386,7 @@ const ARTICLES: Record<string, any> = {
             <ShieldCheck className="w-5 h-5" /> Disclaimer:
           </h5>
           <p className="text-red-500 m-0 text-sm leading-loose italic">
-            บทความนี้เขียนขึ้นเพื่อความบันเทิงและสันทนาการเท่านั้น การสุ่มเลขผ่านระบบเป็นเพียงวิธีการประกอบการตัดสินใจซื้อสลากกินแบ่งรัฐบาลที่ถูกกฎหมาย ไม่ใช่การชี้แนะทางการเงินหรือส่งเสริมการพนัน โปรดใช้วิจารณญาณและสนับสนุนสลากกินแบ่งรัฐบาลเพื่อช่วยพัฒนาประเทศนะครับ!
+            บทความนี้เขียนขึ้นเพื่อความบันเทิงและสันทนาการเท่านั้น การ<Link href="/random-number" className="text-red-600 hover:text-red-700 decoration-red-300 underline-offset-4 hover:underline">สุ่มเลข</Link>ผ่านระบบเป็นเพียงวิธีการประกอบการตัดสินใจซื้อสลากกินแบ่งรัฐบาลที่ถูกกฎหมาย ไม่ใช่การชี้แนะทางการเงินหรือส่งเสริมการพนัน โปรดใช้วิจารณญาณและสนับสนุนสลากกินแบ่งรัฐบาลเพื่อช่วยพัฒนาประเทศนะครับ!
           </p>
         </div>
 
@@ -451,7 +451,7 @@ const ARTICLES: Record<string, any> = {
               ยุติธรรมที่สุด ไม่มีเลขกั๊ก เลขอั้น
             </h3>
             <p className="indent-6 md:indent-12 text-slate-600 leading-relaxed">
-              ระบบสุ่มของ <strong>สุ่มสี่สุ่มห้า</strong> ใช้ค่า True Randomness ที่ไม่มีส่วนได้ส่วนเสียกับเจ้ามือไหนๆ ทั้งสิ้น ทุกตัวเลขมีโอกาสเกิดเท่ากันเป๊ะ 100% ไม่มีการมาบอกว่า "เลขนี้มาแรงไม่สุ่มให้นะ" ยุติธรรมกว่านี้ก็เปายุ้นจิ้นแล้วครับ!
+              ระบบสุ่มของ <Link href="/" className="text-orange-600 hover:text-orange-700 font-bold decoration-orange-300 underline-offset-4 hover:underline"><strong>สุ่มสี่สุ่มห้า</strong></Link> ใช้ค่า True Randomness ที่ไม่มีส่วนได้ส่วนเสียกับเจ้ามือไหนๆ ทั้งสิ้น ทุกตัวเลขมีโอกาสเกิดเท่ากันเป๊ะ 100% ไม่มีการมาบอกว่า "เลขนี้มาแรงไม่สุ่มให้นะ" ยุติธรรมกว่านี้ก็เปายุ้นจิ้นแล้วครับ!
             </p>
           </section>
 
@@ -481,7 +481,7 @@ const ARTICLES: Record<string, any> = {
               เป็นการใช้เทคโนโลยีช่วยตัดสินใจแบบคนรุ่นใหม่
             </h3>
             <p className="indent-6 md:indent-12 text-slate-600 leading-relaxed">
-              คนรุ่นใหม่ (Gen Z / Gen Alpha) เขาไม่มานั่งรอเลขจากต้นไม้กันแล้วครับ เขาใช้เทคโนโลยีช่วยประมวลผล การสุ่มผ่านเว็บพรีเมียมอย่าง <strong>Sum4Sum5.com</strong> คือการประกาศให้โลกรู้ว่าคุณคือ "นักสุ่มยุคใหม่" ที่ใช้ชีวิตแบบ Smart & Easy ที่สุด!
+              คนรุ่นใหม่ (Gen Z / Gen Alpha) เขาไม่มานั่งรอเลขจากต้นไม้กันแล้วครับ เขาใช้เทคโนโลยีช่วยประมวลผล การสุ่มผ่านเว็บพรีเมียมอย่าง <Link href="https://sum4sum5.com" className="text-slate-900 hover:text-orange-600 font-bold decoration-slate-300 underline-offset-4 hover:underline"><strong>Sum4Sum5.com</strong></Link> คือการประกาศให้โลกรู้ว่าคุณคือ "นักสุ่มยุคใหม่" ที่ใช้ชีวิตแบบ Smart & Easy ที่สุด!
             </p>
           </section>
         </div>
@@ -498,7 +498,7 @@ const ARTICLES: Record<string, any> = {
             <ShieldCheck className="w-5 h-5" /> Disclaimer:
           </h5>
           <p className="text-red-500 m-0 text-sm leading-loose italic">
-            บทความนี้จัดทำเพื่อความบันเทิงเท่านั้น การสุ่มเลขผ่านระบบเป็นเพียงทางเลือกหนึ่งในการเลือกซื้อสลากกินแบ่งรัฐบาลที่ถูกกฎหมาย ไม่ได้เป็นการชี้แนะทางการพนันหรือการลงทุนใดๆ โปรดลุ้นโชคอย่างมีสติและพอเหมาะพอดีนะครับ!
+            บทความนี้จัดทำเพื่อความบันเทิงเท่านั้น การ<Link href="/random-number" className="text-red-600 hover:text-red-700 decoration-red-300 underline-offset-4 hover:underline">สุ่มเลข</Link>ผ่านระบบเป็นเพียงทางเลือกหนึ่งในการเลือกซื้อสลากกินแบ่งรัฐบาลที่ถูกกฎหมาย ไม่ได้เป็นการชี้แนะทางการพนันหรือการลงทุนใดๆ โปรดลุ้นโชคอย่างมีสติและพอเหมาะพอดีนะครับ!
           </p>
         </div>
 
@@ -531,7 +531,7 @@ const ARTICLES: Record<string, any> = {
     content: (
       <article className="prose prose-slate max-w-none font-kanit w-full overflow-hidden">
         <p className="lead text-lg md:text-xl text-slate-600 mb-10 leading-relaxed font-medium border-l-4 border-orange-500 pl-6 py-2 italic">
-          "เลขดังเต็มแผงแต่ไม่มีใบที่ชอบ?" หรือ "เลขที่ตั้งใจซื้อดันไม่มีขาย?"... มาลองเปลี่ยนแนวมาเป็นสาย "สุ่มสี่สุ่มห้า" ดูไหมครับ? เพราะบางทีโชคลาภก็ชอบซ่อนตัวอยู่ในที่ที่เรียบง่ายที่สุด!
+          "เลขดังเต็มแผงแต่ไม่มีใบที่ชอบ?" หรือ "เลขที่ตั้งใจซื้อดันไม่มีขาย?"... มาลองเปลี่ยนแนวมาเป็นสาย <Link href="/" className="text-orange-600 hover:text-orange-700 font-bold decoration-orange-300 underline-offset-4 hover:underline"><strong>"สุ่มสี่สุ่มห้า"</strong></Link> ดูไหมครับ? เพราะบางทีโชคลาภก็ชอบซ่อนตัวอยู่ในที่ที่เรียบง่ายที่สุด!
         </p>
 
         <section id="famous-vs-random" className="scroll-mt-24 mb-12">
@@ -560,7 +560,7 @@ const ARTICLES: Record<string, any> = {
             พลังแห่งความสุ่ม: เมื่อเลขนอกสายตาคือพระเอก
           </h2>
           <p className="indent-6 md:indent-12 text-slate-600 leading-relaxed">
-            การสุ่มคือการ "เปิดใจ" รับโอกาสใหม่ๆ ครับ เลขที่ระบบ <strong>สุ่มสี่สุ่มห้า</strong> ดีดออกมาให้อาจจะเป็นเลขที่คุณไม่เคยคิดจะซื้อเลยในชีวิต แต่นั่นแหละครับคือความมหัศจรรย์! เลขเหล่านี้มักจะมีอยู่ตามแผงสลากทั่วไป รอคอยให้คนมีดวง (ที่ใช้ระบบสุ่ม) ไปหยิบมันขึ้นมา
+            การสุ่มคือการ "เปิดใจ" รับโอกาสใหม่ๆ ครับ เลขที่ระบบ <Link href="/" className="text-orange-600 hover:text-orange-700 font-bold decoration-orange-300 underline-offset-4 hover:underline"><strong>สุ่มสี่สุ่มห้า</strong></Link> ดีดออกมาให้อาจจะเป็นเลขที่คุณไม่เคยคิดจะซื้อเลยในชีวิต แต่นั่นแหละครับคือความมหัศจรรย์! เลขเหล่านี้มักจะมีอยู่ตามแผงสลากทั่วไป รอคอยให้คนมีดวง (ที่ใช้ระบบสุ่ม) ไปหยิบมันขึ้นมา
           </p>
           <div className="bg-slate-900 text-white rounded-3xl p-8 my-8 shadow-2xl relative overflow-hidden group">
             <div className="absolute top-0 right-0 w-32 h-32 bg-orange-500/20 rounded-full -mr-16 -mt-16 blur-2xl" />
@@ -578,7 +578,7 @@ const ARTICLES: Record<string, any> = {
             ท้าพิสูจน์! สุ่มแล้วไปหาซื้อดูสักใบ
           </h2>
           <p className="indent-6 md:indent-12 text-slate-600 leading-relaxed mb-8">
-            ผมขอท้าเลยครับ! งวดนี้ไม่ต้องไปหาเลขจากที่ไหนไกล ลองเข้ามาที่ <strong>Sum4Sum5.com</strong> กดปุ่มสุ่มเลข 2 ตัว หรือ 3 ตัว ได้เลขอะไรมา ให้ลองไปหาซื้อสลากกินแบ่งรัฐบาลใบที่มีเลขนั้นดูสักใบ (ในราคาปกติ 80 บาทนะ!) แล้วมาลุ้นกันว่าพลังแห่งความสุ่มจะทำงานให้คุณได้ว้าวขนาดไหน!
+            ผมขอท้าเลยครับ! งวดนี้ไม่ต้องไปหาเลขจากที่ไหนไกล ลองเข้ามาที่ <Link href="https://sum4sum5.com" className="text-orange-600 hover:text-orange-700 font-bold decoration-orange-300 underline-offset-4 hover:underline"><strong>Sum4Sum5.com</strong></Link> กดปุ่มสุ่มเลข 2 ตัว หรือ 3 ตัว ได้เลขอะไรมา ให้ลองไปหาซื้อสลากกินแบ่งรัฐบาลใบที่มีเลขนั้นดูสักใบ (ในราคาปกติ 80 บาทนะ!) แล้วมาลุ้นกันว่าพลังแห่งความสุ่มจะทำงานให้คุณได้ว้าวขนาดไหน!
           </p>
           <div className="text-center">
             <Link href="/random-number" className="btn-primary inline-flex items-center gap-3 text-lg px-10 py-5 group shadow-xl">
@@ -592,7 +592,7 @@ const ARTICLES: Record<string, any> = {
             <ShieldCheck className="w-5 h-5" /> Disclaimer:
           </h5>
           <p className="text-red-500 m-0 text-sm leading-loose italic">
-            เนื้อหานี้เป็นเพียงบทความเชิงไลฟ์สไตล์และความบันเทิง ระบบสุ่มเลขเป็นเพียงโปรแกรมสุ่มตัวเลขทางคณิตศาสตร์เพื่อช่วยในการตัดสินใจเลือกซื้อสลากกินแบ่งรัฐบาลที่ถูกกฎหมายเท่านั้น ไม่มีการการันตีผลหรือสนับสนุนการพนันผิดกฎหมายทุกรูปแบบครับ
+            เนื้อหานี้เป็นเพียงบทความเชิงไลฟ์สไตล์และความบันเทิง ระบบ<Link href="/random-number" className="text-red-600 hover:text-red-700 decoration-red-300 underline-offset-4 hover:underline">สุ่มเลข</Link>เป็นเพียงโปรแกรมสุ่มตัวเลขทางคณิตศาสตร์เพื่อช่วยในการตัดสินใจเลือกซื้อสลากกินแบ่งรัฐบาลที่ถูกกฎหมายเท่านั้น ไม่มีการการันตีผลหรือสนับสนุนการพนันผิดกฎหมายทุกรูปแบบครับ
           </p>
         </div>
 
@@ -602,7 +602,7 @@ const ARTICLES: Record<string, any> = {
             บทสรุป: ความลับของโชคลาภ
           </h2>
           <p className="indent-12 text-slate-600 leading-relaxed text-lg font-medium">
-            โชคลาภมักจะเลือกมาหาคนที่ "พร้อมและผ่อนคลาย" ครับ งวดนี้ขอให้ทุกคนสนุกกับการลุ้นโชคแบบไม่กดดันตัวเอง และให้ <strong>สุ่มสี่สุ่มห้า</strong> เป็นเพื่อนร่วมลุ้นไปกับคุณในทุกย่างก้าวนะครับ!
+            โชคลาภมักจะเลือกมาหาคนที่ "พร้อมและผ่อนคลาย" ครับ งวดนี้ขอให้ทุกคนสนุกกับการลุ้นโชคแบบไม่กดดันตัวเอง และให้ <Link href="/" className="text-orange-600 hover:text-orange-700 font-bold decoration-orange-300 underline-offset-4 hover:underline"><strong>สุ่มสี่สุ่มห้า</strong></Link> เป็นเพื่อนร่วมลุ้นไปกับคุณในทุกย่างก้าวนะครับ!
           </p>
         </section>
       </article>
