@@ -248,16 +248,16 @@ export default function NameRandomizer() {
             </div>
 
             <div
-              className={`bg-white/80 backdrop-blur-2xl rounded-[3rem] lg:rounded-[3.5rem] py-8 lg:py-12 px-6 lg:px-14 border border-white relative flex flex-col items-center justify-center shadow-[0_35px_70px_-15px_rgba(0,0,0,0.1)] transition-all duration-700 w-full ${isFullscreen ? '!border-none !rounded-0 !bg-transparent !shadow-none !p-0' : ''}`}
+              className={`bg-white/80 backdrop-blur-2xl rounded-[3rem] lg:rounded-[3.5rem] py-6 lg:py-10 px-6 lg:px-14 border border-white relative flex flex-col items-center justify-center shadow-[0_35px_70px_-15px_rgba(0,0,0,0.1)] transition-all duration-700 w-full ${isFullscreen ? '!border-none !rounded-0 !bg-transparent !shadow-none !p-0' : ''}`}
             >
               <motion.div
                 id="results-board-container"
                 transition={{ type: "spring", damping: 25, stiffness: 200 }}
                 className={`relative w-full flex flex-col items-center gap-10 justify-center ${isFullscreen ? (showSettings ? 'max-w-[850px]' : 'max-w-[1000px]') : (showSettings ? 'max-w-[800px]' : 'max-w-[850px]')}`}
               >
-                <div className="relative w-full min-h-[450px] lg:aspect-[1.6/1] flex flex-col items-center justify-center">
+                <div className="relative w-full min-h-[300px] flex flex-col items-center justify-center">
 
-                  <div className="absolute inset-0 bg-white/40 backdrop-blur-3xl rounded-[3.5rem] border-4 border-white shadow-[0_40px_100px_-20px_rgba(0,0,0,0.08)] overflow-hidden">
+                  <div className="absolute inset-0 bg-white/40 backdrop-blur-3xl rounded-[3.5rem] border-4 border-white shadow-[0_40px_100px_-20px_rgba(0,0,0,0.08)]">
                     <div className="absolute inset-0 opacity-10 pointer-events-none">
                       {isMounted && [...Array(8)].map((_, i) => (
                         <motion.div
@@ -284,7 +284,7 @@ export default function NameRandomizer() {
                     </div>
                   </div>
 
-                  <div className="relative z-10 w-full h-full flex flex-col items-center justify-center p-6 lg:p-10">
+                  <div className="relative z-10 w-full flex flex-col items-center justify-center p-6 lg:p-10">
                     <AnimatePresence mode="wait">
                       {isRolling ? (
                         <motion.div
@@ -401,7 +401,7 @@ export default function NameRandomizer() {
                           key="results-celebration"
                           initial={{ opacity: 0, y: 20 }}
                           animate={{ opacity: 1, y: 0 }}
-                          className="w-full flex flex-col items-center gap-6 lg:gap-8 py-4 relative"
+                          className="w-full flex flex-col items-center gap-4 lg:gap-6 py-2 lg:py-4 relative"
                         >
                           {/* Export Branding (Hidden) */}
                           <div className="hidden absolute bottom-0 left-0 right-0 items-center justify-between px-8 py-4 opacity-30">
@@ -478,7 +478,7 @@ export default function NameRandomizer() {
                                 />
                               ))}
                             </motion.div>
-                            <h2 className="text-2xl lg:text-4xl font-black text-slate-800 font-prompt tracking-tight">
+                            <h2 className="text-2xl lg:text-3xl font-black font-prompt tracking-tight" style={{ color: currentTheme.primary }}>
                               {mode === 'winner' ? 'สุ่มเสร็จเรียบร้อย!' : 'แบ่งกลุ่มสำเร็จ!'}
                             </h2>
                             <p className="text-slate-400 font-bold font-prompt text-xs lg:text-sm mt-1">
@@ -489,7 +489,7 @@ export default function NameRandomizer() {
                           {/* 2. Results Content */}
                           <div 
                             id="results-capture-area"
-                            className="w-full bg-slate-50/50 backdrop-blur-sm rounded-[3rem] p-4 lg:p-8 border border-slate-100 shadow-inner overflow-hidden max-h-[600px] flex flex-col transition-all duration-500 [.exporting-mode_&]:max-h-none [.exporting-mode_&]:bg-white"
+                            className="w-full bg-slate-50/50 backdrop-blur-sm rounded-[3rem] p-4 lg:p-8 border border-slate-100 shadow-inner overflow-hidden max-h-[800px] flex flex-col transition-all duration-500 [.exporting-mode_&]:max-h-none [.exporting-mode_&]:bg-white"
                           >
                             <div className="flex items-center justify-between mb-6 px-2">
                               <div className="flex items-center gap-2">
@@ -544,35 +544,61 @@ export default function NameRandomizer() {
                                   ))}
                                 </div>
                               ) : (
-                                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                                <motion.div 
+                                  variants={{
+                                    hidden: { opacity: 0 },
+                                    show: {
+                                      opacity: 1,
+                                      transition: {
+                                        staggerChildren: 0.1
+                                      }
+                                    }
+                                  }}
+                                  initial="hidden"
+                                  animate="show"
+                                  className="grid grid-cols-1 sm:grid-cols-2 gap-6"
+                                >
                                   {groups.map((team, i) => (
                                     <motion.div
                                       key={i}
-                                      initial={{ opacity: 0, y: 10 }}
-                                      animate={{ opacity: 1, y: 0 }}
-                                      transition={{ delay: i * 0.1 }}
-                                      className="flex flex-col bg-white rounded-3xl border border-slate-100 shadow-sm overflow-hidden"
+                                      variants={{
+                                        hidden: { opacity: 0, y: 20 },
+                                        show: { opacity: 1, y: 0 }
+                                      }}
+                                      whileHover={{ y: -5, transition: { duration: 0.2 } }}
+                                      className="flex flex-col bg-white rounded-3xl border border-slate-100 shadow-sm overflow-hidden group/card hover:shadow-xl hover:shadow-primary/5 transition-all duration-300"
                                     >
-                                      <div className="p-4 bg-slate-50 border-b border-slate-100 flex items-center justify-between">
+                                      <div className="p-4 bg-slate-50 border-b border-slate-100 flex items-center justify-between group-hover/card:bg-white transition-colors">
                                         <span className="font-black text-slate-700 text-sm lg:text-lg font-prompt uppercase tracking-widest flex items-center gap-2.5">
                                           <div 
-                                            className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0"
+                                            className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0 shadow-sm"
                                             style={{ backgroundColor: `${currentTheme.primary}15` }}
                                           >
                                             <Users className="w-4 h-4 lg:w-4.5 lg:h-4.5" style={{ color: currentTheme.primary }} />
                                           </div>
                                           กลุ่มที่ {i + 1}
                                         </span>
-                                        <span className="px-3 py-1 rounded-full bg-slate-200 text-[10px] lg:text-xs font-black text-slate-500 uppercase">{team.length} คน</span>
+                                        <span 
+                                          className="px-3 py-1 rounded-full text-[10px] lg:text-xs font-black uppercase shadow-sm"
+                                          style={{ 
+                                            backgroundColor: `${currentTheme.primary}10`,
+                                            color: currentTheme.primary 
+                                          }}
+                                        >
+                                          {team.length} คน
+                                        </span>
                                       </div>
                                       <div className="p-4 grid grid-cols-1 gap-2">
                                         {team.map((name, j) => (
-                                          <div 
+                                          <motion.div 
                                             key={j} 
-                                            className="bg-white px-3 py-2 rounded-2xl flex items-center gap-3 border border-slate-50 shadow-sm transition-all hover:translate-x-1 w-full"
+                                            initial={{ opacity: 0, x: -10 }}
+                                            animate={{ opacity: 1, x: 0 }}
+                                            transition={{ delay: (i * 0.1) + (j * 0.05) }}
+                                            className="bg-white px-3 py-2.5 rounded-2xl flex items-center gap-3 border border-slate-50 shadow-sm transition-all hover:translate-x-1 hover:border-primary/20 w-full group/name"
                                           >
                                             <div 
-                                              className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0 shadow-md text-white"
+                                              className="w-8 h-8 rounded-lg flex items-center justify-center shrink-0 shadow-md text-white group-hover/name:scale-110 transition-transform"
                                               style={{ background: `linear-gradient(to bottom right, ${currentTheme.primary}, ${currentTheme.primary}dd)` }}
                                             >
                                               <User className="w-4 h-4" />
@@ -580,12 +606,12 @@ export default function NameRandomizer() {
                                             <span className="text-sm lg:text-base font-bold text-slate-700 font-prompt truncate flex-1" style={{ lineHeight: '1.4' }}>
                                               {name}
                                             </span>
-                                          </div>
+                                          </motion.div>
                                         ))}
                                       </div>
                                     </motion.div>
                                   ))}
-                                </div>
+                                </motion.div>
                               )}
                             </div>
                           </div>
@@ -633,18 +659,24 @@ export default function NameRandomizer() {
                     </div>
                   ))
                 ) : (
-                  <div className="grid grid-cols-1 gap-8 w-full">
+                  <div className="grid grid-cols-1 gap-10 w-full">
                     {groups.map((team, i) => (
                       <div key={i} className="flex flex-col items-center w-full">
-                        <div className="flex items-center gap-3 mb-4">
-                          <div className="h-[1px] w-8 bg-slate-100" />
-                          <span className="text-sm font-black text-slate-300 uppercase tracking-widest">Team {i + 1}</span>
-                          <div className="h-[1px] w-8 bg-slate-100" />
+                        <div className="flex items-center gap-4 mb-6">
+                          <div className="h-[2px] w-12" style={{ backgroundColor: `${currentTheme.primary}22` }} />
+                          <span className="text-sm lg:text-base font-black uppercase tracking-[0.2em] font-prompt" style={{ color: currentTheme.primary }}>
+                            กลุ่มที่ {i + 1}
+                          </span>
+                          <div className="h-[2px] w-12" style={{ backgroundColor: `${currentTheme.primary}22` }} />
                         </div>
-                        <div className="flex flex-wrap justify-center gap-3 w-full">
+                        <div className="flex flex-wrap justify-center gap-4 w-full">
                           {team.map((name, j) => (
-                            <div key={j} className="bg-slate-50 px-5 py-2 rounded-2xl border border-slate-100">
-                              <span className="text-xl font-black text-slate-700">{name}</span>
+                            <div 
+                              key={j} 
+                              className="bg-white px-6 py-3 rounded-[1.5rem] border-2 border-slate-50 shadow-sm flex items-center gap-3"
+                            >
+                              <div className="w-2 h-2 rounded-full" style={{ backgroundColor: currentTheme.primary }} />
+                              <span className="text-2xl font-black text-slate-700 font-prompt">{name}</span>
                             </div>
                           ))}
                         </div>
@@ -713,17 +745,27 @@ export default function NameRandomizer() {
                   </div>
                 ))
               ) : (
-                <div className="w-full max-h-[40vh] overflow-y-auto custom-scrollbar px-4">
-                  {groups.map((team, i) => (
-                    <div key={i} className="mb-6 last:mb-0">
-                      <div className="text-[10px] font-black text-slate-300 uppercase tracking-widest mb-2 text-center">Team {i + 1}</div>
-                      <div className="flex flex-wrap justify-center gap-2">
-                        {team.map((name, j) => (
-                          <span key={j} className="bg-slate-50 px-3 py-1 rounded-full text-sm font-bold text-slate-600 border border-slate-100">{name}</span>
-                        ))}
+                <div className="w-full max-h-[50vh] overflow-y-auto custom-scrollbar px-4 py-2">
+                  <div className="grid grid-cols-1 gap-4">
+                    {groups.map((team, i) => (
+                      <div key={i} className="bg-slate-50/50 rounded-[2rem] border border-slate-100 p-4 flex flex-col gap-3">
+                        <div className="flex items-center justify-between px-2">
+                          <span className="text-[10px] font-black text-slate-400 uppercase tracking-widest">กลุ่มที่ {i + 1}</span>
+                          <span className="text-[10px] font-black text-slate-300 uppercase">{team.length} คน</span>
+                        </div>
+                        <div className="flex flex-wrap gap-2">
+                          {team.map((name, j) => (
+                            <span 
+                              key={j} 
+                              className="bg-white px-4 py-1.5 rounded-xl text-sm font-bold text-slate-700 border border-slate-100 shadow-sm"
+                            >
+                              {name}
+                            </span>
+                          ))}
+                        </div>
                       </div>
-                    </div>
-                  ))}
+                    ))}
+                  </div>
                 </div>
               )}
             </div>
