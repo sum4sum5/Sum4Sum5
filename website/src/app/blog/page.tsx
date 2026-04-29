@@ -10,6 +10,16 @@ export const metadata: Metadata = {
 
 const articles = [
   {
+    title: '10 วิธีสุ่มชื่อนักเรียนให้ตื่นเต้น ไม่น่าเบื่อ (ฉบับคุณครูยุคใหม่)',
+    description: 'เปลี่ยนชั่วโมงเรียนที่น่าเบื่อให้กลายเป็นความสนุก ด้วย 10 เทคนิคการสุ่มรายชื่อนักเรียนที่ช่วยสร้างบรรยากาศตื่นเต้นและเป็นกันเอง',
+    slug: '10-ways-to-random-students-names',
+    date: '29 เม.ย. 2026',
+    readTime: '12 นาที',
+    category: 'ไอเดียห้องเรียน',
+    icon: <Sparkles className="w-6 h-6 text-yellow-500" />,
+    image: '/images/blog/random_students.png',
+  },
+  {
     title: 'วิธีสุ่มเลข 2 ตัว 3 ตัว สำหรับกิจกรรมแจกรางวัลแบบยุติธรรม',
     description: 'แชร์เทคนิคการสุ่มเลขรางวัลให้โปร่งใสและน่าตื่นเต้น พร้อมวิธีใช้เครื่องมือสุ่มออนไลน์ให้ได้ผลลัพธ์ที่ทุกคนยอมรับ',
     slug: 'how-to-random-numbers-for-giveaway',

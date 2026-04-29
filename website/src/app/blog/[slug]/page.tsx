@@ -13,12 +13,217 @@ interface ArticleProps {
 }
 
 const ARTICLES: Record<string, any> = {
+  '10-ways-to-random-students-names': {
+    title: 'รวมไอเดียสุ่มชื่อนักเรียนให้ตื่นเต้น ไม่น่าเบื่อ (ฉบับคุณครูยุคใหม่)',
+    date: '29 เมษายน 2026',
+    readTime: '12 นาที',
+    category: 'ไอเดียห้องเรียน',
+    author: 'ทีมสุ่มสี่สุ่มห้า',
+    description: 'รวมไอเดียการสุ่มชื่อนักเรียนให้สนุกและตื่นเต้น ไม่ว่าจะเป็นการสุ่มแบบดั้งเดิมหรือการใช้เครื่องมือออนไลน์ที่ทันสมัย เพื่อสร้างบรรยากาศที่ดีในห้องเรียนยุคใหม่',
+    keywords: ['สุ่มชื่อนักเรียน', 'วิธีสุ่มชื่อ', 'ไอเดียห้องเรียน', 'กิจกรรมในห้องเรียน', 'สุ่มสี่สุ่มห้า', 'วงล้อสุ่มรายชื่อ'],
+    image: '/images/blog/random_students.png',
+    toc: [
+      { id: 'why-random', title: 'ทำไม "การสุ่ม" ถึงช่วยสร้างบรรยากาศที่ดีในห้องเรียน?' },
+      { id: 'physical-methods', title: 'การสุ่มแบบ Physical' },
+      { id: 'modern-tech', title: 'การสุ่มแบบ High-Tech' },
+      { id: 'digital-wheel', title: 'ทำไมต้องใช้สุ่มสี่สุ่มห้า' },
+      { id: 'tips', title: 'Tips: สุ่มยังไงให้เด็กๆ ไม่รู้สึกโดนแกล้ง' },
+      { id: 'conclusion', title: 'บทสรุป: สร้างห้องเรียนในฝัน' },
+    ],
+    content: (
+      <article className="prose prose-slate max-w-none font-kanit w-full overflow-hidden">
+        <p className="lead text-lg md:text-xl text-slate-600 mb-10 leading-relaxed font-medium border-l-4 border-yellow-500 pl-6 py-2">
+          "เลขที่ 5... เชิญหน้าชั้นครับ!" เสียงนี้อาจเป็นเสียงที่เด็กๆ หลายคนหวาดกลัว แต่จะดีกว่าไหม? ถ้าเราเปลี่ยนวินาทีแห่งความเงียบกริบ ให้กลายเป็นเสียงเชียร์และความตื่นเต้น วันนี้ทีมงาน <Link href="/" className="text-orange-600 hover:text-orange-700 font-bold decoration-orange-300 underline-offset-4 hover:underline"><strong>สุ่มสี่สุ่มห้า</strong></Link> มีไอเดียสุดล้ำมาฝากคุณครูรุ่นใหม่ทุกคนครับ!
+        </p>
+
+        <section id="why-random" className="scroll-mt-24 mb-12">
+          <h2 className="font-prompt font-black text-xl md:text-2xl lg:text-3xl text-slate-900 leading-tight mb-6 flex items-center gap-4 bg-slate-50/50 p-4 rounded-2xl border border-slate-100">
+            <span className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-yellow-500 text-white flex items-center justify-center text-lg md:text-xl italic font-serif shadow-lg shadow-yellow-500/20 shrink-0">01</span>
+            ทำไม "การสุ่ม" ถึงช่วยสร้างบรรยากาศที่ดีในห้องเรียน?
+          </h2>
+          <div className="space-y-4 text-slate-600 leading-relaxed">
+            <p className="indent-6 md:indent-12">
+              คุณครูทราบไหมครับว่า การสุ่มชื่อไม่ใช่แค่การหาคนมาตอบคำถาม แต่มันคือการสร้าง <strong>"ความเท่าเทียม"</strong> และ <strong>"ความลุ้นระทึก"</strong> (Gamification) ในห้องเรียน เมื่อเด็กๆ รู้สึกว่าโอกาสที่จะโดนสุ่มมีเท่ากันทุกคน พวกเขาจะตื่นตัว (Active Learning) และมีส่วนร่วมกับเนื้อหามากขึ้นโดยไม่รู้ตัว
+            </p>
+            <p className="indent-6 md:indent-12">
+              นอกจากนี้ การใช้เครื่องมือสุ่มที่สวยงามและทันสมัย ยังช่วยลดช่องว่างระหว่างครูกับนักเรียน ทำให้บรรยากาศดูเป็นกันเองและลดความกดดันได้ดีเยี่ยมเลยครับ
+            </p>
+          </div>
+        </section>
+
+        <section id="physical-methods" className="scroll-mt-24 mb-12">
+          <h2 className="font-prompt font-black text-xl md:text-2xl lg:text-3xl text-slate-900 leading-tight mb-6 flex items-center gap-4 bg-slate-50/50 p-4 rounded-2xl border border-slate-100">
+            <span className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-orange-500 text-white flex items-center justify-center text-lg md:text-xl italic font-serif shadow-lg shadow-orange-500/20 shrink-0">02</span>
+            การสุ่มแบบ Physical (คลาสสิกแต่ได้ใจ)
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+            <div className="p-6 md:p-8 rounded-2xl bg-white border border-slate-100 shadow-sm flex flex-col h-full hover:border-orange-200 hover:shadow-md transition-all group">
+              <h4 className="font-bold text-slate-900 mb-2 font-prompt group-hover:text-orange-600 transition-colors">1. ไม้ไอติมมหัศจรรย์</h4>
+              <p className="text-sm text-slate-500 leading-relaxed">เขียนชื่อนักเรียนลงบนไม้ไอติม แล้วใส่ในแก้วสวยๆ ทุกครั้งที่สุ่มให้เด็กๆ เป็นคนหยิบเอง จะได้อารมณ์เหมือนจับฉลากรางวัลใหญ่!</p>
+            </div>
+            <div className="p-6 md:p-8 rounded-2xl bg-white border border-slate-100 shadow-sm flex flex-col h-full hover:border-orange-200 hover:shadow-md transition-all group">
+              <h4 className="font-bold text-slate-900 mb-2 font-prompt group-hover:text-orange-600 transition-colors">2. กล่องปริศนา (Mystery Box)</h4>
+              <p className="text-sm text-slate-500 leading-relaxed">ใช้กล่องทึบที่ตกแต่งน่ารักๆ ใส่ชื่อนักเรียนไว้ข้างใน วิธีนี้เหมาะมากสำหรับกิจกรรมที่มีของรางวัลเล็กๆ น้อยๆ ติดมือให้ด้วย</p>
+            </div>
+            <div className="p-6 md:p-8 rounded-2xl bg-white border border-slate-100 shadow-sm flex flex-col h-full hover:border-orange-200 hover:shadow-md transition-all group">
+              <h4 className="font-bold text-slate-900 mb-2 font-prompt group-hover:text-orange-600 transition-colors">3. ดนตรีบำบัด (Hot Potato)</h4>
+              <p className="text-sm text-slate-500 leading-relaxed">เปิดเพลงสนุกๆ แล้วให้เด็กๆ ส่งของต่อกัน เมื่อเพลงหยุด ของอยู่ที่ใคร คนนั้นคือผู้โชคดี (หรือผู้ที่ต้องตอบคำถามนั่นเอง)</p>
+            </div>
+            <div className="p-6 md:p-8 rounded-2xl bg-white border border-slate-100 shadow-sm flex flex-col h-full hover:border-orange-200 hover:shadow-md transition-all group">
+              <h4 className="font-bold text-slate-900 mb-2 font-prompt group-hover:text-orange-600 transition-colors">4. สุ่มตามทิศดินสอ (Spin the Pencil)</h4>
+              <p className="text-sm text-slate-500 leading-relaxed">วางดินสอบนแผ่นกระดาษที่มีเลขที่นักเรียนล้อมรอบเป็นวงกลม แล้วหมุนดินสอเพื่อให้ปลายชี้ไปที่ผู้โชคดี วิธีนี้ง่ายและลุ้นไม่แพ้วงล้อออนไลน์เลยครับ</p>
+            </div>
+            <div className="p-6 md:p-8 rounded-2xl bg-white border border-slate-100 shadow-sm flex flex-col h-full hover:border-orange-200 hover:shadow-md transition-all group">
+              <h4 className="font-bold text-slate-900 mb-2 font-prompt group-hover:text-orange-600 transition-colors">5. สุ่มจาก "คุณลักษณะ" (Attribute Scan)</h4>
+              <p className="text-sm text-slate-500 leading-relaxed">สุ่มจากสิ่งที่ทุกคนมีส่วนร่วมได้ เช่น "ใครที่เกิดในเดือนที่มีเทศกาลสงกรานต์" หรือ "ใครที่ใส่เสื้อกันหนาวมาวันนี้" วิธีนี้ช่วยให้เด็กๆ ได้สังเกตเพื่อนรอบข้างด้วยครับ</p>
+            </div>
+            <div className="p-6 md:p-8 rounded-2xl bg-white border border-slate-100 shadow-sm flex flex-col h-full hover:border-orange-200 hover:shadow-md transition-all group">
+              <h4 className="font-bold text-slate-900 mb-2 font-prompt group-hover:text-orange-600 transition-colors">6. ลูกบอลเสี่ยงทาย (Lucky Balls)</h4>
+              <p className="text-sm text-slate-500 leading-relaxed">เขียนเลขที่ลงบนลูกปิงปองแล้วใส่ในขวดโหลใส วิธีนี้เด็กๆ จะตื่นเต้นมากตอนที่เห็นคุณครูเขย่าขวดโหลและลุ้นว่าลูกไหนจะหลุดออกมา!</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="modern-tech" className="scroll-mt-24 mb-12">
+          <h2 className="font-prompt font-black text-xl md:text-2xl lg:text-3xl text-slate-900 leading-tight mb-6 flex items-center gap-4 bg-slate-50/50 p-4 rounded-2xl border border-slate-100">
+            <span className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-yellow-500 text-white flex items-center justify-center text-lg md:text-xl italic font-serif shadow-lg shadow-yellow-500/20 shrink-0">03</span>
+            การสุ่มแบบ High-Tech
+          </h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="p-6 md:p-8 rounded-[2rem] bg-white border border-slate-100 shadow-sm hover:shadow-md hover:border-yellow-200 transition-all flex flex-col h-full group">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-10 h-10 rounded-full bg-slate-900 text-white flex items-center justify-center font-bold shrink-0 group-hover:bg-yellow-500 transition-colors">1</div>
+                <h4 className="font-bold text-slate-900 m-0 text-lg font-prompt">สุ่มเลขที่นำโชค (Lucky Number)</h4>
+              </div>
+              <p className="text-slate-500 m-0 leading-relaxed text-base">ใช้เครื่องมือ <Link href="/random-number" className="text-orange-600 underline">สุ่มตัวเลข</Link> กำหนดช่วงตามจำนวนนักเรียนในห้อง แล้วกดสุ่มเพื่อหาผู้โชคดีได้ในคลิกเดียว สะดวกและโปร่งใสสุดๆ ครับ</p>
+            </div>
+            
+            <div className="p-6 md:p-8 rounded-[2rem] bg-white border border-slate-100 shadow-sm hover:shadow-md hover:border-yellow-200 transition-all flex flex-col h-full group">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-10 h-10 rounded-full bg-slate-900 text-white flex items-center justify-center font-bold shrink-0 group-hover:bg-yellow-500 transition-colors">2</div>
+                <h4 className="font-bold text-slate-900 m-0 text-lg font-prompt">แบ่งกลุ่มอัจฉริยะ (Smart Grouping)</h4>
+              </div>
+              <p className="text-slate-500 m-0 leading-relaxed text-base">ใช้ระบบ <Link href="/random-name" className="text-orange-600 underline">สุ่มแบ่งกลุ่ม</Link> เพื่อจัดทีมนักเรียนให้เท่าๆ กันโดยอัตโนมัติ เหมาะมากสำหรับกิจกรรมกลุ่มที่ต้องการความรวดเร็วและยุติธรรม</p>
+            </div>
+
+            <div className="p-6 md:p-8 rounded-[2rem] bg-white border border-slate-100 shadow-sm hover:shadow-md hover:border-yellow-200 transition-all flex flex-col h-full group">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-10 h-10 rounded-full bg-slate-900 text-white flex items-center justify-center font-bold shrink-0 group-hover:bg-yellow-500 transition-colors">3</div>
+                <h4 className="font-bold text-slate-900 m-0 text-lg font-prompt">เกมทายเมนูอาหาร (Food Choice Game)</h4>
+              </div>
+              <p className="text-slate-500 m-0 leading-relaxed text-base">ให้นักเรียนเลือกเมนูอาหารที่ชอบคนละ 1 อย่าง แล้วใช้เครื่องมือ <Link href="/wheel" className="text-orange-600 underline">วงล้อสุ่ม</Link> ใส่ชื่อเมนูเหล่านั้นลงไป เมนูไหนถูกสุ่มได้ นักเรียนที่เลือกเมนูนั้นจะเป็นผู้โชคดีครับ!</p>
+            </div>
+
+            <div className="p-6 md:p-8 rounded-[2rem] bg-white border border-slate-100 shadow-sm hover:shadow-md hover:border-yellow-200 transition-all flex flex-col h-full group">
+              <div className="flex items-center gap-4 mb-4">
+                <div className="w-10 h-10 rounded-full bg-slate-900 text-white flex items-center justify-center font-bold shrink-0 group-hover:bg-yellow-500 transition-colors">4</div>
+                <h4 className="font-bold text-slate-900 m-0 text-lg font-prompt">สุ่มจับคู่ออนไลน์ (Online Buddy Match)</h4>
+              </div>
+              <p className="text-slate-500 m-0 leading-relaxed text-base">ใช้เมนู <Link href="/random-name" className="text-orange-600 underline">สุ่มรายชื่อ</Link> ในการจับคู่! ให้ตัวแทนนักเรียนออกมาเป็นคนกดสุ่ม และอย่าลืมใช้ฟีเจอร์ "ลบรายชื่อออกหลังจากสุ่ม" เพื่อไม่ให้ซ้ำกับคนเดิมครับ</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="digital-wheel" className="scroll-mt-24 mb-12">
+          <h2 className="font-prompt font-black text-xl md:text-2xl lg:text-3xl text-slate-900 leading-tight mb-6 flex items-center gap-4 bg-slate-50/50 p-4 rounded-2xl border border-slate-100">
+            <span className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-orange-500 text-white flex items-center justify-center text-lg md:text-xl italic font-serif shadow-lg shadow-orange-500/20 shrink-0">04</span>
+            ทำไมต้องใช้สุ่มสี่สุ่มห้า
+          </h2>
+          <div className="space-y-6 text-slate-600 leading-relaxed">
+            <p className="indent-6 md:indent-12">
+              ถ้าคุณครูอยากได้ความ "ว้าว" แบบจัดเต็ม ต้องลองใช้ <Link href="/wheel" className="text-orange-600 hover:text-orange-700 font-bold decoration-orange-300 underline-offset-4 hover:underline"><strong>วงล้อสุ่มรายชื่อ (Random Wheel)</strong></Link> ของเราครับ! นี่คือเหตุผลว่าทำไม <strong>Sum4Sum5.com</strong> ถึงเป็นขวัญใจคุณครูรุ่นใหม่
+            </p>
+            <div className="bg-orange-50 border border-orange-100 p-8 rounded-[2.5rem] relative overflow-hidden group">
+               <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:scale-110 transition-transform duration-700">
+                  <FerrisWheel className="w-32 h-32 text-orange-500" />
+               </div>
+               <h4 className="text-orange-700 font-bold mb-4 font-prompt text-xl">จุดเด่นที่ทำให้เราต่าง:</h4>
+               <ul className="space-y-3 list-none p-0">
+                  <li className="flex items-center gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-orange-500" /> 
+                    <span><strong>สวยงามพรีเมียม:</strong> ดีไซน์ทันสมัย สีสันสดใส เหมาะกับหน้าจอโปรเจกเตอร์หน้าชั้นเรียน</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-orange-500" /> 
+                    <span><strong>ใช้งานง่าย:</strong> แค่ก๊อปปี้รายชื่อนักเรียนมาวาง แล้วกดสุ่มได้ทันที ไม่ต้องสมัครสมาชิก</span>
+                  </li>
+                  <li className="flex items-center gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-orange-500" /> 
+                    <span><strong>อนิเมชันลื่นไหล:</strong> ให้ความรู้สึกตื่นเต้นเหมือนดูรายการทีวี เด็กๆ จะจ้องหน้าจอตาไม่กระพริบเลยครับ</span>
+                  </li>
+               </ul>
+               <div className="mt-8">
+                  <Link href="/wheel" className="inline-flex items-center gap-2 px-6 py-3 bg-orange-500 text-white font-black rounded-xl hover:bg-orange-600 transition-all shadow-lg shadow-orange-500/20">
+                    ลองใช้สุ่มสี่สุ่มห้าสุ่มชื่อ <ArrowRight className="w-4 h-4" />
+                  </Link>
+               </div>
+            </div>
+          </div>
+        </section>
+
+        <div className="my-16">
+           <AdBanner slot="article_middle" />
+        </div>
+
+        <section id="tips" className="scroll-mt-24 mb-16">
+          <h2 className="font-prompt font-black text-xl md:text-2xl lg:text-3xl text-slate-900 leading-tight mb-10 flex items-center gap-4 bg-slate-50/50 p-4 rounded-2xl border border-slate-100">
+            <span className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-yellow-500 text-white flex items-center justify-center text-lg md:text-xl italic font-serif shadow-lg shadow-yellow-500/20 shrink-0">05</span>
+            Tips: สุ่มยังไงให้เด็กๆ ไม่รู้สึกโดนแกล้ง?
+          </h2>
+          <div className="bg-slate-900 rounded-[2.5rem] p-10 text-white relative overflow-hidden shadow-2xl">
+             <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-orange-500/20 rounded-full blur-3xl" />
+             <div className="relative z-10 space-y-6">
+                <p className="text-lg leading-relaxed italic text-slate-300">
+                  "กุญแจสำคัญคือ **ความยุติธรรม** ครับ ถ้าเราใช้เครื่องมือที่โปร่งใสอย่างวงล้อสุ่มออนไลน์ เด็กๆ จะยอมรับผลได้ง่ายกว่าการที่คุณครูจิ้มเลือกเอง นอกจากนี้ อย่าลืมชมเชยหรือมีรางวัลเล็กๆ ให้คนที่โดนสุ่มบ่อยๆ เพื่อเปลี่ยนความกลัวให้เป็นความภูมิใจนะครับ"
+                </p>
+                <div className="flex items-center gap-4">
+                   <div className="w-12 h-12 rounded-full bg-orange-500 flex items-center justify-center">
+                      <Users className="w-6 h-6 text-white" />
+                   </div>
+                   <div>
+                      <span className="block font-bold text-white">แอดมินสุ่มสี่สุ่มห้า</span>
+                      <span className="text-slate-400 text-sm">ผู้ช่วยสร้างความสนุกในห้องเรียน</span>
+                   </div>
+                </div>
+             </div>
+          </div>
+        </section>
+
+        <section id="conclusion" className="scroll-mt-24 mb-16">
+          <h2 className="font-prompt font-black text-xl md:text-2xl lg:text-3xl text-slate-900 leading-tight mb-6 flex items-center gap-4 bg-slate-50/50 p-4 rounded-2xl border border-slate-100">
+            <span className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-orange-500 text-white flex items-center justify-center text-lg md:text-xl italic font-serif shadow-lg shadow-orange-500/20 shrink-0">06</span>
+            บทสรุป: สร้างห้องเรียนในฝัน
+          </h2>
+          <p className="indent-12 text-slate-600 leading-relaxed text-lg font-medium">
+            การเป็นคุณครูยุคใหม่ไม่ใช่แค่การสอนตามตำรา แต่คือการสร้าง <strong>Experience</strong> ที่ดีให้กับเด็กๆ ครับ หวังว่าไอเดียและเทคนิคเหล่านี้จะช่วยให้คาบเรียนของคุณครูสนุกขึ้น มีชีวิตชีวามากขึ้น และถ้าอยากได้ตัวช่วยสุ่มที่ทั้งสวยและฟรี อย่าลืมแวะมาที่ <Link href="/wheel" className="text-orange-600 font-bold">Sum4Sum5.com</Link> นะครับ เราพร้อมเป็นกำลังใจให้คุณครูทุกคนครับ!
+          </p>
+        </section>
+
+        <div className="mt-24 p-12 bg-gradient-to-br from-slate-900 to-slate-800 rounded-[4rem] text-white text-center relative overflow-hidden group shadow-2xl">
+          <div className="relative z-10">
+            <Sparkles className="w-16 h-16 text-yellow-400 mx-auto mb-8 animate-bounce" />
+            <h3 className="text-3xl md:text-5xl font-black font-prompt mb-6">พร้อมเปลี่ยนห้องเรียนหรือยัง?</h3>
+            <p className="text-slate-400 mb-10 max-w-2xl mx-auto text-xl">ใช้เครื่องมือสุ่มรายชื่อที่พรีเมียมที่สุด ใช้งานฟรี 100%</p>
+            <Link 
+              href="/wheel" 
+              className="inline-flex items-center justify-center gap-4 px-12 py-5 bg-orange-500 hover:bg-orange-600 text-white font-black rounded-2xl transition-all hover:scale-105 active:scale-95 shadow-2xl shadow-orange-500/40 text-xl"
+            >
+              <span>ไปหน้าวงล้อสุ่ม</span>
+              <ArrowRight className="w-6 h-6" />
+            </Link>
+          </div>
+        </div>
+      </article>
+    )
+  },
   'how-to-random-numbers-for-giveaway': {
     title: 'แจกรางวัลยังไงให้คนไม่ดราม่า? เจาะลึกวิธีสุ่มเลข 2 ตัว 3 ตัว ให้โปร่งใสจนใครก็เถียงไม่ได้ (2026)',
     date: '28 เมษายน 2026',
     readTime: '15 นาที',
     category: 'เทคนิคการสุ่ม',
     author: 'ทีมสุ่มสี่สุ่มห้า',
+    description: 'เจาะลึกเทคนิคการสุ่มเลข 2 ตัว และ 3 ตัว สำหรับการจัดกิจกรรมแจกรางวัลให้โปร่งใส ยุติธรรม และลดดราม่า พร้อมแนะนำเครื่องมือสุ่มที่น่าเชื่อถือที่สุด',
+    keywords: ['สุ่มเลข', 'วิธีสุ่มตัวเลข', 'แจกรางวัล', 'สุ่มเลข 2 ตัว', 'สุ่มเลข 3 ตัว', 'จัดกิจกรรมแจกรางวัล', 'สุ่มสี่สุ่มห้า'],
     image: '/images/blog/fair_giveaway.png',
     toc: [
       { id: 'why-fairness', title: 'ทำไมความเชื่อมั่นถึงสำคัญกว่ารางวัล?' },
@@ -284,6 +489,8 @@ const ARTICLES: Record<string, any> = {
     readTime: '12 นาที',
     category: 'ไลฟ์สไตล์',
     author: 'แอดมินสายสุ่ม',
+    description: 'เปลี่ยนความเครียดจากการตีความฝันให้เป็นความสนุก! มาลองใช้ตรรกะแห่งการสุ่มเพื่อช่วยตัดสินใจเลือกเลขที่ใช่ก่อนวันหวยออก พร้อมเคล็ดลับการลุ้นโชคแบบคนรุ่นใหม่',
+    keywords: ['ตีเลขฝัน', 'ตรรกะการสุ่ม', 'วิธีเลือกเลขหวย', 'สุ่มตัวเลข', 'ทำนายฝัน', 'ลุ้นโชค', 'สุ่มสี่สุ่มห้า'],
     image: '/images/blog/logic_vs_dream.png',
     toc: [
       { id: 'dream-struggle', title: 'เมื่อความฝันกลายเป็นความเครียด' },
@@ -408,6 +615,8 @@ const ARTICLES: Record<string, any> = {
     readTime: '10 นาที',
     category: 'เทคโนโลยี',
     author: 'แอดมินสายสุ่ม',
+    description: 'ทำไมการสุ่มเลขถึงเป็นวิธีที่ฉลาดที่สุด? พบกับ 5 เหตุผลที่จะเปลี่ยนมุมมองของคุณต่อการลุ้นโชคในยุคดิจิทัล ทั้งเรื่องความยุติธรรม ประหยัดเวลา และการใช้เทคโนโลยีช่วยตัดสินใจ',
+    keywords: ['การสุ่มเลข', 'ลุ้นโชคยุคดิจิทัล', 'เทคโนโลยีการสุ่ม', 'วิธีซื้อสลาก', 'ความยุติธรรมในการสุ่ม', 'สุ่มสี่สุ่มห้า', 'โปรแกรมสุ่มเลข'],
     image: '/images/blog/smart_random.png',
     toc: [
       { id: 'digital-luck', title: 'ยุคสมัยที่โชคชะตามาพร้อมดิจิทัล' },
@@ -520,6 +729,8 @@ const ARTICLES: Record<string, any> = {
     readTime: '11 นาที',
     category: 'ไลฟ์สไตล์',
     author: 'ทีมสุ่มสี่สุ่มห้า',
+    description: 'เปรียบเทียบระหว่างการตามเลขดังกับการใช้เลขสุ่มในการลุ้นโชค ทำไมบางครั้งเลขที่เราไม่ตั้งใจซื้อถึงนำโชคมาให้ และเคล็ดลับการลุ้นรางวัลอย่างมีสติ',
+    keywords: ['เลขสุ่ม', 'เลขดัง', 'ลุ้นโชค', 'สลากกินแบ่งรัฐบาล', 'ความน่าจะเป็น', 'เทคนิคซื้อหวย', 'สุ่มสี่สุ่มห้า'],
     image: '/images/blog/random_vs_famous.png',
     toc: [
       { id: 'famous-vs-random', title: 'เลขดังที่หาซื้อไม่ได้ vs เลขสุ่มที่ไม่มีใครมอง' },
@@ -619,10 +830,40 @@ export async function generateMetadata({ params }: ArticleProps): Promise<Metada
   const article = getArticleData(slug);
   if (!article) return { title: 'ไม่พบหน้าบทความ' };
 
+  const fullTitle = `${article.title} | สุ่มสี่สุ่มห้า`;
+  const fullUrl = `https://sum4sum5.com/blog/${slug}`;
+
   return {
-    title: `${article.title} | สุ่มสี่สุ่มห้า`,
-    description: article.title,
-    keywords: ['สุ่มสี่สุ่มห้า', 'สุ่มเลข', 'สุ่มตัวเลข', 'วิธีสุ่มเลข', 'แจกรางวัล', 'เลขเด็ด', 'หวยเด็ด'],
+    title: fullTitle,
+    description: article.description || article.title,
+    keywords: article.keywords || ['สุ่มสี่สุ่มห้า', 'สุ่มเลข', 'สุ่มตัวเลข', 'วิธีสุ่มเลข', 'แจกรางวัล'],
+    alternates: {
+      canonical: fullUrl,
+    },
+    openGraph: {
+      title: fullTitle,
+      description: article.description || article.title,
+      url: fullUrl,
+      siteName: 'สุ่มสี่สุ่มห้า',
+      images: [
+        {
+          url: article.image,
+          width: 1200,
+          height: 630,
+          alt: article.title,
+        },
+      ],
+      locale: 'th_TH',
+      type: 'article',
+      publishedTime: article.date,
+      authors: [article.author],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: fullTitle,
+      description: article.description || article.title,
+      images: [article.image],
+    },
   };
 }
 
@@ -634,8 +875,98 @@ export default async function ArticleDetail({ params }: ArticleProps) {
     notFound();
   }
 
+  // JSON-LD Structured Data
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: article.title,
+    image: `https://sum4sum5.com${article.image}`,
+    datePublished: article.date,
+    author: {
+      '@type': 'Organization',
+      name: 'สุ่มสี่สุ่มห้า',
+      url: 'https://sum4sum5.com'
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'สุ่มสี่สุ่มห้า',
+      logo: {
+        '@type': 'ImageObject',
+        url: 'https://sum4sum5.com/logo.png'
+      }
+    },
+    description: article.description,
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': `https://sum4sum5.com/blog/${slug}`
+    }
+  };
+
+  const breadcrumbLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      {
+        '@type': 'ListItem',
+        position: 1,
+        name: 'หน้าแรก',
+        item: 'https://sum4sum5.com'
+      },
+      {
+        '@type': 'ListItem',
+        position: 2,
+        name: 'บทความ',
+        item: 'https://sum4sum5.com/blog'
+      },
+      {
+        '@type': 'ListItem',
+        position: 3,
+        name: article.title,
+        item: `https://sum4sum5.com/blog/${slug}`
+      }
+    ]
+  };
+
+  const faqLd = slug === 'how-to-random-numbers-for-giveaway' ? {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'คอมพิวเตอร์สุ่มได้ "มั่ว" จริงๆ หรือเปล่า?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'ต้องบอกตามตรงว่าคอมพิวเตอร์ทำงานตามตรรกะครับ แต่มันใช้ค่าที่เปลี่ยนแปลงตลอดเวลาอย่างมิลลิวินาทีของนาฬิกาเครื่องมาเป็นตัวคำนวณ ทำให้การสุ่มมีความอิสระและเป็นกลางจนมนุษย์ไม่มีทางจับทางได้แน่นอนครับ สบายใจได้เลย!'
+        }
+      },
+      {
+        '@type': 'Question',
+        name: 'ถ้าสุ่มได้เลขที่ไม่มีเจ้าของ (ไม่มีผู้มารายงานตัว) ต้องทำไง?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'นี่คือเหตุผลที่เราควรประกาศกติกาล่วงหน้าครับ! ให้ระบุไว้เลยว่า "หากสุ่มได้เลขที่ไม่มีเจ้าของ หรือผู้โชคดีไม่มารายงานตัวภายในเวลาที่กำหนด จะถือว่าเป็นการสละสิทธิ์หรือถูกตัดสิทธิ์ทันทีตามกติกา" การระบุเงื่อนไขการตัดสิทธิ์ที่ชัดเจนจะช่วยป้องกันปัญหาความขัดแย้งได้ดีที่สุดครับ'
+        }
+      }
+    ]
+  } : null;
+
   return (
     <main className="min-h-screen pb-20 bg-white">
+      {/* Inject Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbLd) }}
+      />
+      {faqLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqLd) }}
+        />
+      )}
       <ArticleHeroImage 
         src={article.image}
         title={article.title}
