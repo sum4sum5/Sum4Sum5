@@ -1,5 +1,5 @@
 import React from 'react';
-import { BookOpen, Dices, Brain, Zap, Target, Sparkles } from 'lucide-react';
+import { BookOpen, Dices, Brain, Zap, Target, Sparkles, Utensils } from 'lucide-react';
 import type { Metadata } from 'next';
 import BlogListClient from '@/components/blog/BlogListClient';
 
@@ -9,6 +9,16 @@ export const metadata: Metadata = {
 };
 
 const articles = [
+  {
+    title: 'ไอเดียเมนูอาหารเย็นวันนี้ สุ่มกินอะไรดี? (จบปัญหาโลกแตก เลือกไม่ได้ก็สุ่มซะ!)',
+    description: 'เบื่อไหมกับปัญหาโลกแตก "เย็นนี้กินอะไรดี?" พบกับไอเดียเมนูอาหารยอดฮิตและวิธีแก้ปัญหาฉบับคนรุ่นใหม่ด้วยวงล้อสุ่มอาหาร',
+    slug: 'what-to-eat-for-dinner-today',
+    date: '30 เม.ย. 2026',
+    readTime: '8 นาที',
+    category: 'ไลฟ์สไตล์',
+    icon: <Utensils className="w-6 h-6 text-orange-500" />,
+    image: '/images/blog/dinner_random_hero.png',
+  },
   {
     title: '10 วิธีสุ่มชื่อนักเรียนให้ตื่นเต้น ไม่น่าเบื่อ (ฉบับคุณครูยุคใหม่)',
     description: 'เปลี่ยนชั่วโมงเรียนที่น่าเบื่อให้กลายเป็นความสนุก ด้วย 10 เทคนิคการสุ่มรายชื่อนักเรียนที่ช่วยสร้างบรรยากาศตื่นเต้นและเป็นกันเอง',

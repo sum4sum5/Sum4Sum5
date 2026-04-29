@@ -13,6 +13,151 @@ interface ArticleProps {
 }
 
 const ARTICLES: Record<string, any> = {
+  'what-to-eat-for-dinner-today': {
+    title: 'ไอเดียเมนูอาหารเย็นวันนี้ สุ่มกินอะไรดี? (จบปัญหาโลกแตก เลือกไม่ได้ก็สุ่มซะ!)',
+    date: '30 เมษายน 2026',
+    readTime: '8 นาที',
+    category: 'ไลฟ์สไตล์',
+    author: 'แอดมินสายกิน',
+    description: 'เบื่อไหมกับปัญหาโลกแตก "เย็นนี้กินอะไรดี?" พบกับไอเดียเมนูอาหารยอดฮิตและวิธีแก้ปัญหาฉบับคนรุ่นใหม่ด้วยวงล้อสุ่มอาหาร ที่ช่วยให้คุณจบดราม่ากับแฟนได้ในวินาทีเดียว!',
+    keywords: ['เมนูอาหารเย็น', 'เย็นนี้กินอะไรดี', 'สุ่มอาหาร', 'วงล้อสุ่มอาหาร', 'ไอเดียอาหารเย็น', 'กินอะไรดี', 'สุ่มสี่สุ่มห้า'],
+    image: '/images/blog/dinner_random_hero.png',
+    toc: [
+      { id: 'the-eternal-question', title: 'ปัญหาโลกแตก: "อะไรก็ได้" ที่ไม่มีอยู่จริง' },
+      { id: 'popular-menus', title: 'เปิดโพยเมนูยอดฮิต (เลือกไม่ได้ก็สุ่มซะ!)' },
+      { id: 'random-wheel-solution', title: 'จบดราม่าด้วย "วงล้อสุ่มอาหาร"' },
+      { id: 'conclusion', title: 'กินๆ ไปเถอะ เดี๋ยวก็เช้าแล้ว' },
+    ],
+    content: (
+      <article className="prose prose-slate max-w-none font-kanit w-full overflow-hidden">
+        <p className="lead text-lg md:text-xl text-slate-600 mb-10 leading-relaxed font-medium border-l-4 border-orange-500 pl-6 py-2">
+          "เย็นนี้กินอะไรดี?" | "อะไรก็ได้" | "งั้นกะเพราไหม?" | "ไม่เอา เบื่อแล้ว" | "งั้นก๋วยเตี๋ยว?" | "ร้อนไป ไม่อยากซดน้ำ" — นี่คือบทสนทนาที่วนลูปจนน่าปวดหัวของใครหลายคนใช่ไหมครับ?
+        </p>
+
+        <section id="the-eternal-question" className="scroll-mt-24 mb-12">
+          <h2 className="font-prompt font-black text-xl md:text-2xl lg:text-3xl text-slate-900 leading-tight mb-6 flex items-center gap-4 bg-slate-50/50 p-4 rounded-2xl border border-slate-100">
+            <span className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-orange-500 text-white flex items-center justify-center text-lg md:text-xl italic font-serif shadow-lg shadow-orange-500/20 shrink-0">01</span>
+            ปัญหาโลกแตก: "อะไรก็ได้" ที่ไม่มีอยู่จริง
+          </h2>
+          <div className="space-y-4 text-slate-600 leading-relaxed">
+            <p className="indent-6 md:indent-12">
+              เชื่อไหมครับว่า มนุษย์เราเสียเวลาไปกับการคิดเมนูอาหารเฉลี่ยปีละหลายร้อยชั่วโมง! โดยเฉพาะมื้อเย็นที่เป็นช่วงเวลาแห่งการพักผ่อน แต่ดันต้องมานั่งทำสงครามประสาทกับแฟนหรือเพื่อนด้วยคำว่า <strong>"อะไรก็ได้"</strong> ซึ่งเราทุกคนต่างรู้ดีว่ามันหมายถึง <strong>"อะไรก็ได้ที่ฉันอยากกิน แต่ฉันยังนึกไม่ออก และถ้าเธอเสนอมาไม่ถูกใจ ฉันก็จะปัดตก!"</strong> 
+            </p>
+            <p className="indent-6 md:indent-12">
+              วงจรนี้มันช่างโหดร้ายครับ บางทีคิดไปคิดมาจนร้านปิด สรุปจบที่บะหมี่กึ่งสำเร็จรูปถ้วยเดิมหน้าเซเว่น... เศร้ากว่านี้ไม่มีอีกแล้ว!
+            </p>
+          </div>
+        </section>
+
+        <section id="popular-menus" className="scroll-mt-24 mb-12">
+          <h2 className="font-prompt font-black text-xl md:text-2xl lg:text-3xl text-slate-900 leading-tight mb-6 flex items-center gap-4 bg-slate-50/50 p-4 rounded-2xl border border-slate-100">
+            <span className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-orange-500 text-white flex items-center justify-center text-lg md:text-xl italic font-serif shadow-lg shadow-orange-500/20 shrink-0">02</span>
+            เปิดโพยเมนูยอดฮิต (เลือกไม่ได้ก็สุ่มซะ!)
+          </h2>
+          <p className="indent-6 md:indent-12 text-slate-600 leading-relaxed mb-8">
+            ก่อนจะไปสุ่ม เรามาเช็คลิสต์เมนูยอดฮิตในใจคนไทยกันหน่อยครับ เผื่อจะช่วยกระตุ้นต่อมหิวของคุณได้บ้าง:
+          </p>
+          
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="p-8 rounded-[2.5rem] bg-orange-50 border border-orange-100 transition-all hover:shadow-xl hover:-translate-y-1">
+              <h4 className="font-prompt font-bold text-orange-600 text-xl mb-4">🏠 สายตามสั่ง (The Classics)</h4>
+              <ul className="space-y-2 text-slate-600">
+                <li>• กะเพราหมูกรอบไข่ดาว (เมนูสิ้นคิดที่อร่อยที่สุดในโลก)</li>
+                <li>• ข้าวผัดอเมริกัน (ย้อนวัยเด็กเบาๆ)</li>
+                <li>• หมูกระเทียมพริกไทย (เรียบง่ายแต่จริงใจ)</li>
+              </ul>
+            </div>
+            
+            <div className="p-8 rounded-[2.5rem] bg-blue-50 border border-blue-100 transition-all hover:shadow-xl hover:-translate-y-1">
+              <h4 className="font-prompt font-bold text-blue-600 text-xl mb-4">🍜 สายเส้น (Noodle Lovers)</h4>
+              <ul className="space-y-2 text-slate-600">
+                <li>• ก๋วยเตี๋ยวเรือน้ำตก (ตับหมกคือที่สุด)</li>
+                <li>• ราเมงน้ำข้น (ซดร้อนๆ แก้เหนื่อยจากงาน)</li>
+                <li>• ผัดไทยกุ้งสด (นัวๆ หวานอมเปรี้ยว)</li>
+              </ul>
+            </div>
+
+            <div className="p-8 rounded-[2.5rem] bg-green-50 border border-green-100 transition-all hover:shadow-xl hover:-translate-y-1">
+              <h4 className="font-prompt font-bold text-green-600 text-xl mb-4">🥗 สายสุขภาพ (สายมโน)</h4>
+              <ul className="space-y-2 text-slate-600">
+                <li>• สลัดโรลน้ำจิ้มซีฟู้ด (เฮลตี้แบบแซ่บๆ)</li>
+                <li>• ยำวุ้นเส้นรวมมิตร (แคลน้อยแต่อิ่มนาน)</li>
+                <li>• สุกี้น้ำอกไก่ (เบาตัว สบายพุง)</li>
+              </ul>
+            </div>
+
+            <div className="p-8 rounded-[2.5rem] bg-red-50 border border-red-100 transition-all hover:shadow-xl hover:-translate-y-1">
+              <h4 className="font-prompt font-bold text-red-600 text-xl mb-4">🔥 สายจัดหนัก (Buffet Time)</h4>
+              <ul className="space-y-2 text-slate-600">
+                <li>• หมูกระทะเยียวยาทุกสิ่ง (กลิ่นติดผมคือของแถม)</li>
+                <li>• ชาบูสายพาน (หยิบเพลินจนลืมดูราคา)</li>
+                <li>• ปิ้งย่างเกาหลี (ห่อผักคำโตๆ ฟินสุดๆ)</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="random-wheel-solution" className="scroll-mt-24 mb-12">
+          <h2 className="font-prompt font-black text-xl md:text-2xl lg:text-3xl text-slate-900 leading-tight mb-6 flex items-center gap-4 bg-slate-50/50 p-4 rounded-2xl border border-slate-100">
+            <span className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-orange-500 text-white flex items-center justify-center text-lg md:text-xl italic font-serif shadow-lg shadow-orange-500/20 shrink-0">03</span>
+            จบดราม่าด้วย "วงล้อสุ่มอาหาร"
+          </h2>
+          <div className="space-y-6 text-slate-600 leading-relaxed">
+            <p className="indent-6 md:indent-12">
+              ถ้าอ่านข้างบนแล้วยังเลือกไม่ได้อีก ผมมีไม้ตายสุดท้ายมาฝากครับ! เลิกเถียงกับแฟน เลิกถามเพื่อน แล้วให้ <strong>"โชคชะตา"</strong> เป็นคนตัดสินด้วย <Link href="/wheel" className="text-orange-600 hover:text-orange-700 font-bold decoration-orange-300 underline-offset-4 hover:underline"><strong>วงล้อสุ่มอาหาร (Food Random Wheel)</strong></Link> ของเราครับ!
+            </p>
+            <div className="bg-slate-900 text-white p-10 rounded-[3rem] shadow-2xl relative overflow-hidden group">
+              <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:rotate-12 transition-transform duration-700">
+                <FerrisWheel className="w-40 h-40" />
+              </div>
+              <h4 className="text-orange-400 font-bold mb-4 font-prompt text-2xl">วิธีใช้งานง่ายยิ่งกว่าต้มมาม่า:</h4>
+              <ol className="space-y-4 list-none p-0">
+                <li className="flex gap-4">
+                  <span className="w-8 h-8 rounded-full bg-orange-500 flex items-center justify-center font-bold shrink-0 text-white">1</span>
+                  <span>เข้าไปที่ <Link href="/wheel" className="text-orange-400 underline decoration-orange-900/50 underline-offset-4">sum4sum5.com/wheel</Link></span>
+                </li>
+                <li className="flex gap-4">
+                  <span className="w-8 h-8 rounded-full bg-orange-500 flex items-center justify-center font-bold shrink-0 text-white">2</span>
+                  <span>เลือก Template <strong>"เย็นนี้กินอะไรดี?"</strong> ที่เราเตรียมไว้ให้ (หรือจะพิมพ์เองตามความอยากก็ได้นะ)</span>
+                </li>
+                <li className="flex gap-4">
+                  <span className="w-8 h-8 rounded-full bg-orange-500 flex items-center justify-center font-bold shrink-0 text-white">3</span>
+                  <span>กดปุ่ม <strong>"สุ่ม"</strong> แล้วนั่งลุ้นตัวเกร็งไปกับแอนิเมชันสุดเร้าใจ!</span>
+                </li>
+                <li className="flex gap-4">
+                  <span className="w-8 h-8 rounded-full bg-orange-500 flex items-center justify-center font-bold shrink-0 text-white">4</span>
+                  <span>วงล้อหยุดที่ไหน <strong>"ต้องไปกินร้านนั้น"</strong> ห้ามอิดออดเด็ดขาด!</span>
+                </li>
+              </ol>
+              <div className="mt-10">
+                <Link href="/wheel" className="inline-flex items-center gap-3 px-10 py-5 bg-orange-500 text-white font-black rounded-2xl hover:bg-orange-600 transition-all hover:scale-105 shadow-xl shadow-orange-500/40 text-xl uppercase tracking-wider">
+                  ไปสุ่มให้จบปัญหา! <ArrowRight className="w-6 h-6" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="conclusion" className="scroll-mt-24 mb-16">
+          <h2 className="font-prompt font-black text-xl md:text-2xl lg:text-3xl text-slate-900 leading-tight mb-6 flex items-center gap-4 bg-slate-50/50 p-4 rounded-2xl border border-slate-100">
+            <span className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-orange-500 text-white flex items-center justify-center text-lg md:text-xl italic font-serif shadow-lg shadow-orange-500/20 shrink-0">04</span>
+            บทสรุป: มื้อเย็นที่สมบูรณ์แบบเริ่มที่ความสบายใจ
+          </h2>
+          <p className="indent-12 text-slate-600 leading-relaxed text-lg font-medium">
+            สุดท้ายแล้ว ไม่ว่าจะกินอะไร สิ่งที่สำคัญที่สุดคือการได้อิ่มอร่อยกับคนที่เราชอบครับ (แม้คนนั้นจะเพิ่งเถียงกับเราเรื่องเมนูอาหารไปหมาดๆ ก็ตาม) ให้ <strong>สุ่มสี่สุ่มห้า</strong> ช่วยเป็นคนรับผิดชอบความเสี่ยงในการเลือกเมนูให้คุณนะครับ แล้วคุณจะรู้ว่าความสุขของการไม่ต้องคิดอะไรเลย มันฟินขนาดไหน!
+          </p>
+          <div className="mt-10 text-center">
+            <p className="text-slate-400 italic mb-4">"วันนี้โชคชะตาเลือกให้คุณแล้ว... ไปกินซะ!"</p>
+            <div className="flex justify-center gap-4">
+              <div className="w-3 h-3 rounded-full bg-orange-200" />
+              <div className="w-3 h-3 rounded-full bg-orange-400" />
+              <div className="w-3 h-3 rounded-full bg-orange-600" />
+            </div>
+          </div>
+        </section>
+      </article>
+    )
+  },
   '10-ways-to-random-students-names': {
     title: 'รวมไอเดียสุ่มชื่อนักเรียนให้ตื่นเต้น ไม่น่าเบื่อ (ฉบับคุณครูยุคใหม่)',
     date: '29 เมษายน 2026',
