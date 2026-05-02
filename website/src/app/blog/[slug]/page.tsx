@@ -1097,7 +1097,165 @@ const ARTICLES: Record<string, any> = {
         </section>
       </article>
     )
+  },
+  'perfect-travel-photos-sky-and-sea-captions': {
+    title: 'แจกแคปชั่นเที่ยวทะเล-ท้องฟ้า 2026! รูปสวยแล้ว แคปชั่นต้องสับ ให้ AI ช่วยคิดแต่คนกดไลก์เพียบ',
+    date: '2 พฤษภาคม 2026',
+    readTime: '7 นาที',
+    category: 'ไลฟ์สไตล์ & ไอเดีย',
+    author: 'แอดมินสายชิลล์',
+    description: 'รูป 10/10 แคปชั่น 0/10? จบปัญหานี้ด้วยไอเดียแคปชั่นท่องเที่ยวและแคปชั่นทะเลจาก AI ที่คัดมาแล้วว่าโดนใจชาว Gen Z ในปี 2026 พร้อมวิธีใช้เครื่องมือสุ่มแคปชั่นให้ดูเป็นธรรมชาติที่สุด',
+    keywords: ['แคปชั่นท่องเที่ยว', 'แคปชั่นคาเฟ่', 'แคปชั่นทะเล', 'สุ่มแคปชั่นออนไลน์', 'ไอเดียลงรูปเที่ยว', 'Gen Z Captions', 'แคปชั่นท้องฟ้า'],
+    image: '/images/blog/travel_beach_genz_hero.png',
+    toc: [
+      { id: 'sky-sea-vibe', title: 'เมื่อท้องฟ้าและทะเลคือสตูดิโอ: Vibe นี้ต้องคู่กับคำแบบไหน?' },
+      { id: 'curated-captions', title: 'Curated List: แคปชั่นทะเล & ท้องฟ้า แบ่งตามมู้ด (ฉบับปี 2026)' },
+      { id: 'humanizing-ai', title: 'เคล็ดลับใช้ AI คิดแคปชั่นยังไง ให้ดูเหมือน "คน" พิมพ์เอง' },
+      { id: 'faq', title: 'คำถามที่พบบ่อย (FAQ)' },
+      { id: 'call-to-action', title: 'ลองใช้เครื่องมือ "แคปชั่น AI" ของเรา' },
+      { id: 'conclusion', title: 'สรุป: ปล่อยให้รูปเล่าเรื่อง และให้เราช่วยเล่าความรู้สึก' },
+    ],
+    content: (
+      <article className="prose prose-slate max-w-none font-kanit w-full overflow-hidden">
+        <p className="lead text-lg md:text-xl text-slate-600 mb-10 leading-relaxed font-medium border-l-4 border-orange-500 pl-6 py-2 italic">
+          "ถ่ายรูปมาเป็นร้อย แต่ต้องมาจอดที่หน้าจอ Compose เพราะนึกแคปชั่นไม่ออก..." เข้าใจเลยครับว่าฟีลนี้มันทรมานขนาดไหน! วันนี้เราเลยขออาสาเป็นบัดดี้ ช่วยปลดล็อคไอเดีย <strong>แคปชั่นทะเล</strong> และ <strong>แคปชั่นท้องฟ้า</strong> ให้คุณโพสต์รูปได้แบบสับๆ ไม่ต้องรอข้ามวัน!
+        </p>
+
+        <section id="sky-sea-vibe" className="scroll-mt-24 mb-12">
+          <h2 className="font-prompt font-black text-xl md:text-2xl lg:text-3xl text-slate-900 leading-tight mb-6 flex items-center gap-4 bg-slate-50/50 p-4 rounded-2xl border border-slate-100">
+            <span className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-orange-500 text-white flex items-center justify-center text-lg md:text-xl italic font-serif shadow-lg shadow-orange-500/20 shrink-0">01</span>
+            เมื่อท้องฟ้าและทะเลคือสตูดิโอ: Vibe นี้ต้องคู่กับคำแบบไหน?
+          </h2>
+          <div className="space-y-4 text-slate-600 leading-relaxed">
+            <p className="indent-6 md:indent-12">
+              ในปี 2026 นี้ เทรนด์การลงรูปท่องเที่ยวเปลี่ยนไปจากเดิมพอสมควรครับ คนไม่ได้แค่มองหาความสวยงามแบบเป๊ะปัง แต่เขามองหา <strong>"Aesthetic & Authenticity"</strong> หรือความสวยที่ดูมีความเป็นมนุษย์ รูปท้องฟ้าสี Vanilla Sky หรือทะเลสี Turquoise ของคุณจะดูแพงขึ้น 100% ถ้าแคปชั่นมันส่งเสริมมู้ดภาพ ไม่ใช่แค่บรรยายว่า "มาทะเลจ้า"
+            </p>
+            <p className="indent-6 md:indent-12">
+              หัวใจสำคัญคือการใช้ภาษาที่เรียบง่ายแต่มี "Point" ครับ ไม่ว่าจะเป็นคำคมภาษาอังกฤษสั้นๆ (Short & Sweet) หรือแคปชั่นกวนๆ (Sassy) ที่ทำให้เพื่อนต้องมาคอมเมนต์แซว
+            </p>
+          </div>
+        </section>
+
+        <section id="curated-captions" className="scroll-mt-24 mb-12">
+          <h2 className="font-prompt font-black text-xl md:text-2xl lg:text-3xl text-slate-900 leading-tight mb-6 flex items-center gap-4 bg-slate-50/50 p-4 rounded-2xl border border-slate-100">
+            <span className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-orange-500 text-white flex items-center justify-center text-lg md:text-xl italic font-serif shadow-lg shadow-orange-500/20 shrink-0">02</span>
+            Curated List: แคปชั่นทะเล & ท้องฟ้า แบ่งตามมู้ด (สับๆ ฉบับ 2026)
+          </h2>
+          
+          <div className="space-y-8">
+            <div>
+              <h4 className="font-prompt font-bold text-slate-700 text-xl mb-4 flex items-center gap-2">
+                🌊 สายมินิมอล (Aesthetic & Healing)
+              </h4>
+              <div className="grid gap-3">
+                <div className="p-4 rounded-2xl bg-slate-50 border border-slate-100 italic text-slate-700 transition-colors hover:border-orange-200 hover:bg-orange-50/30">"ทะเลเยียวยาทุกสิ่ง Vibe ดีต่อใจ 🌊✨"</div>
+                <div className="p-4 rounded-2xl bg-slate-50 border border-slate-100 italic text-slate-700 transition-colors hover:border-orange-200 hover:bg-orange-50/30">"มองฟ้าแล้วฮีลใจสุดๆ ✨☁️"</div>
+                <div className="p-4 rounded-2xl bg-slate-50 border border-slate-100 italic text-slate-700 transition-colors hover:border-orange-200 hover:bg-orange-50/30">"Vanilla sky วันนี้คือที่สุดของการทิ้งตัว 🍦☁️"</div>
+              </div>
+            </div>
+
+            <div>
+              <h4 className="font-prompt font-bold text-orange-600 text-xl mb-4 flex items-center gap-2">
+                🔥 สายกวน & ตัวมัม (Sassy & Funny)
+              </h4>
+              <div className="grid gap-3">
+                <div className="p-4 rounded-2xl bg-slate-50 border border-slate-100 italic text-slate-700 transition-colors hover:border-orange-200 hover:bg-orange-50/30">"แดดที่ทะเลว่าแรง ยังสู้ความฮอตของเราไม่ได้เลยเนอะ ☀️🔥"</div>
+                <div className="p-4 rounded-2xl bg-slate-50 border border-slate-100 italic text-slate-700 transition-colors hover:border-orange-200 hover:bg-orange-50/30">"มาทะเลทำไมต้องคิดถึงเขา คิดถึงเราบ้างก็ได้นะ 🌊🥺"</div>
+                <div className="p-4 rounded-2xl bg-slate-50 border border-slate-100 italic text-slate-700 transition-colors hover:border-orange-200 hover:bg-orange-50/30">"ร่างพังต้องมาทะเล โหมดทิ้งตัว activated 🔋🏖️"</div>
+              </div>
+            </div>
+
+            <div>
+              <h4 className="font-prompt font-bold text-slate-900 text-xl mb-4 flex items-center gap-2">
+                🎬 สายคอนเทนต์ (Vlog & Main Character)
+              </h4>
+              <div className="grid gap-3">
+                <div className="p-4 rounded-2xl bg-slate-50 border border-slate-100 italic text-slate-700 transition-colors hover:border-orange-200 hover:bg-orange-50/30">"POV: เมื่อคุณได้ใช้วันลาพักร้อนแบบฉ่ำๆ 🌴✨"</div>
+                <div className="p-4 rounded-2xl bg-slate-50 border border-slate-100 italic text-slate-700 transition-colors hover:border-orange-200 hover:bg-orange-50/30">"ฟีลนางเอกเอ็มวีเดินริมหาด (แต่ความจริงคือร้อนมาก) 🐚🎬"</div>
+                <div className="p-4 rounded-2xl bg-slate-50 border border-slate-100 italic text-slate-700 transition-colors hover:border-orange-200 hover:bg-orange-50/30">"ถ่ายรูปเป็นร้อย แต่รอดรูปเดียว... วิถีตัวมัม 📸💅"</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="humanizing-ai" className="scroll-mt-24 mb-12">
+          <h2 className="font-prompt font-black text-xl md:text-2xl lg:text-3xl text-slate-900 leading-tight mb-6 flex items-center gap-4 bg-slate-50/50 p-4 rounded-2xl border border-slate-100">
+            <span className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-orange-500 text-white flex items-center justify-center text-lg md:text-xl italic font-serif shadow-lg shadow-orange-500/20 shrink-0">03</span>
+            เคล็ดลับใช้ AI คิดแคปชั่นยังไง ให้ดูเหมือน "คน" พิมพ์เอง
+          </h2>
+          <div className="space-y-6 text-slate-600 leading-relaxed">
+            <p className="indent-6 md:indent-12">
+              หลายคนกังวลว่าใช้ AI แล้วจะดู "บอท" หรือเปล่า? คำตอบคือ <strong>"ถ้าใช้เป็น ก็ไม่มีใครจับได้ครับ!"</strong> เครื่องมือ <Link href="/random-caption" className="text-orange-600 hover:text-orange-700 font-bold underline decoration-orange-300 underline-offset-4">แคปชั่น AI</Link> ของเราถูกเทรนมาให้เข้าใจบริบทของโซเชียลมีเดียไทย แต่เพื่อให้เนียนที่สุด ลองใช้วิธีเหล่านี้ดูครับ:
+            </p>
+            <ul className="space-y-4 list-none p-0">
+              <li className="flex items-start gap-4 p-5 rounded-2xl bg-white border border-slate-100 shadow-sm transition-all hover:border-orange-200">
+                <CheckCircle2 className="w-6 h-6 text-orange-500 shrink-0 mt-0.5" />
+                <span><strong>เติมคำสร้อยเฉพาะตัว:</strong> เติมคำที่ชอบใช้บ่อยๆ เช่น "นะจ๊ะ", "แกรรร", "คือดีย์" ลงไปในประโยคที่ AI ให้มา</span>
+              </li>
+              <li className="flex items-start gap-4 p-5 rounded-2xl bg-white border border-slate-100 shadow-sm transition-all hover:border-orange-200">
+                <CheckCircle2 className="w-6 h-6 text-orange-500 shrink-0 mt-0.5" />
+                <span><strong>สลับตำแหน่งประโยค:</strong> บางที AI ให้มาเป็นภาษาทางการไปนิด ลองสลับที่ประโยคหน้า-หลัง หรือเปลี่ยนจากภาษาเขียนเป็นภาษาพูดดูครับ</span>
+              </li>
+              <li className="flex items-start gap-4 p-5 rounded-2xl bg-white border border-slate-100 shadow-sm transition-all hover:border-orange-200">
+                <CheckCircle2 className="w-6 h-6 text-orange-500 shrink-0 mt-0.5" />
+                <span><strong>ใส่คำถามชวนคุย:</strong> AI อาจจะให้ประโยคบอกเล่ามา ลองเติมคำถามปิดท้าย เช่น "ใครเคยมาที่นี่บ้าง?" เพื่อเรียกยอดคอมเมนต์</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="faq" className="scroll-mt-24 mb-12">
+          <h2 className="font-prompt font-black text-xl md:text-2xl lg:text-3xl text-slate-900 leading-tight mb-6 flex items-center gap-4 bg-slate-50/50 p-4 rounded-2xl border border-slate-100">
+            <span className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-orange-500 text-white flex items-center justify-center text-lg md:text-xl italic font-serif shadow-lg shadow-orange-500/20 shrink-0">04</span>
+            คำถามที่พบบ่อย (FAQ)
+          </h2>
+          <div className="space-y-4">
+            <div className="p-6 rounded-2xl bg-white border border-slate-100 shadow-sm transition-all hover:border-orange-200">
+              <h4 className="font-bold text-slate-900 mb-2 text-lg">ใช้ AI คิดแคปชั่นภาษาไทยจะดูโป๊ะไหม?</h4>
+              <p className="text-slate-600">ไม่โป๊ะแน่นอนครับ! เพราะ <Link href="/random-caption" className="font-bold text-orange-600 hover:text-orange-700 underline decoration-orange-300 underline-offset-4">เครื่องมือสุ่มแคปชั่นออนไลน์</Link> ของเราถูกออกแบบมาให้ใช้ภาษาที่เป็นธรรมชาติ (Natural Language) แถมยังมีหมวดหมู่ให้เลือกตามความเหมาะสมของ <strong>ไอเดียลงรูปเที่ยว</strong> ด้วย</p>
+            </div>
+            <div className="p-6 rounded-2xl bg-white border border-slate-100 shadow-sm transition-all hover:border-orange-200">
+              <h4 className="font-bold text-slate-900 mb-2 text-lg">นอกจากแคปชั่นทะเลแล้ว มีแคปชั่นคาเฟ่ไหม?</h4>
+              <p className="text-slate-600">มีครบครับ! ใน <Link href="/random-caption" className="font-bold text-orange-600 hover:text-orange-700 underline decoration-orange-300 underline-offset-4">ระบบสุ่มของเรา</Link> ไม่ได้มีแค่ <strong>แคปชั่นท่องเที่ยว</strong> แต่ยังมีทั้ง <strong>แคปชั่นคาเฟ่</strong> แคปชั่นกวนๆ และอีกเพียบ อัปเดตใหม่ล่าสุดรับปี 2026 เลย ถ้า<strong>คิดแคปชั่นไม่ออก</strong> แวะมาใช้บริการได้ 24 ชั่วโมงครับ</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="call-to-action" className="scroll-mt-24 mb-12 text-center">
+          <div className="p-12 rounded-[4rem] bg-gradient-to-br from-slate-900 to-slate-800 text-white relative overflow-hidden group border border-slate-800 shadow-2xl">
+            <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:scale-110 group-hover:rotate-12 transition-transform duration-1000">
+              <Sparkles className="w-40 h-40 text-orange-400" />
+            </div>
+            <div className="relative z-10">
+              <div className="w-20 h-20 rounded-3xl bg-white/10 backdrop-blur-xl flex items-center justify-center mb-8 mx-auto border border-white/20">
+                <Sparkles className="w-10 h-10 text-orange-400" />
+              </div>
+              <h3 className="text-3xl md:text-4xl font-prompt font-black mb-6">รูปพร้อมแล้ว... แต่ไอเดียยังไม่มา?</h3>
+              <p className="text-slate-400 mb-10 max-w-2xl mx-auto text-lg leading-relaxed">
+                ไม่ต้องเสียเวลานั่งเค้นสมองอีกต่อไป! ให้ <Link href="/random-caption" className="text-orange-400 font-bold hover:text-orange-300 transition-colors underline decoration-orange-900/50 underline-offset-8"><strong>เครื่องมือสุ่มแคปชั่น AI</strong></Link> ของเราช่วยส่งต่อความรู้สึกให้คุณ มีให้เลือกทั้งสายชิลล์ สายกวน และสาย Aesthetic ใช้งานฟรี 100%!
+              </p>
+              <Link href="/random-caption" className="inline-flex items-center gap-4 px-12 py-6 bg-orange-500 text-white font-black rounded-[2rem] hover:bg-orange-600 transition-all hover:scale-105 active:scale-95 shadow-2xl shadow-orange-500/40 text-xl uppercase tracking-wider group/btn">
+                <span>ลองสุ่มแคปชั่นเลย!</span>
+                <ArrowRight className="w-6 h-6 group-hover/btn:translate-x-2 transition-transform" />
+              </Link>
+              <p className="mt-8 text-slate-500 text-sm italic">"เพราะเราเชื่อว่า ทุกรูปถ่ายมีความหมายมากกว่าที่ตาเห็น"</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="conclusion" className="scroll-mt-24 mb-16">
+          <h2 className="font-prompt font-black text-xl md:text-2xl lg:text-3xl text-slate-900 leading-tight mb-6 flex items-center gap-4 bg-slate-50/50 p-4 rounded-2xl border border-slate-100">
+            <span className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-orange-500 text-white flex items-center justify-center text-lg md:text-xl italic font-serif shadow-lg shadow-orange-500/20 shrink-0">05</span>
+            บทสรุป: เพราะรูปสวยต้องคู่กับคำที่ใช่
+          </h2>
+          <p className="indent-12 text-slate-600 leading-relaxed text-lg font-medium">
+            สุดท้ายแล้ว การเลือก <strong>แคปชั่นท่องเที่ยว</strong> ในปี 2026 คือการเล่นกับความรู้สึกและความเป็นตัวของตัวเองครับ AI เป็นเพียงบัดดี้ที่ช่วยเปิดประตูไอเดีย แต่คนที่จะทำให้คอนเทนต์นั้นมีชีวิตชีวาที่สุดก็คือ "คุณ" นั่นเอง ขอให้ทุกคนสนุกกับการสร้าง Content และอย่าลืมแวะมาหาไอเดียใหม่ๆ ที่ <strong>สุ่มสี่สุ่มห้า</strong> นะครับ!
+          </p>
+        </section>
+      </article>
+    )
   }
+
 };
 
 const getArticleData = (slug: string) => {
@@ -1206,28 +1364,61 @@ export default async function ArticleDetail({ params }: ArticleProps) {
     ]
   };
 
-  const faqLd = slug === 'how-to-random-numbers-for-giveaway' ? {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: [
-      {
-        '@type': 'Question',
-        name: 'คอมพิวเตอร์สุ่มได้ "มั่ว" จริงๆ หรือเปล่า?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'ต้องบอกตามตรงว่าคอมพิวเตอร์ทำงานตามตรรกะครับ แต่มันใช้ค่าที่เปลี่ยนแปลงตลอดเวลาอย่างมิลลิวินาทีของนาฬิกาเครื่องมาเป็นตัวคำนวณ ทำให้การสุ่มมีความอิสระและเป็นกลางจนมนุษย์ไม่มีทางจับทางได้แน่นอนครับ สบายใจได้เลย!'
-        }
-      },
-      {
-        '@type': 'Question',
-        name: 'ถ้าสุ่มได้เลขที่ไม่มีเจ้าของ (ไม่มีผู้มารายงานตัว) ต้องทำไง?',
-        acceptedAnswer: {
-          '@type': 'Answer',
-          text: 'นี่คือเหตุผลที่เราควรประกาศกติกาล่วงหน้าครับ! ให้ระบุไว้เลยว่า "หากสุ่มได้เลขที่ไม่มีเจ้าของ หรือผู้โชคดีไม่มารายงานตัวภายในเวลาที่กำหนด จะถือว่าเป็นการสละสิทธิ์หรือถูกตัดสิทธิ์ทันทีตามกติกา" การระบุเงื่อนไขการตัดสิทธิ์ที่ชัดเจนจะช่วยป้องกันปัญหาความขัดแย้งได้ดีที่สุดครับ'
-        }
-      }
-    ]
-  } : null;
+  const getFaqLd = (articleSlug: string) => {
+    if (articleSlug === 'how-to-random-numbers-for-giveaway') {
+      return {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'คอมพิวเตอร์สุ่มได้ "มั่ว" จริงๆ หรือเปล่า?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'ต้องบอกตามตรงว่าคอมพิวเตอร์ทำงานตามตรรกะครับ แต่มันใช้ค่าที่เปลี่ยนแปลงตลอดเวลาอย่างมิลลิวินาทีของนาฬิกาเครื่องมาเป็นตัวคำนวณ ทำให้การสุ่มมีความอิสระและเป็นกลางจนมนุษย์ไม่มีทางจับทางได้แน่นอนครับ สบายใจได้เลย!'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'ถ้าสุ่มได้เลขที่ไม่มีเจ้าของ (ไม่มีผู้มารายงานตัว) ต้องทำไง?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'นี่คือเหตุผลที่เราควรประกาศกติกาล่วงหน้าครับ! ให้ระบุไว้เลยว่า "หากสุ่มได้เลขที่ไม่มีเจ้าของ หรือผู้โชคดีไม่มารายงานตัวภายในเวลาที่กำหนด จะถือว่าเป็นการสละสิทธิ์หรือถูกตัดสิทธิ์ทันทีตามกติกา" การระบุเงื่อนไขการตัดสิทธิ์ที่ชัดเจนจะช่วยป้องกันปัญหาความขัดแย้งได้ดีที่สุดครับ'
+            }
+          }
+        ]
+      };
+    }
+    
+    if (articleSlug === 'perfect-travel-photos-sky-and-sea-captions') {
+      return {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'ใช้ AI คิดแคปชั่นภาษาไทยจะดูโป๊ะไหม?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'ไม่โป๊ะแน่นอนครับ! เพราะเครื่องมือสุ่มแคปชั่นออนไลน์ของเราถูกออกแบบมาให้ใช้ภาษาที่เป็นธรรมชาติ (Natural Language) แถมยังมีหมวดหมู่ให้เลือกตามความเหมาะสมของไอเดียลงรูปเที่ยวด้วย'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'นอกจากแคปชั่นทะเลแล้ว มีแคปชั่นคาเฟ่ไหม?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'มีครบครับ! ในระบบสุ่มของเราไม่ได้มีแค่แคปชั่นท่องเที่ยว แต่ยังมีทั้งแคปชั่นคาเฟ่ แคปชั่นกวนๆ และอีกเพียบ อัปเดตใหม่ล่าสุดรับปี 2026 เลย'
+            }
+          }
+        ]
+      };
+    }
+    
+    return null;
+  };
+
+  const faqLd = getFaqLd(slug);
 
   return (
     <main className="min-h-screen pb-20 bg-white">
