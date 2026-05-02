@@ -3,6 +3,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Heart, Sparkles, Code, Smile, Coffee, Rocket } from 'lucide-react';
+import Link from 'next/link';
 
 export default function About() {
   return (
@@ -95,10 +96,12 @@ export default function About() {
           </div>
           
           <div className="flex justify-center gap-4 pt-4">
-            <button className="btn-primary px-8 py-4 rounded-2xl flex items-center gap-2 group">
-              <Rocket className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-              <span>เริ่มสุ่มกับเราเลย</span>
-            </button>
+            <Link href="/wheel">
+              <button className="btn-primary px-8 py-4 rounded-2xl flex items-center gap-2 group">
+                <Rocket className="w-5 h-5 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+                <span>เริ่มสุ่มกับเราเลย</span>
+              </button>
+            </Link>
           </div>
         </section>
 

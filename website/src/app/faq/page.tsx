@@ -36,7 +36,7 @@ export default function FAQPage() {
           <main className="space-y-32">
             
             {/* Topic 1: Algorithm & Transparency */}
-            <article className="space-y-10">
+            <article id="prng" className="space-y-10">
               <div className="space-y-4">
                 <div className="inline-flex items-center gap-2 text-primary font-black uppercase tracking-widest text-xs">
                   <Fingerprint className="w-4 h-4" />
@@ -80,7 +80,7 @@ export default function FAQPage() {
             </article>
 
             {/* Topic 2: Probability Psychology */}
-            <article className="space-y-10">
+            <article id="probability" className="space-y-10">
               <div className="space-y-4">
                 <div className="inline-flex items-center gap-2 text-blue-500 font-black uppercase tracking-widest text-xs">
                   <BarChart3 className="w-4 h-4" />
@@ -107,7 +107,7 @@ export default function FAQPage() {
             </article>
 
             {/* Topic 3: Decision Fatigue */}
-            <article className="space-y-10">
+            <article id="fatigue" className="space-y-10">
               <div className="space-y-4">
                 <div className="inline-flex items-center gap-2 text-purple-500 font-black uppercase tracking-widest text-xs">
                   <Brain className="w-4 h-4" />
@@ -129,7 +129,7 @@ export default function FAQPage() {
             </article>
 
             {/* Topic 4: AI Caption Mastery */}
-            <article className="space-y-10">
+            <article id="ai-tips" className="space-y-10">
               <div className="flex items-center gap-5">
                 <div className="w-16 h-16 bg-pink-50 rounded-[2rem] flex items-center justify-center text-pink-500 shadow-sm border border-pink-100">
                   <Rocket className="w-8 h-8" />
@@ -199,10 +199,10 @@ export default function FAQPage() {
                 <div className="absolute top-0 right-0 w-32 h-32 bg-primary/20 blur-3xl" />
                 <h3 className="text-xl font-black font-prompt">สารบัญคู่มือ</h3>
                 <nav className="flex flex-col gap-4 text-sm font-bold text-slate-400">
-                  <a href="#" className="hover:text-primary transition-colors flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary" /> ระบบสุ่ม PRNG</a>
-                  <a href="#" className="hover:text-primary transition-colors flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-blue-500" /> ศาสตร์ความน่าจะเป็น</a>
-                  <a href="#" className="hover:text-primary transition-colors flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-purple-500" /> ก้าวข้ามความล้า</a>
-                  <a href="#" className="hover:text-primary transition-colors flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-pink-500" /> เคล็ดลับ AI</a>
+                  <Link href="#prng" className="hover:text-primary transition-colors flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-primary" /> ระบบสุ่ม PRNG</Link>
+                  <Link href="#probability" className="hover:text-primary transition-colors flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-blue-500" /> ศาสตร์ความน่าจะเป็น</Link>
+                  <Link href="#fatigue" className="hover:text-primary transition-colors flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-purple-500" /> ก้าวข้ามความล้า</Link>
+                  <Link href="#ai-tips" className="hover:text-primary transition-colors flex items-center gap-2"><div className="w-1.5 h-1.5 rounded-full bg-pink-500" /> เคล็ดลับ AI</Link>
                 </nav>
               </div>
 

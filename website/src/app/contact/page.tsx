@@ -2,6 +2,7 @@
 
 import React, { useState } from 'react';
 import { Mail, MessageSquare, Send, Zap, CheckCircle2, User, AtSign, Type, MessageCircle } from 'lucide-react';
+import Link from 'next/link';
 
 export default function ContactPage() {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -102,7 +103,7 @@ export default function ContactPage() {
                 <div className="flex items-center gap-3 px-2">
                   <input required type="checkbox" id="privacy" className="w-5 h-5 rounded border-slate-300 text-primary focus:ring-primary cursor-pointer" />
                   <label htmlFor="privacy" className="text-sm text-slate-500 font-medium cursor-pointer">
-                    ฉันยอมรับ <a href="/privacy" className="text-primary underline">นโยบายความเป็นส่วนตัว</a> และอนุญาตให้ทีมงานติดต่อกลับ
+                    ฉันยอมรับ <Link href="/privacy" className="text-primary underline">นโยบายความเป็นส่วนตัว</Link> และอนุญาตให้ทีมงานติดต่อกลับ
                   </label>
                 </div>
 
