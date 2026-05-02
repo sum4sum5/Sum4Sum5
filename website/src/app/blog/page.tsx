@@ -10,12 +10,22 @@ export const metadata: Metadata = {
 
 const articles = [
   {
+    title: 'คิดแคปชั่นไม่ออก? ให้ AI ช่วยร่างไอเดีย แล้วเราค่อยมาเติมเสน่ห์กันในแบบของคุณเอง!',
+    description: 'เบื่อไหมกับการจ้องหน้าจอมือถือแต่คิดแคปชั่นไม่ออก? มาลองใช้ "แคปชั่น AI" เป็นบัดดี้คู่ใจ ช่วยร่างไอเดียให้คุณเอาไปต่อยอดได้ในไม่กี่วินาที',
+    slug: 'how-to-use-ai-captions-for-social-media',
+    date: '2 พฤษภาคม 2026',
+    readTime: '6 นาที',
+    category: 'ไลฟ์สไตล์ & ไอเดีย',
+    icon: <Sparkles className="w-6 h-6 text-orange-500" />,
+    image: '/images/blog/ai_caption_human_hero.png',
+  },
+  {
     title: 'ไอเดียเมนูอาหารเย็นวันนี้ สุ่มกินอะไรดี? (จบปัญหาโลกแตก เลือกไม่ได้ก็สุ่มซะ!)',
     description: 'เบื่อไหมกับปัญหาโลกแตก "เย็นนี้กินอะไรดี?" พบกับไอเดียเมนูอาหารยอดฮิตและวิธีแก้ปัญหาฉบับคนรุ่นใหม่ด้วยวงล้อสุ่มอาหาร',
     slug: 'what-to-eat-for-dinner-today',
     date: '30 เม.ย. 2026',
     readTime: '8 นาที',
-    category: 'ไลฟ์สไตล์',
+    category: 'ไลฟ์สไตล์ & ไอเดีย',
     icon: <Utensils className="w-6 h-6 text-orange-500" />,
     image: '/images/blog/dinner_random_hero.png',
   },
@@ -25,8 +35,8 @@ const articles = [
     slug: '10-ways-to-random-students-names',
     date: '29 เม.ย. 2026',
     readTime: '12 นาที',
-    category: 'ไอเดียห้องเรียน',
-    icon: <Sparkles className="w-6 h-6 text-yellow-500" />,
+    category: 'ไลฟ์สไตล์ & ไอเดีย',
+    icon: <Sparkles className="w-6 h-6 text-orange-500" />,
     image: '/images/blog/random_students.png',
   },
   {
@@ -45,8 +55,8 @@ const articles = [
     slug: 'logic-of-random-numbers-before-lottery',
     date: '28 เม.ย. 2026',
     readTime: '12 นาที',
-    category: 'ไลฟ์สไตล์',
-    icon: <Brain className="w-6 h-6 text-purple-500" />,
+    category: 'ไลฟ์สไตล์ & ไอเดีย',
+    icon: <Brain className="w-6 h-6 text-orange-500" />,
     image: '/images/blog/logic_vs_dream.png',
   },
   {
@@ -55,8 +65,8 @@ const articles = [
     slug: '5-reasons-why-randomizing-is-smart-for-luck',
     date: '28 เม.ย. 2026',
     readTime: '10 นาที',
-    category: 'เทคโนโลยี',
-    icon: <Zap className="w-6 h-6 text-blue-500" />,
+    category: 'เทคนิคการสุ่ม',
+    icon: <Zap className="w-6 h-6 text-orange-500" />,
     image: '/images/blog/smart_random.png',
   },
   {
@@ -65,8 +75,8 @@ const articles = [
     slug: 'random-numbers-vs-famous-numbers',
     date: '28 เม.ย. 2026',
     readTime: '11 นาที',
-    category: 'ไลฟ์สไตล์',
-    icon: <Target className="w-6 h-6 text-red-500" />,
+    category: 'ไลฟ์สไตล์ & ไอเดีย',
+    icon: <Target className="w-6 h-6 text-orange-500" />,
     image: '/images/blog/random_vs_famous.png',
   },
 ];
@@ -85,7 +95,7 @@ export default function BlogPage() {
         <div className="max-w-2xl mx-auto mb-8 md:mb-12 text-center">
           <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-orange-50 rounded-full mb-4">
             <BookOpen className="w-3.5 h-3.5 text-orange-500" />
-            <span className="text-[11px] font-black text-orange-600 uppercase tracking-widest">Sum4Sum5 Knowledge Hub</span>
+            <span className="text-[11px] font-black text-orange-600 uppercase tracking-widest">สุ่มสี่สุ่มห้า Knowledge Hub</span>
           </div>
 
           <h1 className="text-3xl md:text-5xl font-prompt font-black text-slate-900 mb-4 leading-[1.2]">
@@ -107,7 +117,7 @@ export default function BlogPage() {
             <Sparkles className="w-16 h-16 text-orange-400 mx-auto mb-8 animate-pulse" />
             <h3 className="text-3xl md:text-5xl font-prompt font-black text-white mb-6">เราอัปเดตบทความใหม่ทุกสัปดาห์!</h3>
             <p className="text-slate-400 text-xl max-w-2xl mx-auto leading-relaxed">
-              ติดตามเทคนิคการสุ่มเจ๋งๆ และไอเดียสร้างสรรค์เพื่อช่วยให้ชีวิตคุณง่ายขึ้นได้ที่นี่ที่เดียว
+              ติดตามเทคนิคการสุ่มเจ๋งๆ และไอเดียสร้างสรรค์เพื่อช่วยให้ชีวิตคุณง่ายขึ้นได้ที่นี่ที่เดียวที่ สุ่มสี่สุ่มห้า
             </p>
           </div>
         </div>

@@ -17,7 +17,7 @@ const ARTICLES: Record<string, any> = {
     title: 'ไอเดียเมนูอาหารเย็นวันนี้ สุ่มกินอะไรดี? (จบปัญหาโลกแตก เลือกไม่ได้ก็สุ่มซะ!)',
     date: '30 เมษายน 2026',
     readTime: '8 นาที',
-    category: 'ไลฟ์สไตล์',
+    category: 'ไลฟ์สไตล์ & ไอเดีย',
     author: 'แอดมินสายกิน',
     description: 'เบื่อไหมกับปัญหาโลกแตก "เย็นนี้กินอะไรดี?" พบกับไอเดียเมนูอาหารยอดฮิตและวิธีแก้ปัญหาฉบับคนรุ่นใหม่ด้วยวงล้อสุ่มอาหาร ที่ช่วยให้คุณจบดราม่ากับแฟนได้ในวินาทีเดียว!',
     keywords: ['เมนูอาหารเย็น', 'เย็นนี้กินอะไรดี', 'สุ่มอาหาร', 'วงล้อสุ่มอาหาร', 'ไอเดียอาหารเย็น', 'กินอะไรดี', 'สุ่มสี่สุ่มห้า'],
@@ -162,7 +162,7 @@ const ARTICLES: Record<string, any> = {
     title: 'รวมไอเดียสุ่มชื่อนักเรียนให้ตื่นเต้น ไม่น่าเบื่อ (ฉบับคุณครูยุคใหม่)',
     date: '29 เมษายน 2026',
     readTime: '12 นาที',
-    category: 'ไอเดียห้องเรียน',
+    category: 'ไลฟ์สไตล์ & ไอเดีย',
     author: 'ทีมสุ่มสี่สุ่มห้า',
     description: 'รวมไอเดียการสุ่มชื่อนักเรียนให้สนุกและตื่นเต้น ไม่ว่าจะเป็นการสุ่มแบบดั้งเดิมหรือการใช้เครื่องมือออนไลน์ที่ทันสมัย เพื่อสร้างบรรยากาศที่ดีในห้องเรียนยุคใหม่',
     keywords: ['สุ่มชื่อนักเรียน', 'วิธีสุ่มชื่อ', 'ไอเดียห้องเรียน', 'กิจกรรมในห้องเรียน', 'สุ่มสี่สุ่มห้า', 'วงล้อสุ่มรายชื่อ'],
@@ -632,7 +632,7 @@ const ARTICLES: Record<string, any> = {
     title: 'หมดปัญหาฝันเห็นอะไรก็ตีเป็นเลขไม่ได้! มาลองใช้ "ตรรกะแห่งการสุ่ม" ตัดใจก่อนวันหวยออก',
     date: '28 เมษายน 2026',
     readTime: '12 นาที',
-    category: 'ไลฟ์สไตล์',
+    category: 'ไลฟ์สไตล์ & ไอเดีย',
     author: 'แอดมินสายสุ่ม',
     description: 'เปลี่ยนความเครียดจากการตีความฝันให้เป็นความสนุก! มาลองใช้ตรรกะแห่งการสุ่มเพื่อช่วยตัดสินใจเลือกเลขที่ใช่ก่อนวันหวยออก พร้อมเคล็ดลับการลุ้นโชคแบบคนรุ่นใหม่',
     keywords: ['ตีเลขฝัน', 'ตรรกะการสุ่ม', 'วิธีเลือกเลขหวย', 'สุ่มตัวเลข', 'ทำนายฝัน', 'ลุ้นโชค', 'สุ่มสี่สุ่มห้า'],
@@ -695,7 +695,7 @@ const ARTICLES: Record<string, any> = {
         </section>
 
         <section id="benefits" className="scroll-mt-24 mb-12">
-          <h2 className="font-prompt font-black text-xl md:text-2xl lg:text-3xl text-slate-900 leading-tight mb-6 flex items-center gap-4 bg-slate-50/50 p-4 rounded-2xl border border-slate-100">
+          <h2 className="font-prompt font-black text-xl md:text-2xl lg:text-3xl text-slate-900 leading-tight mb-10 flex items-center gap-4 bg-slate-50/50 p-4 rounded-2xl border border-slate-100">
             <span className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-orange-500 text-white flex items-center justify-center text-lg md:text-xl italic font-serif shadow-lg shadow-orange-500/20 shrink-0">03</span>
             ทำไมการสุ่มถึงช่วยให้ชีวิตดีขึ้น (ในช่วงวันหวยออก)?
           </h2>
@@ -758,7 +758,7 @@ const ARTICLES: Record<string, any> = {
     title: '5 เหตุผลที่ "การสุ่มเลข" คือทางเลือกที่ฉลาดที่สุด สำหรับสายลุ้นโชคยุคดิจิทัล',
     date: '28 เมษายน 2026',
     readTime: '10 นาที',
-    category: 'เทคโนโลยี',
+    category: 'เทคนิคการสุ่ม',
     author: 'แอดมินสายสุ่ม',
     description: 'ทำไมการสุ่มเลขถึงเป็นวิธีที่ฉลาดที่สุด? พบกับ 5 เหตุผลที่จะเปลี่ยนมุมมองของคุณต่อการลุ้นโชคในยุคดิจิทัล ทั้งเรื่องความยุติธรรม ประหยัดเวลา และการใช้เทคโนโลยีช่วยตัดสินใจ',
     keywords: ['การสุ่มเลข', 'ลุ้นโชคยุคดิจิทัล', 'เทคโนโลยีการสุ่ม', 'วิธีซื้อสลาก', 'ความยุติธรรมในการสุ่ม', 'สุ่มสี่สุ่มห้า', 'โปรแกรมสุ่มเลข'],
@@ -872,7 +872,7 @@ const ARTICLES: Record<string, any> = {
     title: 'ส่องสไตล์ "เลขสุ่ม" ปะทะ "เลขดัง": เมื่อโชคชะตามักจะมาในตอนที่เราไม่ตั้งใจ',
     date: '28 เมษายน 2026',
     readTime: '11 นาที',
-    category: 'ไลฟ์สไตล์',
+    category: 'ไลฟ์สไตล์ & ไอเดีย',
     author: 'ทีมสุ่มสี่สุ่มห้า',
     description: 'เปรียบเทียบระหว่างการตามเลขดังกับการใช้เลขสุ่มในการลุ้นโชค ทำไมบางครั้งเลขที่เราไม่ตั้งใจซื้อถึงนำโชคมาให้ และเคล็ดลับการลุ้นรางวัลอย่างมีสติ',
     keywords: ['เลขสุ่ม', 'เลขดัง', 'ลุ้นโชค', 'สลากกินแบ่งรัฐบาล', 'ความน่าจะเป็น', 'เทคนิคซื้อหวย', 'สุ่มสี่สุ่มห้า'],
@@ -959,6 +959,140 @@ const ARTICLES: Record<string, any> = {
           </h2>
           <p className="indent-12 text-slate-600 leading-relaxed text-lg font-medium">
             โชคลาภมักจะเลือกมาหาคนที่ "พร้อมและผ่อนคลาย" ครับ งวดนี้ขอให้ทุกคนสนุกกับการลุ้นโชคแบบไม่กดดันตัวเอง และให้ <Link href="/" className="text-orange-600 hover:text-orange-700 font-bold decoration-orange-300 underline-offset-4 hover:underline"><strong>สุ่มสี่สุ่มห้า</strong></Link> เป็นเพื่อนร่วมลุ้นไปกับคุณในทุกย่างก้าวนะครับ!
+          </p>
+        </section>
+      </article>
+    )
+  },
+  'how-to-use-ai-captions-for-social-media': {
+    title: 'คิดแคปชั่นไม่ออก? ให้ AI ช่วยร่างไอเดีย แล้วเราค่อยมาเติมเสน่ห์กันในแบบของคุณเอง!',
+    date: '2 พฤษภาคม 2026',
+    readTime: '6 นาที',
+    category: 'ไลฟ์สไตล์ & ไอเดีย',
+    author: 'แอดมินสายชิลล์',
+    description: 'เบื่อไหมกับการจ้องหน้าจอมือถือแต่คิดแคปชั่นไม่ออก? มาลองใช้ "แคปชั่น AI" เป็นบัดดี้คู่ใจ ช่วยร่างไอเดียให้คุณเอาไปต่อยอดได้ในไม่กี่วินาที พร้อมเคล็ดลับทำให้โพสต์ดูเป็นธรรมชาติที่สุด',
+    keywords: ['แคปชั่น AI', 'สุ่มแคปชั่น', 'คิดแคปชั่นไม่ออก', 'เครื่องมือช่วยโพสต์โซเชียล', 'Content Burnout', 'สุ่มสี่สุ่มห้า'],
+    image: '/images/blog/ai_caption_human_hero.png',
+    toc: [
+      { id: 'the-blank-screen-struggle', title: 'เมื่อรูปสวยแล้ว แต่ "แคปชั่น" ดันแป้ก' },
+      { id: 'ai-as-creative-buddy', title: 'เปลี่ยน AI จากหุ่นยนต์ ให้กลายเป็น "เพื่อนคู่คิด"' },
+      { id: 'how-to-use-sum4sum5', title: 'ลองใช้ระบบสุ่มแคปชั่นที่ใช้ง่ายที่สุด' },
+      { id: 'human-touch-tips', title: '3 เคล็ดลับเติมเสน่ห์ ให้แคปชั่นดูเป็น "เรา" มากที่สุด' },
+      { id: 'conclusion', title: 'บทสรุป: เพราะเทคโนโลยีมีไว้ให้เราสนุกขึ้น' },
+    ],
+    content: (
+      <article className="prose prose-slate max-w-none font-kanit w-full overflow-hidden">
+        <p className="lead text-lg md:text-xl text-slate-600 mb-10 leading-relaxed font-medium border-l-4 border-orange-500 pl-6 py-2 italic">
+          "ถ่ายรูปคาเฟ่มาอย่างสวย แต่ผ่านไปครึ่งชั่วโมงแล้วยังไม่ได้โพสต์ เพราะไม่รู้จะเขียนแคปชั่นอะไร..." เชื่อว่านี่คือโมเมนต์ที่ทุกคนเคยเจอครับ! วันนี้เราไม่ได้จะมาบอกให้คุณเลิกคิดเอง แต่จะมาแนะนำ "บัดดี้" ที่จะช่วยสะกิดไอเดียให้คุณมีแคปชั่นเด็ดๆ ได้ในพริบตา
+        </p>
+
+        <section id="the-blank-screen-struggle" className="scroll-mt-24 mb-12">
+          <h2 className="font-prompt font-black text-xl md:text-2xl lg:text-3xl text-slate-900 leading-tight mb-6 flex items-center gap-4 bg-slate-50/50 p-4 rounded-2xl border border-slate-100">
+            <span className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-orange-500 text-white flex items-center justify-center text-lg md:text-xl italic font-serif shadow-lg shadow-orange-500/20 shrink-0">01</span>
+            เมื่อ "รูปสวย" แต่ "ใจเหี่ยว" เพราะคิดแคปชั่นไม่ออก
+          </h2>
+          <div className="space-y-4 text-slate-600 leading-relaxed">
+            <p className="indent-6 md:indent-12">
+              อาการ <strong>"คิดแคปชั่นไม่ออก"</strong> ไม่ได้แปลว่าคุณไม่มีความคิดสร้างสรรค์นะครับ แต่มันคือภาวะที่สมองเราล้าจากการเสพคอนเทนต์เยอะๆ จนบางทีไอเดียมันตีกันไปหมด การพยายามเค้นคำพูดที่ต้องดูดี ดูเท่ หรือดูตลกตลอดเวลา บางทีมันก็ทำให้ความสนุกในการแชร์เรื่องราวหายไปครับ 
+            </p>
+            <p className="indent-6 md:indent-12">
+              นี่คือที่มาของอาการ Content Burnout ที่หลายคนเจอ คืออยากโพสต์นะแต่ขี้เกียจคิดคำบรรยาย สุดท้ายรูปสวยๆ เลยนอนนิ่งอยู่ใน Gallery ไม่ได้ออกมาทักทายชาวโลกเสียที
+            </p>
+          </div>
+        </section>
+
+        <section id="ai-as-creative-buddy" className="scroll-mt-24 mb-12">
+          <h2 className="font-prompt font-black text-xl md:text-2xl lg:text-3xl text-slate-900 leading-tight mb-6 flex items-center gap-4 bg-slate-50/50 p-4 rounded-2xl border border-slate-100">
+            <span className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-orange-500 text-white flex items-center justify-center text-lg md:text-xl italic font-serif shadow-lg shadow-orange-500/20 shrink-0">02</span>
+            เปลี่ยน AI จากหุ่นยนต์ ให้กลายเป็น "เพื่อนคู่คิด"
+          </h2>
+          <p className="indent-6 md:indent-12 text-slate-600 leading-relaxed mb-8">
+            เราอยากให้มองว่า <strong>แคปชั่น AI</strong> ไม่ใช่เครื่องจักรที่มาทำงานแทนเรา แต่คือ "ผู้ช่วยส่วนตัว" ที่คอยโยนไอเดียมาให้เราเลือก (Draft) แล้วเราค่อยเอามาปัดฝุ่น ตกแต่งใหม่ให้เข้ากับสไตล์ของเราเอง:
+          </p>
+          
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="p-8 rounded-[2.5rem] bg-orange-50 border border-orange-100 transition-all hover:shadow-xl hover:-translate-y-1">
+              <h4 className="font-prompt font-bold text-orange-600 text-xl mb-4">✨ จุดชนวนไอเดีย</h4>
+              <p className="text-slate-600 leading-relaxed">บางที AI แค่โยนคำคมมาคำเดียว หรือมุกตลกมามุกหนึ่ง ก็อาจจะทำให้คุณนึกประโยคที่โดนใจกว่าออกได้ทันทีครับ</p>
+            </div>
+            
+            <div className="p-8 rounded-[2.5rem] bg-blue-50 border border-blue-100 transition-all hover:shadow-xl hover:-translate-y-1">
+              <h4 className="font-prompt font-bold text-blue-600 text-xl mb-4">🎭 ปรับมู้ดได้ตามใจ</h4>
+              <p className="text-slate-600 leading-relaxed">วันไหนอยากเป็นสายตลก วันไหนอยากเป็นสายซึ้ง AI สามารถเปลี่ยนโหมด (Tone) ให้คุณได้ โดยที่คุณไม่ต้องมานั่งเค้นสมองจนเหนื่อยครับ</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="how-to-use-sum4sum5" className="scroll-mt-24 mb-12">
+          <h2 className="font-prompt font-black text-xl md:text-2xl lg:text-3xl text-slate-900 leading-tight mb-6 flex items-center gap-4 bg-slate-50/50 p-4 rounded-2xl border border-slate-100">
+            <span className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-orange-500 text-white flex items-center justify-center text-lg md:text-xl italic font-serif shadow-lg shadow-orange-500/20 shrink-0">03</span>
+            ลองใช้ระบบสุ่มแคปชั่นที่ใช้ง่ายที่สุด
+          </h2>
+          <div className="space-y-6 text-slate-600 leading-relaxed">
+            <p className="indent-6 md:indent-12">
+              ที่ <Link href="/" className="text-orange-600 hover:text-orange-700 font-bold decoration-orange-300 underline-offset-4 hover:underline"><strong>สุ่มสี่สุ่มห้า</strong></Link> เราตัดขั้นตอนยุ่งยากออกทั้งหมดครับ เพราะเราเชื่อว่าเครื่องมือที่ดีต้องช่วยให้ชีวิต "ง่ายขึ้น" ไม่ใช่ซับซ้อนขึ้น
+            </p>
+            <div className="bg-slate-900 text-white p-10 rounded-[3rem] shadow-2xl relative overflow-hidden group border border-slate-800">
+              <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:rotate-12 transition-transform duration-700">
+                <Sparkles className="w-40 h-40" />
+              </div>
+              <h4 className="text-orange-400 font-bold mb-4 font-prompt text-2xl">แค่ 3 คลิก ก็ได้ไอเดียแล้ว:</h4>
+              <ol className="space-y-4 list-none p-0">
+                <li className="flex gap-4">
+                  <span className="w-8 h-8 rounded-full bg-orange-500 flex items-center justify-center font-bold shrink-0 text-white">1</span>
+                  <span>จิ้มไปที่เมนู <Link href="/random-caption" className="text-orange-400 hover:text-orange-300 underline decoration-orange-500/30 underline-offset-4"><strong>แคปชั่น AI</strong></Link></span>
+                </li>
+                <li className="flex gap-4">
+                  <span className="w-8 h-8 rounded-full bg-orange-500 flex items-center justify-center font-bold shrink-0 text-white">2</span>
+                  <span>เลือกหมวดหมู่ที่ตรงกับรูปคุณ เช่น "สายกิน", "สายเที่ยว" หรือ "สายอ่อย (ขำๆ)"</span>
+                </li>
+                <li className="flex gap-4">
+                  <span className="w-8 h-8 rounded-full bg-orange-500 flex items-center justify-center font-bold shrink-0 text-white">3</span>
+                  <span>กดปุ่มสุ่มจนกว่าจะเจอประโยคที่ "ใช่" แล้วก๊อปไปโพสต์ได้เลย!</span>
+                </li>
+              </ol>
+              <div className="mt-10">
+                <Link href="/random-caption" className="inline-flex items-center gap-3 px-10 py-5 bg-orange-500 text-white font-black rounded-2xl hover:bg-orange-600 transition-all hover:scale-105 shadow-xl shadow-orange-500/40 text-xl uppercase tracking-wider">
+                  ไปลองสุ่มแคปชั่นดูครับ <ArrowRight className="w-6 h-6" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="human-touch-tips" className="scroll-mt-24 mb-16">
+          <h2 className="font-prompt font-black text-xl md:text-2xl lg:text-3xl text-slate-900 leading-tight mb-6 flex items-center gap-4 bg-slate-50/50 p-4 rounded-2xl border border-slate-100">
+            <span className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-orange-500 text-white flex items-center justify-center text-lg md:text-xl italic font-serif shadow-lg shadow-orange-500/20 shrink-0">04</span>
+            3 เคล็ดลับเติมเสน่ห์ ให้แคปชั่นดูเป็น "เรา" มากที่สุด
+          </h2>
+          <div className="space-y-4 text-slate-600 leading-relaxed">
+            <p className="indent-6 md:indent-12">
+              หัวใจสำคัญที่จะทำให้แคปชั่นจาก AI ดูไม่เป็นหุ่นยนต์ คือการใส่ <strong>"ความเป็นมนุษย์"</strong> ของคุณลงไปครับ:
+            </p>
+            <ul className="space-y-6 list-none p-0 mt-8">
+              <li className="flex items-start gap-4 p-6 rounded-3xl bg-slate-50 border border-slate-100">
+                <div className="w-10 h-10 rounded-xl bg-orange-500 text-white flex items-center justify-center shrink-0 shadow-lg shadow-orange-500/20">1</div>
+                <span><strong>เติม "คำสร้อย" ของตัวเอง:</strong> ทุกคนจะมีคำพูดติดปากครับ เช่น "นะจ๊ะ", "แกรรร", "ฝุดๆ" การเติมคำพวกนี้ลงไปท้ายประโยคของ AI จะทำให้คนอ่านรู้สึกว่าคุณเป็นคนพิมพ์จริงๆ ครับ</span>
+              </li>
+              <li className="flex items-start gap-4 p-6 rounded-3xl bg-slate-50 border border-slate-100">
+                <div className="w-10 h-10 rounded-xl bg-orange-500 text-white flex items-center justify-center shrink-0 shadow-lg shadow-orange-500/20">2</div>
+                <span><strong>ใช้ Emojis สื่ออารมณ์:</strong> AI มักจะเลือก Emoji แบบกลางๆ ลองเปลี่ยนเป็น Emoji ที่คุณชอบใช้บ่อยๆ หรือจัดกลุ่ม Emoji ตามสไตล์ของคุณเองดูครับ</span>
+              </li>
+              <li className="flex items-start gap-4 p-6 rounded-3xl bg-slate-50 border border-slate-100">
+                <div className="w-10 h-10 rounded-xl bg-orange-500 text-white flex items-center justify-center shrink-0 shadow-lg shadow-orange-500/20">3</div>
+                <span><strong>โยนคำถามกลับไป:</strong> อย่าแค่โพสต์ประโยคบอกเล่าทิ้งไว้ ลองเติมคำถามชวนเพื่อนคุยต่อท้าย เช่น "มีใครเป็นแบบนี้บ้าง?" หรือ "แนะนำที่อื่นเพิ่มได้นะ!" เพื่อสร้าง Community ครับ</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="conclusion" className="scroll-mt-24 mb-16">
+          <h2 className="font-prompt font-black text-xl md:text-2xl lg:text-3xl text-slate-900 leading-tight mb-6 flex items-center gap-4 bg-slate-50/50 p-4 rounded-2xl border border-slate-100">
+            <span className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-orange-500 text-white flex items-center justify-center text-lg md:text-xl italic font-serif shadow-lg shadow-orange-500/20 shrink-0">05</span>
+            บทสรุป: เพราะเทคโนโลยีมีไว้ให้เรา "สนุก" ขึ้น
+          </h2>
+          <p className="indent-12 text-slate-600 leading-relaxed text-lg font-medium">
+            สุดท้ายแล้ว การใช้ AI ไม่ได้แปลว่าเราขี้เกียจครับ แต่มันคือการฉลาดใช้เครื่องมือมาช่วยให้เราประหยัดเวลา และเหลือพลังงานไปโฟกัสกับเรื่องที่สนุกและสำคัญกว่า เช่น การออกไปถ่ายรูปใหม่ๆ หรือการตอบคอมเมนต์พูดคุยกับเพื่อนๆ ให้อาการ <strong>คิดแคปชั่นไม่ออก</strong> เป็นเรื่องสนุกที่ท้าทายด้วยบัดดี้จาก <Link href="/" className="text-orange-600 hover:text-orange-700 font-bold decoration-orange-300 underline-offset-4 hover:underline"><strong>สุ่มสี่สุ่มห้า</strong></Link> นะครับ!
           </p>
         </section>
       </article>
