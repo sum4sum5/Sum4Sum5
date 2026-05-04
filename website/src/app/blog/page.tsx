@@ -1,5 +1,5 @@
 import React from 'react';
-import { BookOpen, Dices, Brain, Zap, Target, Sparkles, Utensils } from 'lucide-react';
+import { BookOpen, Dices, Brain, Zap, Target, Sparkles, Utensils, Users } from 'lucide-react';
 import type { Metadata } from 'next';
 import BlogListClient from '@/components/blog/BlogListClient';
 
@@ -9,6 +9,16 @@ export const metadata: Metadata = {
 };
 
 const articles = [
+  {
+    title: 'สุ่มรายชื่อผู้โชคดียังไงให้โปร่งใส ไม่โดนด่า และ Live ได้ทุกแพลตฟอร์ม! (2026)',
+    description: 'คู่มือ Admin และ Creator ทุกแพลตฟอร์ม ครบทุกขั้นตอน ตั้งแต่รวบรวมรายชื่อ ไปจนถึงประกาศผลสดแบบ Live ที่ทำให้ไม่มีใครแย้งได้',
+    slug: 'how-to-random-winner-for-online-giveaway',
+    date: '4 พฤษภาคม 2026',
+    readTime: '10 นาที',
+    category: 'เทคนิคการสุ่ม',
+    icon: <Users className="w-6 h-6 text-orange-500" />,
+    image: '/images/blog/facebook_giveaway_hero.png',
+  },
   {
     title: 'แจกแคปชั่นเที่ยวทะเล-ท้องฟ้า 2026! รูปสวยแล้ว แคปชั่นต้องสับ ให้ AI ช่วยคิดแต่คนกดไลก์เพียบ',
     description: 'รูป 10/10 แคปชั่น 0/10? จบปัญหานี้ด้วยไอเดียแคปชั่นท่องเที่ยวและแคปชั่นทะเลจาก AI ที่คัดมาแล้วว่าโดนใจชาว Gen Z ในปี 2026 พร้อมวิธีใช้เครื่องมือสุ่มแคปชั่นให้ดูเป็นธรรมชาติที่สุด',

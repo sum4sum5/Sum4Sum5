@@ -1254,6 +1254,206 @@ const ARTICLES: Record<string, any> = {
         </section>
       </article>
     )
+  },
+  'how-to-random-winner-for-online-giveaway': {
+    title: 'สุ่มรายชื่อผู้โชคดียังไงให้โปร่งใส ไม่โดนด่า และ Live ได้ทุกแพลตฟอร์ม! (2026)',
+    date: '4 พฤษภาคม 2026',
+    dateIso: '2026-05-04',
+    readTime: '10 นาที',
+    category: 'เทคนิคการสุ่ม',
+    author: 'ทีมสุ่มสี่สุ่มห้า',
+    description: 'คู่มือสุ่มรายชื่อผู้โชคดีสำหรับ Admin และ Creator ทุกแพลตฟอร์ม ครบทุกขั้นตอนตั้งแต่รวบรวมรายชื่อ ไปจนถึงประกาศผลสดแบบ Live ที่ทำให้ไม่มีใครแย้งได้',
+    keywords: ['สุ่มชื่อผู้โชคดี', 'สุ่มรายชื่อออนไลน์', 'กิจกรรมแจกรางวัล', 'สุ่มของรางวัล', 'วิธีสุ่มรายชื่อ', 'สุ่มสี่สุ่มห้า', 'random name picker', 'live giveaway'],
+    image: '/images/blog/facebook_giveaway_hero.png',
+    toc: [
+      { id: 'why-transparency', title: 'ทำไม "ความโปร่งใส" ถึงสำคัญกว่ารางวัล?' },
+      { id: 'prep-list', title: 'Step 1: เตรียมรายชื่อให้พร้อมก่อนสุ่ม' },
+      { id: 'how-to-random', title: 'Step 2: วิธีใช้สุ่มสี่สุ่มห้าสุ่มรายชื่อ' },
+      { id: 'live-tips', title: 'Step 3: เทคนิคทำ Live สุ่มให้น่าเชื่อถือ' },
+      { id: 'announce', title: 'Step 4: ประกาศผลยังไงให้ไม่โดนดราม่า' },
+      { id: 'faq', title: 'FAQ: คำถามที่ Admin ถามบ่อย' },
+      { id: 'conclusion', title: 'บทสรุป' },
+    ],
+    content: (
+      <article className="prose prose-slate max-w-none font-kanit w-full overflow-hidden">
+        <p className="lead text-lg md:text-xl text-slate-600 mb-10 leading-relaxed font-medium border-l-4 border-orange-500 pl-6 py-2">
+          จัดกิจกรรมแจกรางวัลทีไร ดราม่ามาทุกที? "สุ่มให้เพื่อนตัวเองหรือเปล่า?" "ทำไมไม่ Live?" "น่าเชื่อถือได้ไหม?" — วันนี้ทีม <Link href="/" className="text-orange-600 font-bold hover:underline">สุ่มสี่สุ่มห้า</Link> มาแชร์คู่มือฉบับ Admin มือโปรที่จะจบปัญหาเหล่านี้ทั้งหมดครับ!
+        </p>
+
+        <section id="why-transparency" className="scroll-mt-24 mb-12">
+          <h2 className="font-prompt font-black text-xl md:text-2xl lg:text-3xl text-slate-900 leading-tight mb-6 flex items-center gap-4 bg-slate-50/50 p-4 rounded-2xl border border-slate-100">
+            <span className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-orange-500 text-white flex items-center justify-center text-lg md:text-xl italic font-serif shadow-lg shadow-orange-500/20 shrink-0">01</span>
+            ทำไม Online Giveaway ถึงดราม่าง่าย? (และจะป้องกันได้ยังไง)
+          </h2>
+          <div className="space-y-4 text-slate-600 leading-relaxed">
+            <p className="indent-6 md:indent-12">
+              ไม่ว่าจะ Live บน Facebook, TikTok, Instagram หรือ YouTube — แพลตฟอร์มเหล่านี้ล้วนเป็น <strong>เครื่องขยายเสียง</strong> ครับ Algorithm ชอบ Engagement สูง ไม่ว่าบวกหรือลบ ดังนั้นถ้าดราม่าเกิดในคอมเมนต์ คนที่ไม่ได้ร่วมกิจกรรมด้วยซ้ำก็จะเห็น และถ้ามีคนแคปไปโพสต์ต่อ งานก็ไหลได้ทันทีแม้คุณจะสุ่มอย่างสุจริต
+            </p>
+            <div className="bg-orange-50 border border-orange-100 p-5 rounded-2xl flex gap-4 items-start">
+              <ShieldCheck className="w-5 h-5 text-orange-500 shrink-0 mt-1" />
+              <p className="m-0 text-slate-700 text-sm leading-relaxed">
+                <strong>วิธีแก้ที่ได้ผลจริง:</strong> ใช้เครื่องมือที่มีแอนิเมชันให้เห็นกระบวนการสุ่มชัดๆ + Live สด = ไม่มีใครแย้งได้ บทความนี้จะพาทำทั้ง 2 อย่างเลยครับ
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="prep-list" className="scroll-mt-24 mb-12">
+          <h2 className="font-prompt font-black text-xl md:text-2xl lg:text-3xl text-slate-900 leading-tight mb-6 flex items-center gap-4 bg-slate-50/50 p-4 rounded-2xl border border-slate-100">
+            <span className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-orange-500 text-white flex items-center justify-center text-lg md:text-xl italic font-serif shadow-lg shadow-orange-500/20 shrink-0">02</span>
+            Step 1: เตรียมรายชื่อให้พร้อมก่อนสุ่ม
+          </h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="p-6 rounded-2xl bg-white border border-slate-100 shadow-sm hover:border-orange-200 hover:shadow-md transition-all">
+              <h4 className="font-bold font-prompt text-slate-900 mb-3">✅ วิธีรวบรวมรายชื่อแบบโปร</h4>
+              <ul className="space-y-2 text-slate-600 text-sm">
+                <li>• คัดลอกชื่อจากคอมเมนต์มาวางใน Google Sheet</li>
+                <li>• ตรวจสอบความซ้ำซ้อน (1 คน = 1 สิทธิ์ ตามกติกา)</li>
+                <li>• แชร์ลิงก์ Sheet ให้คนอ่านได้ก่อนสุ่ม 15 นาที</li>
+                <li>• ประกาศจำนวนผู้เข้าร่วมทั้งหมดให้ชัดเจน</li>
+              </ul>
+            </div>
+            <div className="p-6 rounded-2xl bg-red-50 border border-red-100 shadow-sm">
+              <h4 className="font-bold font-prompt text-red-700 mb-3">❌ สิ่งที่ควรหลีกเลี่ยง</h4>
+              <ul className="space-y-2 text-red-600 text-sm">
+                <li>• สุ่มทันทีโดยไม่ให้ดูรายชื่อก่อน</li>
+                <li>• ใช้รายชื่อที่ไม่ได้ประกาศล่วงหน้า</li>
+                <li>• ไม่บอกจำนวนผู้เข้าร่วมทั้งหมด</li>
+                <li>• แก้รายชื่อหลังประกาศปิดรับสิทธิ์แล้ว</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="how-to-random" className="scroll-mt-24 mb-12">
+          <h2 className="font-prompt font-black text-xl md:text-2xl lg:text-3xl text-slate-900 leading-tight mb-6 flex items-center gap-4 bg-slate-50/50 p-4 rounded-2xl border border-slate-100">
+            <span className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-orange-500 text-white flex items-center justify-center text-lg md:text-xl italic font-serif shadow-lg shadow-orange-500/20 shrink-0">03</span>
+            Step 2: วิธีใช้สุ่มสี่สุ่มห้าสุ่มรายชื่อผู้โชคดี
+          </h2>
+          <div className="bg-slate-900 text-white p-8 md:p-10 rounded-[2.5rem] shadow-2xl relative overflow-hidden group">
+            <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:rotate-12 transition-transform duration-700">
+              <Users className="w-40 h-40" />
+            </div>
+            <h4 className="text-orange-400 font-bold mb-6 font-prompt text-xl">ขั้นตอนง่ายๆ 4 คลิกจบ:</h4>
+            <ol className="space-y-5 list-none p-0">
+              <li className="flex gap-4">
+                <span className="w-8 h-8 rounded-full bg-orange-500 flex items-center justify-center font-bold shrink-0 text-white text-sm">1</span>
+                <span>เข้าไปที่ <Link href="/random-name" className="text-orange-400 font-bold underline underline-offset-4">เครื่องมือสุ่มรายชื่อ</Link> แล้วพิมพ์หรือวางรายชื่อทั้งหมดลงช่อง Input</span>
+              </li>
+              <li className="flex gap-4">
+                <span className="w-8 h-8 rounded-full bg-orange-500 flex items-center justify-center font-bold shrink-0 text-white text-sm">2</span>
+                <span>เลือกจำนวนผู้โชคดีที่ต้องการสุ่ม (เช่น 1, 3, 5 รางวัล)</span>
+              </li>
+              <li className="flex gap-4">
+                <span className="w-8 h-8 rounded-full bg-orange-500 flex items-center justify-center font-bold shrink-0 text-white text-sm">3</span>
+                <span>กดปุ่ม <strong>"สุ่ม!"</strong> แล้วนั่งลุ้นไปกับแอนิเมชันสุดเร้าใจที่คนดู Live จะตาไม่กระพริบ</span>
+              </li>
+              <li className="flex gap-4">
+                <span className="w-8 h-8 rounded-full bg-orange-500 flex items-center justify-center font-bold shrink-0 text-white text-sm">4</span>
+                <span>บันทึกผลลัพธ์เป็นภาพ Screenshot หรือคัดลอกชื่อผู้โชคดีเพื่อประกาศทันที</span>
+              </li>
+            </ol>
+            <div className="mt-8">
+              <Link href="/random-name" className="inline-flex items-center gap-3 px-8 py-4 bg-orange-500 text-white font-black rounded-2xl hover:bg-orange-600 transition-all hover:scale-105 shadow-xl shadow-orange-500/40 text-lg uppercase tracking-wider">
+                ไปสุ่มรายชื่อเลย! <ArrowRight className="w-5 h-5" />
+              </Link>
+            </div>
+          </div>
+        </section>
+
+        <div className="my-16">
+          <AdBanner slot="article_middle" />
+        </div>
+
+        <section id="live-tips" className="scroll-mt-24 mb-12">
+          <h2 className="font-prompt font-black text-xl md:text-2xl lg:text-3xl text-slate-900 leading-tight mb-6 flex items-center gap-4 bg-slate-50/50 p-4 rounded-2xl border border-slate-100">
+            <span className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-orange-500 text-white flex items-center justify-center text-lg md:text-xl italic font-serif shadow-lg shadow-orange-500/20 shrink-0">04</span>
+            Step 3: เทคนิคทำ Live สุ่มให้น่าเชื่อถือ 100%
+          </h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            {[
+              { icon: '📱', title: 'แชร์หน้าจอ', desc: 'Live ผ่าน Facebook, TikTok หรือ Instagram ล้วนเปิด Share Screen ให้คนดูเห็นหน้าเว็บสุ่มโดยตรง ไม่มีทางโกงได้แน่นอน' },
+              { icon: '🕐', title: 'โชว์นาฬิกา', desc: 'เปิดนาฬิกาให้เห็นบนหน้าจอเพื่อพิสูจน์ว่าเป็นการสุ่มสดๆ ไม่ใช่วิดีโอตัดต่อ' },
+              { icon: '💬', title: 'อ่านชื่อดังๆ', desc: 'เมื่อได้ผลลัพธ์แล้ว อ่านชื่อผู้โชคดีดังๆ ให้คนใน Live ได้ยินและตรวจสอบเองได้ทันที' },
+            ].map((tip) => (
+              <div key={tip.title} className="p-6 rounded-2xl bg-white border border-slate-100 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all text-center">
+                <div className="text-4xl mb-4">{tip.icon}</div>
+                <h4 className="font-bold font-prompt text-slate-900 mb-2">{tip.title}</h4>
+                <p className="text-sm text-slate-500 leading-relaxed">{tip.desc}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section id="announce" className="scroll-mt-24 mb-12">
+          <h2 className="font-prompt font-black text-xl md:text-2xl lg:text-3xl text-slate-900 leading-tight mb-6 flex items-center gap-4 bg-slate-50/50 p-4 rounded-2xl border border-slate-100">
+            <span className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-orange-500 text-white flex items-center justify-center text-lg md:text-xl italic font-serif shadow-lg shadow-orange-500/20 shrink-0">05</span>
+            Step 4: ประกาศผลยังไงให้ไม่โดนดราม่า
+          </h2>
+          <div className="space-y-4 text-slate-600 leading-relaxed">
+            <p className="indent-6 md:indent-12">
+              หลังจากสุ่มเสร็จ ให้โพสต์ประกาศผลพร้อม <strong>Screenshot หน้าสุ่ม</strong> ที่เห็นชื่อผู้โชคดีชัดเจน พร้อมระบุ <strong>วันเวลาที่ทำการสุ่ม</strong> และ <strong>เงื่อนไขการติดต่อกลับ</strong> เช่น "ผู้โชคดีกรุณา inbox มาภายใน 48 ชั่วโมง มิฉะนั้นจะถือว่าสละสิทธิ์" ครับ
+            </p>
+            <div className="bg-slate-900 text-white p-8 rounded-[2rem] shadow-xl">
+              <h4 className="text-orange-400 font-bold mb-4 font-prompt">📋 Template ประกาศผลแบบมืออาชีพ:</h4>
+              <p className="text-slate-300 leading-loose italic text-sm">
+                "🎉 ผลการสุ่มผู้โชคดีรับ [ชื่อรางวัล] จากกิจกรรม [ชื่อกิจกรรม]<br/>
+                📅 สุ่มเมื่อ: [วันที่] เวลา [เวลา] น.<br/>
+                🏆 ผู้โชคดีคือ: [ชื่อผู้โชคดี]<br/>
+                📩 กรุณา inbox มาภายใน 48 ชั่วโมง<br/>
+                ✅ ใช้ระบบสุ่มจาก sum4sum5.com เพื่อความโปร่งใส"
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="faq" className="scroll-mt-24 mb-12">
+          <h2 className="font-prompt font-black text-xl md:text-2xl lg:text-3xl text-slate-900 leading-tight mb-6 flex items-center gap-4 bg-slate-50/50 p-4 rounded-2xl border border-slate-100">
+            <span className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-orange-500 text-white flex items-center justify-center text-lg md:text-xl italic font-serif shadow-lg shadow-orange-500/20 shrink-0">06</span>
+            FAQ: คำถามที่ Admin ถามบ่อย
+          </h2>
+          <div className="bg-slate-50 rounded-[2.5rem] p-6 divide-y divide-slate-200 border border-slate-100">
+            {[
+              { q: 'คอมเมนต์ที่ Tag เพื่อนมาด้วย นับสิทธิ์ให้เจ้าของคอมเมนต์ หรือคนที่ถูก Tag?', a: 'ขึ้นอยู่กับกติกาที่ Admin ระบุไว้ล่วงหน้าครับ ถ้าไม่ได้ระบุ แนะนำให้นับเจ้าของคอมเมนต์เป็นผู้เข้าร่วม และอย่าลืมประกาศกติกานี้ให้ชัดเจนตั้งแต่แรก เพื่อป้องกันคนเถียงทีหลัง' },
+              { q: 'คอมเมนต์ซ้ำหลายครั้ง นับสิทธิ์เพิ่มได้ไหม?', a: 'ขึ้นอยู่กับกติกาเช่นกันครับ แต่ถ้ากิจกรรมต้องการให้คอมเมนต์ได้หลายสิทธิ์ (เช่น Tag เพื่อน 1 คน = 1 สิทธิ์เพิ่ม) ให้ระบุให้ชัดในโพสต์ประกาศกิจกรรม และรวบรวมชื่อผู้เข้าร่วมให้ครบตามสิทธิ์ก่อนนำมาสุ่ม' },
+              { q: 'สุ่มรายชื่อได้กี่คนสูงสุด?', a: 'ไม่จำกัดครับ! ระบบของเราสามารถรับรายชื่อได้หลายร้อยหลายพันรายชื่อ วางมาได้เลยไม่ต้องกังวล' },
+              { q: 'สุ่มแล้วได้ชื่อซ้ำได้ไหม?', a: 'ค่าเริ่มต้นระบบจะ "ไม่ซ้ำ" ครับ ทำให้มั่นใจได้ว่าผู้โชคดีแต่ละคนจะไม่ถูกสุ่มซ้ำในการสุ่มครั้งเดียวกัน' },
+              { q: 'ถ้าผู้โชคดีไม่ตอบรับ ต้องสุ่มใหม่ไหม?', a: 'ขึ้นอยู่กับกติกาที่ประกาศไว้ครับ แนะนำให้ระบุล่วงหน้าว่า "หากไม่ตอบรับภายใน X ชั่วโมง จะสุ่มใหม่" เพื่อป้องกันดราม่า' },
+              { q: 'ใช้มือถือ Live พร้อมแชร์หน้าจอได้ไหม?', a: 'ได้ครับ! ทั้ง Facebook Live, TikTok Live และ Instagram Live รองรับการ Share Screen ผ่านมือถือ เปิดเบราว์เซอร์ไปที่เครื่องมือสุ่มรายชื่อ จากนั้นสลับมา Live + Share Screen ได้เลย คนดูจะเห็นหน้าเว็บสุ่มสดๆ' },
+            ].map((item) => (
+              <div key={item.q} className="p-6 space-y-2">
+                <h4 className="font-bold font-prompt text-slate-800 flex items-start gap-3">
+                  <HelpCircle className="w-5 h-5 text-orange-500 shrink-0 mt-0.5" />
+                  {item.q}
+                </h4>
+                <p className="text-slate-600 text-sm leading-relaxed pl-8">{item.a}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section id="conclusion" className="scroll-mt-24 mb-16">
+          <h2 className="font-prompt font-black text-xl md:text-2xl lg:text-3xl text-slate-900 leading-tight mb-6 flex items-center gap-4 bg-slate-50/50 p-4 rounded-2xl border border-slate-100">
+            <span className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-orange-500 text-white flex items-center justify-center text-lg md:text-xl italic font-serif shadow-lg shadow-orange-500/20 shrink-0">07</span>
+            บทสรุป: แจกรางวัลดีๆ เริ่มที่ความโปร่งใส
+          </h2>
+          <p className="indent-12 text-slate-600 leading-relaxed text-lg font-medium">
+            กิจกรรมแจกรางวัลที่ดีไม่ได้วัดที่มูลค่าของของรางวัลครับ แต่วัดที่ <strong>ความเชื่อมั่น</strong> ที่ชุมชนของคุณมีต่อกระบวนการ ลองใช้ <Link href="/random-name" className="text-orange-600 font-bold hover:underline">สุ่มรายชื่อของสุ่มสี่สุ่มห้า</Link> ดูสักครั้งครับ รับรองว่าทำง่าย สวยงาม และไม่มีใครแย้งได้อีกต่อไป!
+          </p>
+        </section>
+
+        <div className="mt-24 p-12 bg-gradient-to-br from-slate-900 to-slate-800 rounded-[4rem] text-white text-center relative overflow-hidden group shadow-2xl">
+          <div className="relative z-10">
+            <Users className="w-16 h-16 text-orange-400 mx-auto mb-8" />
+            <h3 className="text-3xl md:text-5xl font-black font-prompt mb-6">พร้อมจัดกิจกรรมหรือยัง?</h3>
+            <p className="text-slate-400 mb-10 max-w-2xl mx-auto text-xl">สุ่มรายชื่อผู้โชคดีอย่างโปร่งใส ฟรี 100% ไม่ต้องสมัครสมาชิก</p>
+            <Link href="/random-name" className="inline-flex items-center justify-center gap-4 px-12 py-5 bg-orange-500 hover:bg-orange-600 text-white font-black rounded-2xl transition-all hover:scale-105 shadow-2xl shadow-orange-500/40 text-xl">
+              ไปสุ่มรายชื่อ <ArrowRight className="w-6 h-6" />
+            </Link>
+          </div>
+        </div>
+      </article>
+    )
   }
 
 };
@@ -1318,7 +1518,8 @@ export default async function ArticleDetail({ params }: ArticleProps) {
     '@type': 'BlogPosting',
     headline: article.title,
     image: `https://sum4sum5.com${article.image}`,
-    datePublished: article.date,
+    datePublished: (article as { dateIso?: string }).dateIso || article.date,
+    dateModified: (article as { dateIso?: string }).dateIso || article.date,
     author: {
       '@type': 'Organization',
       name: 'สุ่มสี่สุ่มห้า',
@@ -1390,6 +1591,31 @@ export default async function ArticleDetail({ params }: ArticleProps) {
       };
     }
     
+    if (articleSlug === 'how-to-random-winner-for-online-giveaway') {
+      return {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'สุ่มรายชื่อได้กี่คนสูงสุด?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'ไม่จำกัดครับ! ระบบของเราสามารถรับรายชื่อได้หลายร้อยหลายพันรายชื่อ วางมาได้เลยไม่ต้องกังวล'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'ถ้าผู้โชคดีไม่ตอบรับ ต้องสุ่มใหม่ไหม?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'ขึ้นอยู่กับกติกาที่ประกาศไว้ครับ แนะนำให้ระบุล่วงหน้าว่าหากไม่ตอบรับภายในเวลาที่กำหนดจะสุ่มใหม่ เพื่อป้องกันดราม่า'
+            }
+          }
+        ]
+      };
+    }
+
     if (articleSlug === 'perfect-travel-photos-sky-and-sea-captions') {
       return {
         '@context': 'https://schema.org',
