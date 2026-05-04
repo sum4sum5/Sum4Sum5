@@ -319,7 +319,7 @@ const ARTICLES: Record<string, any> = {
              <div className="absolute -bottom-10 -right-10 w-40 h-40 bg-orange-500/20 rounded-full blur-3xl" />
              <div className="relative z-10 space-y-6">
                 <p className="text-lg leading-relaxed italic text-slate-300">
-                  "กุญแจสำคัญคือ **ความยุติธรรม** ครับ ถ้าเราใช้เครื่องมือที่โปร่งใสอย่างวงล้อสุ่มออนไลน์ เด็กๆ จะยอมรับผลได้ง่ายกว่าการที่คุณครูจิ้มเลือกเอง นอกจากนี้ อย่าลืมชมเชยหรือมีรางวัลเล็กๆ ให้คนที่โดนสุ่มบ่อยๆ เพื่อเปลี่ยนความกลัวให้เป็นความภูมิใจนะครับ"
+                  "กุญแจสำคัญคือ <strong>ความยุติธรรม</strong> ครับ ถ้าเราใช้เครื่องมือที่โปร่งใสอย่างวงล้อสุ่มออนไลน์ เด็กๆ จะยอมรับผลได้ง่ายกว่าการที่คุณครูจิ้มเลือกเอง นอกจากนี้ อย่าลืมชมเชยหรือมีรางวัลเล็กๆ ให้คนที่โดนสุ่มบ่อยๆ เพื่อเปลี่ยนความกลัวให้เป็นความภูมิใจนะครับ"
                 </p>
                 <div className="flex items-center gap-4">
                    <div className="w-12 h-12 rounded-full bg-orange-500 flex items-center justify-center">
@@ -978,6 +978,8 @@ const ARTICLES: Record<string, any> = {
       { id: 'ai-as-creative-buddy', title: 'เปลี่ยน AI จากหุ่นยนต์ ให้กลายเป็น "เพื่อนคู่คิด"' },
       { id: 'how-to-use-sum4sum5', title: 'ลองใช้ระบบสุ่มแคปชั่นที่ใช้ง่ายที่สุด' },
       { id: 'human-touch-tips', title: '3 เคล็ดลับเติมเสน่ห์ ให้แคปชั่นดูเป็น "เรา" มากที่สุด' },
+      { id: 'use-cases', title: 'การใช้งานที่หลากหลาย: ไม่ใช่แค่เรื่องโซเชียล' },
+      { id: 'faq', title: 'FAQ: คำถามที่พบบ่อย' },
       { id: 'conclusion', title: 'บทสรุป: เพราะเทคโนโลยีมีไว้ให้เราสนุกขึ้น' },
     ],
     content: (
@@ -1063,36 +1065,83 @@ const ARTICLES: Record<string, any> = {
         <section id="human-touch-tips" className="scroll-mt-24 mb-16">
           <h2 className="font-prompt font-black text-xl md:text-2xl lg:text-3xl text-slate-900 leading-tight mb-6 flex items-center gap-4 bg-slate-50/50 p-4 rounded-2xl border border-slate-100">
             <span className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-orange-500 text-white flex items-center justify-center text-lg md:text-xl italic font-serif shadow-lg shadow-orange-500/20 shrink-0">04</span>
-            3 เคล็ดลับเติมเสน่ห์ ให้แคปชั่นดูเป็น "เรา" มากที่สุด
+            เติมเสน่ห์ให้เป็นตัวเอง: 3 เทคนิคง่ายๆ
           </h2>
           <div className="space-y-4 text-slate-600 leading-relaxed">
             <p className="indent-6 md:indent-12">
-              หัวใจสำคัญที่จะทำให้แคปชั่นจาก AI ดูไม่เป็นหุ่นยนต์ คือการใส่ <strong>"ความเป็นมนุษย์"</strong> ของคุณลงไปครับ:
+              อยากให้ AI เป็นเหมือนร่างเงาที่รู้ใจคุณ? ลองใส่ "ลายเซ็น" ส่วนตัวลงไปในแคปชั่นสักนิด แล้วจะพบว่าความจริงใจคืออาวุธที่ทรงพลังที่สุด:
             </p>
             <ul className="space-y-6 list-none p-0 mt-8">
               <li className="flex items-start gap-4 p-6 rounded-3xl bg-slate-50 border border-slate-100">
                 <div className="w-10 h-10 rounded-xl bg-orange-500 text-white flex items-center justify-center shrink-0 shadow-lg shadow-orange-500/20">1</div>
-                <span><strong>เติม "คำสร้อย" ของตัวเอง:</strong> ทุกคนจะมีคำพูดติดปากครับ เช่น "นะจ๊ะ", "แกรรร", "ฝุดๆ" การเติมคำพวกนี้ลงไปท้ายประโยคของ AI จะทำให้คนอ่านรู้สึกว่าคุณเป็นคนพิมพ์จริงๆ ครับ</span>
+                <span><strong>เพิ่มน้ำเสียงที่เป็นคุณ:</strong> ลองเติมคำติดปากที่คุณใช้คุยกับเพื่อนลงไปท้ายประโยค เช่น "นะจ๊ะ", "แกรรร", หรือ "สุดปัง" เพื่อให้คนอ่านรับรู้ถึงตัวตนของคุณผ่านตัวอักษร</span>
               </li>
               <li className="flex items-start gap-4 p-6 rounded-3xl bg-slate-50 border border-slate-100">
                 <div className="w-10 h-10 rounded-xl bg-orange-500 text-white flex items-center justify-center shrink-0 shadow-lg shadow-orange-500/20">2</div>
-                <span><strong>ใช้ Emojis สื่ออารมณ์:</strong> AI มักจะเลือก Emoji แบบกลางๆ ลองเปลี่ยนเป็น Emoji ที่คุณชอบใช้บ่อยๆ หรือจัดกลุ่ม Emoji ตามสไตล์ของคุณเองดูครับ</span>
+                <span><strong>ปรับแต่ง Emoji ให้โดนใจ:</strong> อย่าปล่อยให้เป็นหน้าที่ของ AI แต่เพียงผู้เดียว ลองคัดเลือก Emoji กลุ่มโปรดที่สื่อถึงอารมณ์และสไตล์ของคุณมาใส่ เพื่อสร้างเอกลักษณ์ให้ทุกโพสต์มีความเป็น "ตัวคุณ" 100%</span>
               </li>
               <li className="flex items-start gap-4 p-6 rounded-3xl bg-slate-50 border border-slate-100">
                 <div className="w-10 h-10 rounded-xl bg-orange-500 text-white flex items-center justify-center shrink-0 shadow-lg shadow-orange-500/20">3</div>
-                <span><strong>โยนคำถามกลับไป:</strong> อย่าแค่โพสต์ประโยคบอกเล่าทิ้งไว้ ลองเติมคำถามชวนเพื่อนคุยต่อท้าย เช่น "มีใครเป็นแบบนี้บ้าง?" หรือ "แนะนำที่อื่นเพิ่มได้นะ!" เพื่อสร้าง Community ครับ</span>
+                <span><strong>ชวนคุยสร้างปฏิสัมพันธ์:</strong> เปลี่ยนประโยคบอกเล่าให้เป็นการชวนเพื่อนคอมเมนต์ เช่น "ใครเคยเจอแบบนี้บ้าง?" หรือ "มีที่ไหนแนะนำเพิ่มไหม?" เพราะแคปชั่นที่ดีไม่ได้มีไว้แค่อ่าน แต่มีไว้เพื่อให้คนเข้ามาพูดคุยกัน</span>
               </li>
             </ul>
           </div>
         </section>
 
-        <section id="conclusion" className="scroll-mt-24 mb-16">
+        <section id="use-cases" className="scroll-mt-24 mb-12">
           <h2 className="font-prompt font-black text-xl md:text-2xl lg:text-3xl text-slate-900 leading-tight mb-6 flex items-center gap-4 bg-slate-50/50 p-4 rounded-2xl border border-slate-100">
             <span className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-orange-500 text-white flex items-center justify-center text-lg md:text-xl italic font-serif shadow-lg shadow-orange-500/20 shrink-0">05</span>
+            การใช้งานที่หลากหลาย: ไม่ใช่แค่เรื่องโซเชียล
+          </h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="p-8 rounded-[2.5rem] bg-white border border-slate-100 shadow-sm flex items-start gap-6 group hover:border-orange-200 transition-all text-left">
+              <div className="w-14 h-14 rounded-2xl bg-orange-50 text-orange-600 flex items-center justify-center shrink-0 group-hover:bg-orange-600 group-hover:text-white transition-all">
+                <BookOpen className="w-7 h-7" />
+              </div>
+              <div>
+                <h4 className="font-bold text-slate-900 mb-2 font-prompt text-lg">ไอเดียสร้างสรรค์</h4>
+                <p className="text-slate-500 text-base m-0 leading-relaxed font-light">ใช้ร่างหัวข้อบทความ, คิดชื่อโปรเจกต์กลุ่ม, หรือแม้แต่สุ่มแนวทางทำกิจกรรมในห้องเรียนให้ดูสนุกและน่าตื่นเต้น</p>
+              </div>
+            </div>
+            <div className="p-8 rounded-[2.5rem] bg-white border border-slate-100 shadow-sm flex items-start gap-6 group hover:border-orange-200 transition-all text-left">
+              <div className="w-14 h-14 rounded-2xl bg-orange-50 text-orange-600 flex items-center justify-center shrink-0 group-hover:bg-orange-600 group-hover:text-white transition-all">
+                <Users className="w-7 h-7" />
+              </div>
+              <div>
+                <h4 className="font-bold text-slate-900 mb-2 font-prompt text-lg">กิจกรรมในองค์กร</h4>
+                <p className="text-slate-500 text-base m-0 leading-relaxed font-light">แบ่งทีมทำ Workshop แบบด่วนๆ, จับคู่ Buddy เพื่อทำกิจกรรมร่วมกัน หรือสุ่มหัวข้อสนทนาตอนพักเที่ยง</p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section id="faq" className="scroll-mt-24 mb-12">
+          <h2 className="font-prompt font-black text-xl md:text-2xl lg:text-3xl text-slate-900 leading-tight mb-6 flex items-center gap-4 bg-slate-50/50 p-4 rounded-2xl border border-slate-100">
+            <span className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-orange-500 text-white flex items-center justify-center text-lg md:text-xl italic font-serif shadow-lg shadow-orange-500/20 shrink-0">06</span>
+            FAQ: คำถามที่พบบ่อยเกี่ยวกับการเลือกแคปชั่น
+          </h2>
+          <div className="bg-slate-50 rounded-[2.5rem] p-6 md:p-10 divide-y divide-slate-200 border border-slate-100">
+            {[
+              { q: 'แคปชั่นที่ได้จาก AI ซ้ำกับคนอื่นไหม?', a: 'ระบบของเราสุ่มจากฐานข้อมูลที่หลากหลายมากครับ โอกาสซ้ำจึงน้อยมาก และคุณสามารถปรับแต่งเพิ่มให้เป็นสไตล์ของตัวเองได้เลย' },
+              { q: 'สามารถบันทึกเก็บไว้ใช้ทีหลังได้ไหม?', a: 'สามารถกด Copy ไปใช้ หรือแคปหน้าจอเก็บไว้ได้เลยครับ เราออกแบบมาให้ใช้งานง่ายและรวดเร็วที่สุด' },
+              { q: 'รองรับการใช้งานภาษาอังกฤษไหม?', a: 'รองรับครับ! เรามีให้เลือกทั้งแคปชั่นภาษาไทยที่เข้าใจง่าย และแคปชั่นภาษาอังกฤษเก๋ๆ ที่คัดมาให้แล้ว' },
+            ].map((item) => (
+              <div key={item.q} className="py-6 first:pt-0 last:pb-0 space-y-3 text-left">
+                <h4 className="font-bold font-prompt text-slate-800 flex items-start gap-3 text-lg">
+                  <HelpCircle className="w-5 h-5 text-orange-500 shrink-0 mt-1.5" />
+                  {item.q}
+                </h4>
+                <p className="text-slate-600 text-base leading-relaxed pl-8 m-0 font-light">{item.a}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+        <section id="conclusion" className="scroll-mt-24 mb-16">
+          <h2 className="font-prompt font-black text-xl md:text-2xl lg:text-3xl text-slate-900 leading-tight mb-6 flex items-center gap-4 bg-slate-50/50 p-4 rounded-2xl border border-slate-100">
+            <span className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-orange-500 text-white flex items-center justify-center text-lg md:text-xl italic font-serif shadow-lg shadow-orange-500/20 shrink-0">06</span>
             บทสรุป: เพราะเทคโนโลยีมีไว้ให้เรา "สนุก" ขึ้น
           </h2>
           <p className="indent-12 text-slate-600 leading-relaxed text-lg font-medium">
-            สุดท้ายแล้ว การใช้ AI ไม่ได้แปลว่าเราขี้เกียจครับ แต่มันคือการฉลาดใช้เครื่องมือมาช่วยให้เราประหยัดเวลา และเหลือพลังงานไปโฟกัสกับเรื่องที่สนุกและสำคัญกว่า เช่น การออกไปถ่ายรูปใหม่ๆ หรือการตอบคอมเมนต์พูดคุยกับเพื่อนๆ ให้อาการ <strong>คิดแคปชั่นไม่ออก</strong> เป็นเรื่องสนุกที่ท้าทายด้วยบัดดี้จาก <Link href="/" className="text-orange-600 hover:text-orange-700 font-bold decoration-orange-300 underline-offset-4 hover:underline"><strong>สุ่มสี่สุ่มห้า</strong></Link> นะครับ!
+            สุดท้ายแล้ว การใช้ AI ไม่ได้แปลว่าเราขี้เกียจครับ แต่มันคือการฉลาดใช้เครื่องมือมาช่วยให้เราประหยัดเวลา และเหลือพลังงานไปโฟกัสกับเรื่องที่สำคัญกว่าให้อาการ <strong>คิดแคปชั่นไม่ออก</strong> เป็นเรื่องสนุกที่ท้าทายด้วยบัดดี้จาก <Link href="/" className="text-orange-600 hover:text-orange-700 font-bold decoration-orange-300 underline-offset-4 hover:underline"><strong>สุ่มสี่สุ่มห้า</strong></Link> นะครับ!
           </p>
         </section>
       </article>
@@ -1454,8 +1503,206 @@ const ARTICLES: Record<string, any> = {
         </div>
       </article>
     )
-  }
+  },
+  'random-wheel-group-divider': {
+    title: 'วงล้อสุ่มแบ่งกลุ่ม: จัดทีมงาน, ทีมกีฬา, กลุ่มทัศนศึกษา ยุติธรรมใน 1 คลิก',
+    date: '4 พฤษภาคม 2026',
+    readTime: '10 นาที',
+    category: 'เทคนิคการสุ่ม',
+    author: 'ทีมสุ่มสี่สุ่มห้า',
+    description: 'วิธีสุ่มแบ่งกลุ่มให้ยุติธรรมและรวดเร็ว ไม่ว่าจะเป็นการแบ่งกลุ่มนักเรียน ทีมกีฬา หรือทีมงานในองค์กร พบกับเทคนิคการใช้ฟีเจอร์สุ่มแบ่งกลุ่มจาก สุ่มสี่สุ่มห้า ที่ช่วยให้คุณจบปัญหาการเลือกที่รักมักที่ชังได้ทันที',
+    keywords: ['วงล้อสุ่มแบ่งกลุ่ม', 'สุ่มทีม', 'แบ่งกลุ่มออนไลน์', 'สุ่มแบ่งกลุ่มนักเรียน', 'สุ่มจับคู่', 'สุ่มสี่สุ่มห้า'],
+    image: '/images/blog/group_split_random_hero.png',
+    toc: [
+      { id: 'why-grouping-matters', title: 'ทำไมการแบ่งกลุ่มอย่างยุติธรรมถึงสำคัญ?' },
+      { id: 'common-grouping-problems', title: 'ปัญหาที่มักเจอเมื่อแบ่งกลุ่มด้วยมือ' },
+      { id: 'random-wheel-solution', title: 'ทางออก: ใช้ระบบสุ่มอัจฉริยะ' },
+      { id: 'how-to-use', title: 'วิธีใช้งานโหมดแบ่งกลุ่ม' },
+      { id: 'use-cases', title: 'ไอเดียการนำไปใช้งาน' },
+      { id: 'faq', title: 'FAQ: คำถามที่พบบ่อย' },
+      { id: 'conclusion', title: 'บทสรุป: จบดราม่าด้วยการสุ่ม' },
+    ],
+    content: (
+      <article className="prose prose-slate max-w-none font-kanit w-full overflow-hidden">
+        <p className="lead text-lg md:text-xl text-slate-600 mb-10 leading-relaxed font-medium border-l-4 border-orange-500 pl-6 py-2">
+          "ทำไมหนูต้องอยู่กลุ่มนี้ตลอดเลย?" | "ขอแลกทีมได้ไหมครับ?" | "ครูขา เพื่อนคนนี้ไม่ช่วยงานกลุ่มเลย!" — เชื่อว่าคุณครูหรือหัวหน้างานหลายคนต้องเคยปวดหัวกับเสียงบ่นเหล่านี้ใช่ไหมครับ? วันนี้ <Link href="/" className="text-orange-600 hover:text-orange-700 font-bold decoration-orange-300 underline-offset-4 hover:underline"><strong>สุ่มสี่สุ่มห้า</strong></Link> จะมาแชร์เคล็ดลับการใช้ <strong>"วงล้อสุ่มแบ่งกลุ่ม"</strong> ที่จะเปลี่ยนการจัดทีมที่แสนวุ่นวาย ให้กลายเป็นเรื่องสนุก โปร่งใส และยุติธรรมที่สุดในปี 2026 นี้ครับ!
+        </p>
 
+        <section id="why-grouping-matters" className="scroll-mt-24 mb-12">
+          <h2 className="font-prompt font-black text-xl md:text-2xl lg:text-3xl text-slate-900 leading-tight mb-6 flex items-center gap-4 bg-slate-50/50 p-4 rounded-2xl border border-slate-100">
+            <span className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-orange-500 text-white flex items-center justify-center text-lg md:text-xl italic font-serif shadow-lg shadow-orange-500/20 shrink-0">01</span>
+            ทำไมการแบ่งกลุ่มอย่างยุติธรรมถึงสำคัญ?
+          </h2>
+          <div className="space-y-4 text-slate-600 leading-relaxed text-base md:text-lg">
+            <p className="indent-6 md:indent-12">
+              ไม่ว่าจะเป็นการเรียนหรือการทำงาน หัวใจสำคัญคือ <strong>"ทีมที่ดี"</strong> ครับ แต่จุดเริ่มต้นที่ยากที่สุดมักจะเป็นการจัดกลุ่มนี่แหแหละ หากสมาชิกในทีมรู้สึกว่าการจัดกลุ่มมีการลำเอียง หรือมีการ "ล็อคตัว" เพื่อนสนิทให้อยู่ด้วยกันตลอดเวลา จะส่งผลต่อความตั้งใจทำงานและบรรยากาศโดยรวมทันที
+            </p>
+            <p className="indent-6 md:indent-12">
+              การใช้ระบบสุ่มที่เป็นกลางช่วยลดปัญหา "ดราม่า" ในกลุ่มได้แบบ 100% แถมยังช่วยเปิดโอกาสให้ทุกคนได้ทำความรู้จักเพื่อนใหม่ๆ และฝึกทักษะการทำงานร่วมกับผู้อื่น (Soft Skills) ซึ่งเป็นสิ่งที่สำคัญมากในโลกยุคใหม่ครับ
+            </p>
+          </div>
+        </section>
+
+        <section id="common-grouping-problems" className="scroll-mt-24 mb-12">
+          <h2 className="font-prompt font-black text-xl md:text-2xl lg:text-3xl text-slate-900 leading-tight mb-6 flex items-center gap-4 bg-slate-50/50 p-4 rounded-2xl border border-slate-100">
+            <span className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-orange-500 text-white flex items-center justify-center text-lg md:text-xl italic font-serif shadow-lg shadow-orange-500/20 shrink-0">02</span>
+            ปัญหาที่มักเจอเมื่อแบ่งกลุ่มด้วยมือ (Manual Grouping)
+          </h2>
+          <div className="grid md:grid-cols-2 gap-6 mb-8">
+            <div className="p-8 rounded-[2.5rem] bg-red-50 border border-red-100 group hover:bg-red-100 transition-colors">
+              <h4 className="font-prompt font-bold text-red-600 text-xl mb-4">🤝 กลุ่มกระจุกตัว (The Clique)</h4>
+              <p className="text-slate-600 text-sm leading-relaxed">กลุ่มเพื่อนสนิทมักจะเกาะกลุ่มกันเองตลอด ทำให้ไม่มีไอเดียใหม่ๆ เกิดขึ้น และอาจทำให้เพื่อนที่เหลือรู้สึกเหมือนถูกทิ้งไว้ข้างหลัง</p>
+            </div>
+            <div className="p-8 rounded-[2.5rem] bg-orange-50 border border-orange-100 group hover:bg-orange-100 transition-colors">
+              <h4 className="font-prompt font-bold text-orange-600 text-xl mb-4">⌛ วุ่นวายและเสียเวลา</h4>
+              <p className="text-slate-600 text-sm leading-relaxed">การนับเลข 1-2-3 หรือการจับฉลากกระดาษนั้นทั้งวุ่นวายและใช้เวลานาน โดยเฉพาะเมื่อต้องจัดกลุ่มคนจำนวนมากในเวลาจำกัด</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="random-wheel-solution" className="scroll-mt-24 mb-12">
+          <h2 className="font-prompt font-black text-xl md:text-2xl lg:text-3xl text-slate-900 leading-tight mb-6 flex items-center gap-4 bg-slate-50/50 p-4 rounded-2xl border border-slate-100">
+            <span className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-orange-500 text-white flex items-center justify-center text-lg md:text-xl italic font-serif shadow-lg shadow-orange-500/20 shrink-0">03</span>
+            ทางออก: ระบบสุ่มแบ่งกลุ่มอัจฉริยะจาก สุ่มสี่สุ่มห้า
+          </h2>
+          <div className="space-y-6 text-slate-600 leading-relaxed text-base md:text-lg">
+            <p className="indent-6 md:indent-12">
+              ลืมภาพการจับฉลากแบบเดิมๆ ไปได้เลย! ด้วย <Link href="/random-name" className="text-orange-600 hover:text-orange-700 font-bold underline decoration-orange-300"><strong>เครื่องมือสุ่มแบ่งกลุ่ม (Group Divider)</strong></Link> ของเรา คุณสามารถจัดการความวุ่นวายให้จบได้ในไม่กี่วินาที:
+            </p>
+            <div className="bg-slate-900 text-white p-10 rounded-[3rem] shadow-2xl relative overflow-hidden group border border-slate-700">
+              <div className="absolute top-0 right-0 p-8 opacity-10 group-hover:rotate-12 transition-transform duration-700 pointer-events-none">
+                <Users className="w-40 h-40" />
+              </div>
+              <h4 className="text-orange-400 font-bold mb-8 font-prompt text-2xl border-b border-slate-800 pb-4">ทำไมต้องใช้ระบบของเรา?</h4>
+              <ul className="space-y-5 list-none p-0">
+                <li className="flex gap-4 items-start">
+                  <CheckCircle2 className="w-6 h-6 text-orange-500 shrink-0 mt-1" />
+                  <span className="text-lg"><strong>จัดกลุ่มอัตโนมัติแม่นยำ:</strong> แค่ใส่รายชื่อแล้วเลือกว่าจะเอากี่กลุ่ม ระบบจะเฉลี่ยจำนวนคนให้เท่ากันทันที ไม่มีใครได้เปรียบเสียเปรียบ</span>
+                </li>
+                <li className="flex gap-4 items-start">
+                  <CheckCircle2 className="w-6 h-6 text-orange-500 shrink-0 mt-1" />
+                  <span className="text-lg"><strong>อนิเมชันสร้างสีสัน:</strong> การสุ่มโชว์หน้าห้องช่วยสร้างความตื่นเต้นและลดแรงต้านจากผู้ร่วมกิจกรรม เพราะทุกคนเห็นว่ามันโปร่งใสจริงๆ</span>
+                </li>
+                <li className="flex gap-4 items-start">
+                  <CheckCircle2 className="w-6 h-6 text-orange-500 shrink-0 mt-1" />
+                  <span className="text-lg"><strong>Export ผลลัพธ์ง่าย:</strong> บันทึกผลลัพธ์เป็นรูปภาพสวยๆ เพื่อส่งเข้ากลุ่ม LINE หรือบันทึกเก็บไว้ดูภายหลังได้ทันที</span>
+                </li>
+              </ul>
+              <div className="mt-12 text-center md:text-left">
+                <Link href="/random-name" className="inline-flex items-center gap-3 px-10 py-5 bg-orange-500 text-white font-black rounded-2xl hover:bg-orange-600 transition-all hover:scale-105 shadow-xl shadow-orange-500/40 text-xl uppercase tracking-wider">
+                  ลองสุ่มแบ่งกลุ่มเลย! <ArrowRight className="w-6 h-6" />
+                </Link>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="how-to-use" className="scroll-mt-24 mb-12">
+          <h2 className="font-prompt font-black text-xl md:text-2xl lg:text-3xl text-slate-900 leading-tight mb-6 flex items-center gap-4 bg-slate-50/50 p-4 rounded-2xl border border-slate-100">
+            <span className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-orange-500 text-white flex items-center justify-center text-lg md:text-xl italic font-serif shadow-lg shadow-orange-500/20 shrink-0">04</span>
+            วิธีใช้งานโหมดแบ่งกลุ่ม ง่ายๆ ใน 4 ขั้นตอน
+          </h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+            <div className="p-6 rounded-3xl bg-orange-50/50 border border-orange-100 space-y-4 hover:shadow-md transition-shadow">
+              <div className="w-14 h-14 rounded-2xl bg-orange-500 text-white flex items-center justify-center text-xl font-black shadow-lg shadow-orange-500/30">1</div>
+              <h4 className="font-bold text-slate-900 font-prompt text-lg">เลือกแถบ "แบ่งกลุ่ม"</h4>
+              <p className="text-slate-500 text-sm leading-relaxed">เมื่อเข้าหน้า <Link href="/random-name" className="text-orange-600 font-bold hover:underline">สุ่มรายชื่อ</Link> ให้มองหาและคลิกเลือกแถบ <strong>"แบ่งกลุ่ม"</strong> ที่อยู่ด้านบนของช่องใส่ชื่อครับ</p>
+            </div>
+            <div className="p-6 rounded-3xl bg-slate-50 border border-slate-100 space-y-4 hover:shadow-md transition-shadow">
+              <div className="w-14 h-14 rounded-2xl bg-slate-800 text-white flex items-center justify-center text-xl font-black shadow-lg shadow-slate-800/30">2</div>
+              <h4 className="font-bold text-slate-900 font-prompt text-lg">ใส่รายชื่อสมาชิก</h4>
+              <p className="text-slate-500 text-sm leading-relaxed">ก๊อปปี้รายชื่อนักเรียนหรือสมาชิกมาวางในช่องรับข้อมูล โดยแนะนำให้ใส่ <strong>"บรรทัดละ 1 ชื่อ"</strong> เพื่อความถูกต้อง</p>
+            </div>
+            <div className="p-6 rounded-3xl bg-slate-50 border border-slate-100 space-y-4 hover:shadow-md transition-shadow">
+              <div className="w-14 h-14 rounded-2xl bg-slate-800 text-white flex items-center justify-center text-xl font-black shadow-lg shadow-slate-800/30">3</div>
+              <h4 className="font-bold text-slate-900 font-prompt text-lg">เลือกจำนวนกลุ่ม</h4>
+              <p className="text-slate-500 text-sm leading-relaxed">เลือกว่าต้องการแบ่งเป็นกี่กลุ่ม หรือจะกำหนดให้แต่ละกลุ่มมีจำนวนสมาชิกกี่คนก็ได้ตามใจคุณ</p>
+            </div>
+            <div className="p-6 rounded-3xl bg-slate-50 border border-slate-100 space-y-4 hover:shadow-md transition-shadow">
+              <div className="w-14 h-14 rounded-2xl bg-orange-500 text-white flex items-center justify-center text-xl font-black shadow-lg shadow-orange-500/30">4</div>
+              <h4 className="font-bold text-slate-900 font-prompt text-lg">กดปุ่มสุ่มเลย!</h4>
+              <p className="text-slate-500 text-sm leading-relaxed">นั่งลุ้นไปกับแอนิเมชันสวยๆ แล้วระบบจะแสดงผลลัพธ์การจัดทีมที่แบ่งให้เท่ากันโดยอัตโนมัติทันที</p>
+            </div>
+          </div>
+        </section>
+
+        <div className="my-16">
+          <AdBanner slot="article_middle" />
+        </div>
+
+        <section id="use-cases" className="scroll-mt-24 mb-12">
+          <h2 className="font-prompt font-black text-xl md:text-2xl lg:text-3xl text-slate-900 leading-tight mb-6 flex items-center gap-4 bg-slate-50/50 p-4 rounded-2xl border border-slate-100">
+            <span className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-orange-500 text-white flex items-center justify-center text-lg md:text-xl italic font-serif shadow-lg shadow-orange-500/20 shrink-0">05</span>
+            ไอเดียการนำไปใช้งาน (Use Cases)
+          </h2>
+          <div className="grid md:grid-cols-2 gap-6">
+            <div className="p-8 rounded-[2.5rem] bg-white border border-slate-100 shadow-sm flex items-start gap-6 group hover:border-orange-200 transition-all text-left">
+              <div className="w-14 h-14 rounded-2xl bg-orange-50 text-orange-600 flex items-center justify-center shrink-0 group-hover:bg-orange-600 group-hover:text-white transition-all">
+                <BookOpen className="w-7 h-7" />
+              </div>
+              <div>
+                <h4 className="font-bold text-slate-900 mb-2 font-prompt text-lg">ในห้องเรียน</h4>
+                <p className="text-slate-500 text-base m-0 leading-relaxed font-light">แบ่งกลุ่มทำโปรเจกต์กลุ่ม, จับคู่บัดดี้ (Buddy), หรือสุ่มลำดับการนำเสนอหน้าชั้นเรียนให้ตื่นเต้นยิ่งขึ้น</p>
+              </div>
+            </div>
+            <div className="p-8 rounded-[2.5rem] bg-white border border-slate-100 shadow-sm flex items-start gap-6 group hover:border-orange-200 transition-all text-left">
+              <div className="w-14 h-14 rounded-2xl bg-orange-50 text-orange-600 flex items-center justify-center shrink-0 group-hover:bg-orange-600 group-hover:text-white transition-all">
+                <Users className="w-7 h-7" />
+              </div>
+              <div>
+                <h4 className="font-bold text-slate-900 mb-2 font-prompt text-lg">ในองค์กร/บริษัท</h4>
+                <p className="text-slate-500 text-base m-0 leading-relaxed font-light">แบ่งทีมระดมสมอง (Brainstorming), จัดกลุ่ม Workshop, หรือแม้แต่สุ่มทีมไปทานมื้อเที่ยงด้วยกันเพื่อกระชับมิตร</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="faq" className="scroll-mt-24 mb-12">
+          <h2 className="font-prompt font-black text-xl md:text-2xl lg:text-3xl text-slate-900 leading-tight mb-6 flex items-center gap-4 bg-slate-50/50 p-4 rounded-2xl border border-slate-100">
+            <span className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-orange-500 text-white flex items-center justify-center text-lg md:text-xl italic font-serif shadow-lg shadow-orange-500/20 shrink-0">06</span>
+            FAQ: คำถามที่พบบ่อยเกี่ยวกับการแบ่งกลุ่ม
+          </h2>
+          <div className="bg-slate-50 rounded-[2.5rem] p-6 md:p-10 divide-y divide-slate-200 border border-slate-100">
+            {[
+              { q: 'ถ้าจำนวนคนไม่ลงตัว ระบบจะจัดการยังไง?', a: 'ไม่ต้องกังวลครับ! ระบบจะเฉลี่ยจำนวนคนให้ใกล้เคียงกันที่สุด เช่น มี 10 คน แบ่ง 3 กลุ่ม ระบบจะจัดเป็น 4, 3, 3 คนโดยอัตโนมัติ เพื่อความยุติธรรมสูงสุด' },
+              { q: 'สามารถบันทึกผลการสุ่มเก็บไว้ดูทีหลังได้ไหม?', a: 'ได้แน่นอนครับ! คุณสามารถกดปุ่ม "บันทึกเป็นรูปภาพ" เพื่อเซฟผลลัพธ์ที่แบ่งเสร็จแล้วเป็นไฟล์ภาพคุณภาพสูงได้ทันที' },
+              { q: 'รองรับรายชื่อภาษาไทยไหม?', a: 'รองรับ 100% ครับ! ทั้งชื่อภาษาไทย ภาษาอังกฤษ สัญลักษณ์ หรือตัวเลข สามารถใส่มาได้เลย ระบบเราประมวลผลได้ไม่มีปัญหา' },
+            ].map((item) => (
+              <div key={item.q} className="py-6 first:pt-0 last:pb-0 space-y-3 text-left">
+                <h4 className="font-bold font-prompt text-slate-800 flex items-start gap-3 text-lg">
+                  <HelpCircle className="w-5 h-5 text-orange-500 shrink-0 mt-1.5" />
+                  {item.q}
+                </h4>
+                <p className="text-slate-600 text-base leading-relaxed pl-8 m-0 font-light">{item.a}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        <section id="conclusion" className="scroll-mt-24 mb-16">
+          <h2 className="font-prompt font-black text-xl md:text-2xl lg:text-3xl text-slate-900 leading-tight mb-6 flex items-center gap-4 bg-slate-50/50 p-4 rounded-2xl border border-slate-100">
+            <span className="w-10 h-10 md:w-12 md:h-12 rounded-xl bg-orange-500 text-white flex items-center justify-center text-lg md:text-xl italic font-serif shadow-lg shadow-orange-500/20 shrink-0">07</span>
+            บทสรุป: จบดราม่าด้วยการสุ่ม
+          </h2>
+          <p className="indent-12 text-slate-600 leading-relaxed text-lg font-medium">
+            สุดท้ายแล้ว การแบ่งกลุ่มที่ดีคือการสร้างบรรยากาศที่ทุกคนรู้สึกว่าได้รับโอกาสที่เท่าเทียมกันครับ ให้ <Link href="/random-name" className="text-orange-600 font-bold hover:underline decoration-orange-300">สุ่มสี่สุ่มห้า</Link> เป็นผู้ช่วยมือขวาของคุณในการจัดการทุกกิจกรรมให้ราบรื่น สนุกสนาน และไม่มีใครต้องรู้สึกน้อยใจนะครับ!
+          </p>
+        </section>
+
+        <div className="mt-24 p-12 bg-gradient-to-br from-slate-900 to-slate-800 rounded-[4rem] text-white text-center relative overflow-hidden group shadow-2xl border border-slate-700">
+          <div className="absolute top-0 left-0 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/carbon-fibre.png')] opacity-10 pointer-events-none" />
+          <div className="relative z-10">
+            <Users className="w-16 h-16 text-orange-400 mx-auto mb-8 animate-bounce" />
+            <h3 className="text-3xl md:text-5xl font-black font-prompt mb-6 leading-tight">เริ่มแบ่งกลุ่มแบบโปรวันนี้!</h3>
+            <p className="text-slate-400 mb-10 max-w-2xl mx-auto text-xl font-light">ใช้เครื่องมือสุ่มแบ่งกลุ่มที่ง่ายและสวยที่สุด ฟรี 100% ไม่ต้องติดตั้งแอป</p>
+            <Link href="/random-name" className="inline-flex items-center justify-center gap-4 px-12 py-5 bg-orange-500 hover:bg-orange-600 text-white font-black rounded-3xl transition-all hover:scale-105 shadow-2xl shadow-orange-500/40 text-2xl uppercase">
+              ไปหน้าสุ่มแบ่งกลุ่ม <ArrowRight className="w-8 h-8" />
+            </Link>
+          </div>
+        </div>
+      </article>
+    )
+  }
 };
 
 const getArticleData = (slug: string) => {
@@ -1616,6 +1863,31 @@ export default async function ArticleDetail({ params }: ArticleProps) {
       };
     }
 
+    if (articleSlug === 'ai-caption-generator-tips') {
+      return {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'แคปชั่นที่ได้จาก AI ซ้ำกับคนอื่นไหม?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'ระบบของเราสุ่มจากฐานข้อมูลที่หลากหลายมากครับ โอกาสซ้ำจึงน้อยมาก และคุณสามารถปรับแต่งเพิ่มให้เป็นสไตล์ของตัวเองได้เลย'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'สามารถบันทึกเก็บไว้ใช้ทีหลังได้ไหม?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'สามารถกด Copy ไปใช้ หรือแคปหน้าจอเก็บไว้ได้เลยครับ เราออกแบบมาให้ใช้งานง่ายและรวดเร็วที่สุด'
+            }
+          }
+        ]
+      };
+    }
+
     if (articleSlug === 'perfect-travel-photos-sky-and-sea-captions') {
       return {
         '@context': 'https://schema.org',
@@ -1635,6 +1907,31 @@ export default async function ArticleDetail({ params }: ArticleProps) {
             acceptedAnswer: {
               '@type': 'Answer',
               text: 'มีครบครับ! ในระบบสุ่มของเราไม่ได้มีแค่แคปชั่นท่องเที่ยว แต่ยังมีทั้งแคปชั่นคาเฟ่ แคปชั่นกวนๆ และอีกเพียบ อัปเดตใหม่ล่าสุดรับปี 2026 เลย'
+            }
+          }
+        ]
+      };
+    }
+
+    if (articleSlug === 'random-wheel-group-divider') {
+      return {
+        '@context': 'https://schema.org',
+        '@type': 'FAQPage',
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'ถ้าจำนวนคนไม่ลงตัว ระบบจะจัดการยังไง?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'ไม่ต้องกังวลครับ! ระบบจะเฉลี่ยจำนวนคนให้ใกล้เคียงกันที่สุด เช่น มี 10 คน แบ่ง 3 กลุ่ม ระบบจะจัดเป็น 4, 3, 3 คนโดยอัตโนมัติ เพื่อความยุติธรรมสูงสุด'
+            }
+          },
+          {
+            '@type': 'Question',
+            name: 'สามารถบันทึกผลการสุ่มเก็บไว้ดูทีหลังได้ไหม?',
+            acceptedAnswer: {
+              '@type': 'Answer',
+              text: 'ได้แน่นอนครับ! คุณสามารถกดปุ่ม "บันทึกเป็นรูปภาพ" เพื่อเซฟผลลัพธ์ที่แบ่งเสร็จแล้วเป็นไฟล์ภาพคุณภาพสูงได้ทันที'
             }
           }
         ]

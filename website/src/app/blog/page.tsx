@@ -10,6 +10,16 @@ export const metadata: Metadata = {
 
 const articles = [
   {
+    title: 'วงล้อสุ่มแบ่งกลุ่ม: จัดทีมงาน, ทีมกีฬา, กลุ่มทัศนศึกษา ยุติธรรมใน 1 คลิก',
+    description: 'วิธีสุ่มแบ่งกลุ่มให้ยุติธรรมและรวดเร็ว ไม่ว่าจะเป็นการแบ่งกลุ่มนักเรียน ทีมกีฬา หรือทีมงานในองค์กร พบกับเทคนิคการใช้ฟีเจอร์สุ่มแบ่งกลุ่มที่ช่วยให้จบปัญหาการเลือกที่รักมักที่ชังได้ทันที',
+    slug: 'random-wheel-group-divider',
+    date: '4 พฤษภาคม 2026',
+    readTime: '10 นาที',
+    category: 'เทคนิคการสุ่ม',
+    icon: <Users className="w-6 h-6 text-orange-500" />,
+    image: '/images/blog/group_split_random_hero.png',
+  },
+  {
     title: 'สุ่มรายชื่อผู้โชคดียังไงให้โปร่งใส ไม่โดนด่า และ Live ได้ทุกแพลตฟอร์ม! (2026)',
     description: 'คู่มือ Admin และ Creator ทุกแพลตฟอร์ม ครบทุกขั้นตอน ตั้งแต่รวบรวมรายชื่อ ไปจนถึงประกาศผลสดแบบ Live ที่ทำให้ไม่มีใครแย้งได้',
     slug: 'how-to-random-winner-for-online-giveaway',
